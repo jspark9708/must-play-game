@@ -52,7 +52,12 @@ const Nav = (props) => {
                 :
                 <li className={styles.login_btt} onClick={logout}><em>LOGOUT</em></li>
               }
-              <li className={`${styles.hamburger} hamburger`} onClick={(e)=>sliderOpen(e.currentTarget)} ref={hamburger}></li>
+              <li className={`${styles.hamburger} hamburger`} onClick={(e)=>sliderOpen(e.currentTarget)} ref={hamburger}>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </li>
             </ul>
           </div>
         </div>

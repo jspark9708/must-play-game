@@ -10,6 +10,9 @@ function App() {
   return (
     <div className="App">
       <Nav></Nav>
+      <Routes>
+        <Route></Route>
+      </Routes>
     </div>
   );
 }
