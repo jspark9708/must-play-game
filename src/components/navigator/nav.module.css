@@ -18,6 +18,10 @@
     align-items: center;
 }
 
+.logo{
+    color: #ffffff;
+}
+
 .slideMenu{ display: flex; align-items: center; }
 
 .slideMenu ul{ display: flex; }

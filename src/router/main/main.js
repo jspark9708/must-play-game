@@ -1,15 +1,26 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-//import styles from './main.module.css';
+import bestGameVideo from '../../source/video/2018-bestgame.mp4';
+import styles from './main.module.css';
 
 const Main = (props) => {
     let nav = useNavigate();
 
     return (
         <div>
-            <br/><br/><br/><br/>
-            <h1>Main Page Example</h1>
-            <h3>Hi, this is main page of my project</h3>
+            
+            <div className={styles.vid}>
+            <video
+                autoPlay
+                controls={false}
+                loop
+                muted
+                style={{ width: '100%', height: 'auto'}}
+                >
+                    <source src={bestGameVideo} type="video/mp4"/>
+                    Your browser dose not support the video tag.
+                </video>
+            </div>
         </div>
     );
 

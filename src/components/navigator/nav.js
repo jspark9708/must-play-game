@@ -28,7 +28,9 @@ const Nav = (props) => {
       <nav className={styles.nav}>
         <div className={styles.container}>
           <div className={styles.slideMenu} ref={slideMenu}>
-            <div className={styles.logo}>{/*img 파일로 로고 만들기*/}</div>
+            <div className={styles.logo}>
+              <h1>Must.Play.Games</h1>
+            </div>
             <ul>
               <li onClick={() => {setPageState(0); sliderClose();}} className={pageState == 0 ? `${styles.active}` : null}>
                 <Link to="/About"><em>About</em></Link>
