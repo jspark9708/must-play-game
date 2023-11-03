@@ -13,15 +13,23 @@ const Showbox = () => {
     return(
         <div>
             <div className={styles.container}>
-                <h1 ref={ref1} className={inView1 ? styles.show : styles.hide}>
-                    Games to Play Right Now
-                </h1>
-                <p ref={ref2} className={inView2 ? styles.show : `${styles.hide} ${styles.translateLTR}`}>
-                    metacritic에서 선정한 최고의 게임들입니다.
-                </p>
-                <p ref={ref3} className={inView3 ? styles.show : `${styles.hide} ${styles.translateRTL}`}>
-                    진정한 게이머가 되기위한 여정을 준비하세요!
-                </p>
+                <div className={styles.textContainer}>
+                    <h1 ref={ref1} className={inView1 ? styles.show : styles.hide}>
+                        Games to Play Right Now !!
+                    </h1>
+                    <p ref={ref2} className={inView2 ? styles.show : `${styles.hide} ${styles.translateLTR}`}>
+                        metacritic에서 선정한 최고의 게임들입니다.
+                    </p>
+                    <p ref={ref3} className={inView3 ? styles.show : `${styles.hide} ${styles.translateRTL}`}>
+                        진정한 게이머가 되기위한 여정을 준비하세요.
+                    </p>
+                </div>
+                <div className={styles.imgContainer}>
+                    <div>
+                        <img src={`${process.env.PUBLIC_URL}/img/game1.jpeg`} width={250}></img>
+                        <div className={styles.scoreOverlay}>99</div>
+                    </div>
+                </div>
             </div>
         </div>
     );

@@ -29,7 +29,8 @@ const Nav = (props) => {
         <div className={styles.container}>
           <div className={styles.slideMenu} ref={slideMenu}>
             <div className={styles.logo}>
-              <h1>Must.Play.Games</h1>
+              <img src={`${process.env.PUBLIC_URL}/img/logo.png`} width={30} height={30}></img>
+              <h1>MUST PLAY GAME</h1>
             </div>
             <ul>
               <li onClick={() => {setPageState(0); sliderClose();}} className={pageState == 0 ? `${styles.active}` : null}>

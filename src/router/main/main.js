@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import styles from './main.module.css';
 import { useInView } from 'react-intersection-observer';
 import Showbox from '../../components/showbox/showbox';
-import bestGameVideo from '../../source/video/2018-bestgame.mp4';
 
 const Main = (props) => {
     let nav = useNavigate();
@@ -19,7 +18,7 @@ const Main = (props) => {
                 muted
                 style={{ width: '100%', height: 'auto'}}
                 >
-                    <source src={bestGameVideo} type="video/mp4"/>
+                    <source src={`${process.env.PUBLIC_URL}/video/2018-bestgame.mp4`} type="video/mp4"/>
                     Your browser dose not support the video tag.
                 </video>
             </div>

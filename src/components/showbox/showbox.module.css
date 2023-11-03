@@ -1,17 +1,29 @@
-
-
 .container {
     display: flex; flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
-.container > *{
-    display: block; text-align: center; margin: 10px 0;
+.container > * {
+    display: block; text-align: center;
 }
 
-.container p { margin-top: 10; }
+.container p { margin-top: 10; color: #FDBB3D; }
+
+.textContainer{ margin-bottom: 50px; }
+
+.imgContainer {
+    position: relative;
+    display: inline-block;
+}
+
+/* 숫자 99가 쓰인 둥근 사각형을 만들기 위한 스타일 */
+.scoreOverlay {
+    position: absolute; bottom: -10px; right: -10px;
+    background-color: #66CC33; border-radius: 5px; padding: 15px;
+    font-size: 35px; font-weight: 600; color: white;
+}
 
 /* 소개글 용 애니메이션 css */
 .show {
