@@ -17,14 +17,12 @@
     align-items: center;
 }
 
-.logo{
-    align-items: center;
-    color: #ffffff;
-    display: flex;
-}
+.logo { align-items: center; display: block; }
+  
+.logoContent { display: flex; align-items: center; } 
 
-.logo > h1 {
-    margin-left: 15px;
+.logoContent img {
+    margin-right: 15px; /* 이미지와 제목 사이 간격 조정 */
 }
 
 .slideMenu{ display: flex; align-items: center; }
@@ -35,8 +33,8 @@
     font-size: 16px; font-weight: 400; color: #ffffff;
     padding: 0 15px; transition: all 0.2s;
 }
-.slideMenu ul li.active em{ color: #7e8bec; }
-.slideMenu ul li em:hover{ color: #7e8bec; }
+.slideMenu ul li.active em{ color: #FDBB3D; }
+.slideMenu ul li em:hover{ color: #FDBB3D; }
 
 .login ul{ display: flex; align-items: center; }
 .login ul li{ margin-left: 30px; }

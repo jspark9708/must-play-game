@@ -4,3 +4,7 @@ ul, li, ol {list-style: none;}
 h1, h2, h3, p{
     color: white;
 }
+
+a { text-decoration: none; }
+
+em, address {font-style: normal;}

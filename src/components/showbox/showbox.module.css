@@ -1,8 +1,10 @@
 .container {
-    display: flex; flex-direction: column;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    background: radial-gradient(circle at center, rgb(85, 85, 85) 0%, rgba(0, 0, 0, 0) 70%);
 }
 
 .container > * {
@@ -12,15 +14,48 @@
 .container p { margin-top: 10; color: #FDBB3D; }
 
 .textContainer{ margin-bottom: 50px; }
-
+.textContainer h1{
+    padding: 15px 0;
+}
 .imgContainer {
     position: relative;
-    display: inline-block;
+    display: flex; /* Flexbox를 이용하여 내부 요소들을 가로로 배열합니다 */
+    justify-content: space-between; /* 내부 요소 사이의 공간을 최대화합니다 */
+    align-items: center; /* 내부 요소를 수직 가운데 정렬합니다 */
+}
+
+.imgContainer p {
+    color: rgb(152, 152, 152);
+}
+
+.imgContainer p:first-of-type {
+    color: #ffffff;
+}
+
+.imgContainer {
+    margin: 40px 0;
+}
+
+.commentsR {
+    width: 100%;
+    text-align: right;
+    margin: -100px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.commentsL {
+    width: 100%;
+    text-align: left;
+    margin-left: -180px;
+    font-size: 25px;
+    font-weight: 700;
+    transform: translateX(-210px)
 }
 
 /* 숫자 99가 쓰인 둥근 사각형을 만들기 위한 스타일 */
 .scoreOverlay {
-    position: absolute; bottom: -10px; right: -10px;
+    position:absolute; bottom: -10px; right: -10px;
     background-color: #66CC33; border-radius: 5px; padding: 15px;
     font-size: 35px; font-weight: 600; color: white;
 }
@@ -28,8 +63,58 @@
 /* 소개글 용 애니메이션 css */
 .show {
     opacity: 1; transform: translateX(0px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
 }
 .hide { opacity: 0; }
-.translateRTL { transform: translateX(80px); }
-.translateLTR { transform: translateX(-80px); }
+.translateRTL { transform: translateX(20px); }
+.translateLTR { transform: translateX(-20px); }
+
+.show_itemL {
+    opacity: 1; transform: translateX(-150px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.show_itemR {
+    opacity: 1; transform: translateX(+150px);
+    transition: opacity 1s ease-in-out, transform 1.5s ease-in-out;
+}
+.translateRTL_item { transform: translateX(+250px); }
+.translateLTR_item { transform: translateX(-250px); }
+
+@media (max-width : 767px){
+    .container .textContainer h1 {
+        font-size: 170%; /* h1 요소의 글꼴 크기를 20%로 축소합니다. */
+    }
+
+    .show_itemL {
+        opacity: 1; transform: translateX(0px);
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    }
+    .show_itemR {
+        opacity: 1; transform: translateX(0px);
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    }
+
+    .translateRTL_item { transform: translateX(+20px); }
+    .translateLTR_item { transform: translateX(-20px); }
+
+
+    .imgContainer {
+        flex-direction: column; /* 화면이 좁을 때, 요소들을 세로로 표시합니다 */
+        margin-bottom: 70px;
+    }
+
+    .commentsR {
+        width: auto;
+        text-align: center; 
+        margin: 0 0 -30px 0;
+    }
+
+    .commentsL {
+        width: auto;
+        text-align: center;
+        margin: 0 0 -30px 0;
+        transform: translateX(0px)
+    }
+
+
+}
