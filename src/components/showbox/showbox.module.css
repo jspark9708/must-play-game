@@ -1,0 +1,23 @@
+
+
+.container {
+    display: flex; flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.container > *{
+    display: block; text-align: center; margin: 10px 0;
+}
+
+.container p { margin-top: 10; }
+
+/* 소개글 용 애니메이션 css */
+.show {
+    opacity: 1; transform: translateX(0px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.hide { opacity: 0; }
+.translateRTL { transform: translateX(80px); }
+.translateLTR { transform: translateX(-80px); }

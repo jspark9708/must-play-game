@@ -1,6 +1,5 @@
 .vid {
-    width: 100%;
-    height: auto;
+    width: 100%; height: auto;
     overflow: hidden;
     margin-top: 70px;
 }

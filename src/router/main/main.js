@@ -1,14 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import bestGameVideo from '../../source/video/2018-bestgame.mp4';
 import styles from './main.module.css';
+import { useInView } from 'react-intersection-observer';
+import Showbox from '../../components/showbox/showbox';
+import bestGameVideo from '../../source/video/2018-bestgame.mp4';
 
 const Main = (props) => {
     let nav = useNavigate();
 
+
     return (
         <div>
-            
             <div className={styles.vid}>
             <video
                 autoPlay
@@ -20,6 +22,10 @@ const Main = (props) => {
                     <source src={bestGameVideo} type="video/mp4"/>
                     Your browser dose not support the video tag.
                 </video>
+            </div>
+            <div>
+                <Showbox></Showbox>
+                <h1>after showbox</h1>
             </div>
         </div>
     );

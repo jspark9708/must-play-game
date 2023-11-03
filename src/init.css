@@ -1,2 +1,6 @@
 /* 블릿기호 초기화 */
 ul, li, ol {list-style: none;}
+
+h1, h2, h3, p{
+    color: white;
+}
