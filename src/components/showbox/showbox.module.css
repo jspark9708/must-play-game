@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
     background: radial-gradient(circle at center, rgb(85, 85, 85) 0%, rgba(0, 0, 0, 0) 70%);
 }
 
@@ -56,7 +55,7 @@
 /* 숫자 99가 쓰인 둥근 사각형을 만들기 위한 스타일 */
 .scoreOverlay {
     position:absolute; bottom: -10px; right: -10px;
-    background-color: #66CC33; border-radius: 5px; padding: 15px;
+    background-color: #00ce7a; border-radius: 5px; padding: 15px;
     font-size: 35px; font-weight: 600; color: white;
 }
 

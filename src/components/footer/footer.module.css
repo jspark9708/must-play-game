@@ -1,0 +1,96 @@
+
+
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display: block;
+    box-sizing: content-box;
+    padding-bottom: 40px;
+    /* 3 color divider 부분 */
+    overflow: hidden;
+    border-width: 15px 0 0;
+    border-style: solid;
+    border-image: linear-gradient(90deg, #00ce7a 33%, #ffbd3f 0, #ffbd3f 67%, #00ce7a 0) 5;
+    border-image-slice: 5;
+    border-image-width: 1;
+    border-image-repeat: stretch;
+}
+
+footer h1,
+footer h2,
+footer a {
+    color: black;
+}
+
+.text_width {
+    width: 100px;
+}
+
+
+.textcenter{
+    margin: 10px auto;
+    box-sizing: border-box; display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoContent { display: flex; align-items: center; } 
+
+.logoContent img {
+    margin-right: 15px; /* 이미지와 제목 사이 간격 조정 */
+}
+
+.grid {
+    display: block;
+    text-align: center;
+}
+.grid div {
+    margin-bottom: 25px;
+}
+
+.links{
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.links ul li { text-align: left; }
+
+
+.brands span{
+    display: block;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 1024px) {
+    .logoContent {font-size: 1.0rem;}
+    .logoContent img {width: 30px; height: 30px;}
+
+    .footer_container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .logoContent {font-size: 0.9rem;}
+    .logoContent img {width: 25px; height: 25px; margin-right: 7px;}
+    
+    .footer_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .logoContent {font-size: 0.8rem;}
+    .logoContent img {width: 20px; height: 20px; margin-right: 6px;}
+    
+
+    .footer_container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

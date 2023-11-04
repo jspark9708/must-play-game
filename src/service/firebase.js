@@ -1,4 +1,6 @@
-import { initializeApp } from "firebase/app";
+import firebase from "firebase/compat/app";
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyB9ZV0BRlgNDZhJO_ob3rhLL4uL4thUEOk",
@@ -6,10 +8,10 @@ const firebaseConfig = {
   projectId: "mustplaygame",
   storageBucket: "mustplaygame.appspot.com",
   messagingSenderId: "84110381925",
-  appId: "1:84110381925:web:94a91a358c4674a50fc78c",
+  appId: "1:84110381925:web:94a91a358c4674a50fc78c"
 };
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 export default firebaseApp;

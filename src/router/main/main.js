@@ -11,20 +11,24 @@ const Main = (props) => {
     return (
         <div>
             <div className={styles.vid}>
-            <video
-                autoPlay
-                controls={false}
-                loop
-                muted
-                style={{ width: '100%', height: 'auto'}}
+                <video
+                    autoPlay
+                    controls={false}
+                    loop
+                    muted
+                    style={{ width: '100%', height: 'auto'}}
                 >
                     <source src={`${process.env.PUBLIC_URL}/video/2018-bestgame.mp4`} type="video/mp4"/>
                     Your browser dose not support the video tag.
                 </video>
             </div>
+            
             <div>
+                <div className={styles.separator}></div>
                 <Showbox></Showbox>
-                <h1>after showbox</h1>
+            </div>
+            <div>
+                <div className={styles.separator}></div>
             </div>
         </div>
     );

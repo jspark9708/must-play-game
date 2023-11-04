@@ -17,7 +17,7 @@
     align-items: center;
 }
 
-.logo { align-items: center; display: block; }
+.logo { align-items: center; display: block; margin-right: 70px; }
   
 .logoContent { display: flex; align-items: center; } 
 
