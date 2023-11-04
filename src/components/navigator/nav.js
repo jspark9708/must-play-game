@@ -38,15 +38,12 @@ const Nav = (props) => {
             </div>
             <ul>
               <li onClick={() => {setPageState(0); sliderClose();}} className={pageState == 0 ? `${styles.active}` : null}>
-                <Link to="/About"><em>About</em></Link>
-              </li>
-              <li onClick={() => {setPageState(1); sliderClose();}} className={pageState == 1 ? `${styles.active}` : null}>
                 <Link to="/PC"><em>PC</em></Link>
               </li>
-              <li onClick={() => {setPageState(2); sliderClose();}} className={pageState == 2 ? `${styles.active}` : null}>
+              <li onClick={() => {setPageState(1); sliderClose();}} className={pageState == 1 ? `${styles.active}` : null}>
                 <Link to="/Switch"><em>Switch</em></Link>
               </li>
-              <li onClick={() => {setPageState(3); sliderClose();}} className={pageState == 3 ? `${styles.active}` : null}>
+              <li onClick={() => {setPageState(2); sliderClose();}} className={pageState == 2 ? `${styles.active}` : null}>
                 <Link to="/PlayStation"><em>Playstation</em></Link>
               </li>
             </ul>

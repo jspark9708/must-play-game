@@ -28,7 +28,7 @@
 .slideMenu{ display: flex; align-items: center; }
 
 .slideMenu ul{ display: flex; }
-.slideMenu ul li:nth-child(1){ display: none; }
+.slideMenu ul li:nth-child(0){ display: none; }
 .slideMenu ul li em{
     font-size: 16px; font-weight: 400; color: #ffffff;
     padding: 0 15px; transition: all 0.2s;

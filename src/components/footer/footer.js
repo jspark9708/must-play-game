@@ -12,6 +12,7 @@ const Footer = () => {
     return (
         <div>
             <footer className={styles.footer}>
+                <div className={styles.container}>
                 <div className={styles.textcenter}>
                     <div className={styles.logoContent}>
                         <img src={`${process.env.PUBLIC_URL}/img/logo.png`} alt="Logo"></img>
@@ -39,6 +40,7 @@ const Footer = () => {
                         <span><a href="https://www.gamespot.com/" target='_blank'>gamespot</a></span>
                         <span><a href="https://store.steampowered.com/" target='_blank'>steam</a></span>
                     </div>
+                </div>
                 </div>
             </footer>
         </div>

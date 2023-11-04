@@ -24,12 +24,13 @@ footer a {
     color: black;
 }
 
-.text_width {
-    width: 100px;
+.container {
+    width: 60%;
+    margin: 0 auto;
 }
 
-
 .textcenter{
+    padding-top: 10px;
     margin: 10px auto;
     box-sizing: border-box; display: flex;
     justify-content: center;
@@ -58,10 +59,22 @@ footer a {
 
 .links ul li { text-align: left; }
 
+.social{
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.brands{
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0;
+}
 
 .brands span{
     display: block;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 @media (min-width: 1024px) {
