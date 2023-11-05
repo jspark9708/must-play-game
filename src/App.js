@@ -5,6 +5,7 @@ import Footer from "./components/footer/footer"
 import "./App.css";
 import Nav from "./components/navigator/nav";
 import Main from  "./router/main/main";
+import PC from "./router/pc/pc";
 
 import './init.css';
 
@@ -41,6 +42,7 @@ function App() {
       <Nav loginData={loginData} emailCheck={emailCheck} setEmailCheck={setEmailCheck} onLogin={onLogin}></Nav>
       <Routes>
         <Route path="/" element={<Main></Main>}></Route>
+        <Route path="/PC" element={<PC></PC>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
