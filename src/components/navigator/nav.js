@@ -1,4 +1,4 @@
-import { React, useEffect, useRef, useState } from "react";
+import { React, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from './nav.module.css';
 
@@ -37,13 +37,13 @@ const Nav = (props) => {
               </Link>
             </div>
             <ul>
-              <li onClick={() => {setPageState(0); sliderClose();}} className={pageState == 0 ? `${styles.active}` : null}>
+              <li onClick={() => {setPageState(0); sliderClose();}} className={pageState === 0 ? `${styles.active}` : null}>
                 <Link to="/PC"><em>PC</em></Link>
               </li>
-              <li onClick={() => {setPageState(1); sliderClose();}} className={pageState == 1 ? `${styles.active}` : null}>
+              <li onClick={() => {setPageState(1); sliderClose();}} className={pageState === 1 ? `${styles.active}` : null}>
                 <Link to="/Switch"><em>Switch</em></Link>
               </li>
-              <li onClick={() => {setPageState(2); sliderClose();}} className={pageState == 2 ? `${styles.active}` : null}>
+              <li onClick={() => {setPageState(2); sliderClose();}} className={pageState === 2 ? `${styles.active}` : null}>
                 <Link to="/PlayStation"><em>Playstation</em></Link>
               </li>
             </ul>
@@ -51,7 +51,7 @@ const Nav = (props) => {
           <div className={styles.login}>
             <ul>
               {
-                props.emailCheck == false ?
+                props.emailCheck === false ?
                 <li className={styles.login_btt} onClick={props.onLogin}><em>LOGIN</em></li>
                 :
                 <li className={styles.login_btt} onClick={logout}><em>LOGOUT</em></li>

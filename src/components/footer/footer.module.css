@@ -57,12 +57,16 @@ footer a {
     padding: 0;
 }
 
-.links ul li { text-align: left; }
+.links ul li { text-align: left; margin-bottom: 10px;}
 
-.social{
+.social {
     max-width: 300px;
     margin: 0 auto;
     padding: 0;
+}
+
+.social span a {
+    color:rgb(55 55, 55);
 }
 
 .brands{
@@ -98,6 +102,7 @@ footer a {
 }
 
 @media (max-width: 767px) {
+    .container { width: 100%; }
     .logoContent {font-size: 0.8rem;}
     .logoContent img {width: 20px; height: 20px; margin-right: 6px;}
     
