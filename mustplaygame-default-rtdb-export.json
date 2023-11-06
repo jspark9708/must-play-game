@@ -3,9 +3,10 @@
     "halflife2": {
       "gameTitle": "HλLF-LIFE 2",
       "gameVideo": "https://www.youtube.com/watch?v=UKA7JkV51Jw",
-      "gameCover": "gs://mustplaygame.appspot.com/gameCover/hafelife2cover.jpg",
-      "gameBanner": "gs://mustplaygame.appspot.com/gameBanner/halflife2banner.jpg",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fhafelife2cover.jpg?alt=media&token=5083bba0-f3d3-401b-8da3-edb8acd0915b&_gl=1*1m4k6ms*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2MjQuNDEuMC4w",
+      "gameBanner": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameBanner%2Fhalflife2banner.jpg?alt=media&token=06e4d89c-976c-4da4-892e-14406eac56cd&_gl=1*1r4uhr4*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI4NDcuNS4wLjA.",
       "gameDescript": "엄청난 자유로움과 역동적인 오픈 월드 환경에서의 흥미진진한 범죄 어드벤처를 제공하는 인기 있는 액션 어드벤처 게임입니다. 캘리포니아를 모티브로 한 거대한 맵에서 플레이어는 세 명의 주인공으로 전환하며, 자유로운 탐험, 자동차 경주, 범죄 행위, 그리고 다양한 임무를 수행하며 즐기세요.",
+      "score": "96",
       "develop": "Valve",
       "platform": [
         "pc"
@@ -15,9 +16,10 @@
     "gta5": {
       "gameTitle": "Grand Theft Auto 5",
       "gameVideo": "https://www.youtube.com/watch?v=QkkoHAzjnUs",
-      "gameCover": "gs://mustplaygame.appspot.com/gameCover/gta5cover.jpg",
-      "gameBanner": "gs://mustplaygame.appspot.com/gameBanner/gta5banner.jpg",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fgta5cover.jpg?alt=media&token=1451d0c4-af1d-4656-9e4f-0ea69ede597c&_gl=1*1ty3h72*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI0NTYuMzQuMC4w",
+      "gameBanner": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameBanner%2Fgta5banner.jpg?alt=media&token=dfca9233-5da0-4390-b358-7d4770bbccb3&_gl=1*19crp93*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI4MjEuMzEuMC4w",
       "gameDescript": "엄청난 자유로움과 역동적인 오픈 월드 환경에서의 흥미진진한 범죄 어드벤처를 제공하는 인기 있는 액션 어드벤처 게임입니다. 캘리포니아를 모티브로 한 거대한 맵에서 플레이어는 세 명의 주인공으로 전환하며, 자유로운 탐험, 자동차 경주, 범죄 행위, 그리고 다양한 임무를 수행하며 즐기세요.",
+      "score": "97",
       "develop": "Rockstar Games",
       "platform": [
         "pc"
@@ -27,9 +29,10 @@
     "orangebox": {
       "gameTitle": "The Orange Box",
       "gameVideo": "https://www.youtube.com/watch?v=9FYQ1tynj6U",
-      "gameCover": "gs://mustplaygame.appspot.com/gameCover/orangecover.jpg",
-      "gameBanner": "gs://mustplaygame.appspot.com/gameBanner/obbanner.jpg",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Forangecover.jpg?alt=media&token=8c7c6020-6558-4786-927f-b75e58417055&_gl=1*1d5fj9j*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2NjYuNjAuMC4w",
+      "gameBanner": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameBanner%2Fobbanner.jpg?alt=media&token=420f3515-7209-496a-a896-e51c9a722e35&_gl=1*1idg979*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI4ODguMzIuMC4w",
       "gameDescript": "팀 기반 FPS 게임인 '팀 포트리스 2'와 '하프 라이프 2', 그리고 물리학 기반 퍼즐 게임 '포털'을 포함하고 있습니다. 이 번들은 각각의 게임이 독립적으로 우수한 퀄리티를 보유하며, 한 번에 다양한 장르의 게임을 즐길 수 있는 패키지로 유명합니다.",
+      "score": "96",
       "develop": "Valve",
       "platform": [
         "pc"
@@ -39,9 +42,10 @@
     "halflife": {
       "gameTitle": "HλLF-LIFE",
       "gameVideo": "https://www.youtube.com/watch?v=5Wavn29LMrs",
-      "gameCover": "gs://mustplaygame.appspot.com/gameBanner/halflifecover.jpg",
-      "gameBanner": "gs://mustplaygame.appspot.com/gameBanner/halflifebanner.jpg",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fhalflifecover.jpg?alt=media&token=3bc4576f-6d31-49c5-8e95-fae78359fde7&_gl=1*1onow15*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2MzguMjcuMC4w",
+      "gameBanner": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameBanner%2Fhalflifebanner.jpg?alt=media&token=b713f8e3-089c-49e1-87c4-b09730b7dbdb&_gl=1*1klgid8*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI4NjAuNjAuMC4w",
       "gameDescript": "유명한 FPS 시리즈로, 뛰어난 스토리텔링과 혁신적인 게임 플레이로 극찬받는 작품입니다. 주인공 고든 프리먼은 다양한 적과 퍼즐을 해결하며 혁신적인 무기와 상상력을 요구하는 환경 속에서 스릴 넘치는 경험해보세요.",
+      "score": "96",
       "develop": "Valve",
       "platform": [
         "pc"
@@ -51,9 +55,10 @@
     "bioshock": {
       "gameTitle": "Bioshock",
       "gameVideo": "https://www.youtube.com/watch?v=rrqfPG4ZcAA",
-      "gameCover": "gs://mustplaygame.appspot.com/gameCover/baldurscover.jpg",
-      "gameBanner": "gs://mustplaygame.appspot.com/gameBanner/bioshockbanner.jpg",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fbioshockcover.jpg?alt=media&token=197f5d3d-db86-4f9f-af13-37fd5b528895&_gl=1*n63cyj*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI1OTAuMTUuMC4w",
+      "gameBanner": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameBanner%2Fbioshockbanner.jpg?alt=media&token=e7b2f052-a94b-487c-91fa-453f8660cd81&_gl=1*1m5agyo*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI4MTAuNDIuMC4w",
       "gameDescript": "공상과학 FPS 요소와 깊은 스토리, 철학적 요소를 결합한 히트 게임입니다. 바이오쇼크 를! 해보세요",
+      "score": "96",
       "develop": "IRRATIONAL GAMES",
       "platform": [
         "pc"
@@ -63,9 +68,10 @@
     "baldursgate": {
       "gameTitle": "Baldur's Gate II: Shadows of Amn",
       "gameVideo": "https://www.youtube.com/watch?v=tONHtATupkw",
-      "gameCover": "gs://mustplaygame.appspot.com/gameCover/baldurscover.jpg",
-      "gameBanner": "gs://mustplaygame.appspot.com/gameBanner/baldursbanner.jpg",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fbaldurscover.jpg?alt=media&token=36a3aac2-ea06-4e2c-bace-542776b62804&_gl=1*1my2iqd*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI1NDguNTcuMC4w",
+      "gameBanner": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameBanner%2Fbaldursbanner.jpg?alt=media&token=39fb2001-754a-4205-b606-5bda28c4935f&_gl=1*19eqi08*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI3OTQuNTguMC4w",
       "gameDescript": "고전적인 어드벤처 RPG로, 플레이어는 희귀한 힘을 가진 주인공을 조종하여 아드, 페어런스, 아몬, 아이린델 등의 도시와 던전을 탐험합니다. 다양한 퀘스트, 파티 멤버, 전략적인 전투, 그리고 선택에 따라 바뀌는 이야기 선이 특징입니다.",
+      "score": "95",
       "develop": "BioWare",
       "platform": [
         "pc"
@@ -75,9 +81,10 @@
     "portal2": {
       "gameTitle": "Portal 2",
       "gameVideo": "https://www.youtube.com/watch?v=tax4e4hBBZc",
-      "gameCover": "gs://mustplaygame.appspot.com/gameCover/portal2cover.jpg",
-      "gameBanner": "gs://mustplaygame.appspot.com/gameBanner/portal2banner.jpg",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fportal2cover.jpg?alt=media&token=1e36fa9b-7109-4423-a563-2039502cba88&_gl=1*eu19pa*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2ODIuNDQuMC4w",
+      "gameBanner": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameBanner%2Fportal2banner.jpg?alt=media&token=c09c123a-6f46-4211-bebe-139acfaba610&_gl=1*3ara96*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI5MDQuMTYuMC4w",
       "gameDescript": "고유한 퍼즐 해결과 흥미진진한 이야기가 결합된 인기 퍼즐 플랫폼 게임입니다. 플레이어는 고유한 플로우를 가진 무한한 포탈을 생성하여 다양한 퍼즐과 도전을 해결하며, 로봇 GLaDOS와의 상호작용을 통해 게임 세계를 탐험하세요.",
+      "score": "95",
       "develop": "Valve",
       "platform": [
         "pc"
@@ -87,9 +94,10 @@
     "skyrim5": {
       "gameTitle": "The Elder Scrolls V: Skyrim",
       "gameVideo": "https://www.youtube.com/watch?v=JSRtYpNRoN0",
-      "gameCover": "gs://mustplaygame.appspot.com/gameCover/skyrim5cover.jpg",
-      "gameBanner": "gs://mustplaygame.appspot.com/gameBanner/skyrim5banner.jpg",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fskyrim5cover.jpg?alt=media&token=dd0b5fa7-d16f-4439-b1b3-4496dd5ed351&_gl=1*1nqdat6*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI3NDcuNDEuMC4w",
+      "gameBanner": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameBanner%2Fskyrim5banner.jpg?alt=media&token=6d8d0608-4d61-46d6-ac83-20b2ef3628bb&_gl=1*172tcfv*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI5MTYuNC4wLjA.",
       "gameDescript": "오픈 월드 액션 RPG 게임으로, 환상적인 고대 북유럽 판타지 세계에 입문할 수 있는 플레이어를 위한 환상적인 모험을 제공합니다. 플레이어는 용을 퇴치하고 영토를 탐험하며, 다양한 퀘스트를 완수하고 마법을 사용하여 자신만의 이야기를 만들어나갑니다.",
+      "score": "96",
       "develop": "Bethesda",
       "platform": [
         "pc"
@@ -99,9 +107,10 @@
     "masseffect2": {
       "gameTitle": "Mass Effect 2",
       "gameVideo": "https://www.youtube.com/watch?v=lx9sPQpjgjU",
-      "gameCover": "gs://mustplaygame.appspot.com/gameCover/masseffect2cover.jpg",
-      "gameBanner": "gs://mustplaygame.appspot.com/gameBanner/masseffect2banner.jpg",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fskyrim5cover.jpg?alt=media&token=dd0b5fa7-d16f-4439-b1b3-4496dd5ed351&_gl=1*6254di*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI3MDIuMjQuMC4w",
+      "gameBanner": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameBanner%2Fmasseffect2banner.jpg?alt=media&token=88a0a553-8a51-467f-8d6c-9d994975574a&_gl=1*1beeamd*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI4NzMuNDcuMC4w",
       "gameDescript": "과학 판타지 액션 RPG 게임으로, 우주 선박 Normandy를 이끄는 Commander Shepard의 이야기를 중심으로 합니다. 은하계를 위협하는 신종 적인 적과의 전투, 팀원들과의 관계 형성, 그리고 선택에 따라 변화하는 다양한 엔딩이 게임의 핵심을 이룹니다",
+      "score": "96",
       "develop": "BioWare",
       "platform": [
         "pc"
@@ -111,9 +120,10 @@
     "gtavicecity": {
       "gameTitle": "Grand Theft Auto: Vice City",
       "gameVideo": "https://www.youtube.com/watch?v=BcqMaYdYow0",
-      "gameCover": "gs://mustplaygame.appspot.com/gameCover/gtavicecover.jpg",
-      "gameBanner": "gs://mustplaygame.appspot.com/gameBanner/gtavicebanner.jpg",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fgtavicecover.jpg?alt=media&token=3a0a26aa-71a0-4057-bf9e-0be4bf3baefa&_gl=1*u25ir6*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2MDUuNjAuMC4w",
+      "gameBanner": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameBanner%2Fgtavicebanner.jpg?alt=media&token=27cbb10a-4733-4400-baff-e7c6d7095331&_gl=1*1walfea*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI4MzQuMTguMC4w",
       "gameDescript": "1980년대 마이애미를 배경으로 한 Rockstar Games의 역동적인 액션 어드벤처 비디오 게임입니다. 이 게임은 자유로운 탐험과 미션 수행을 통해 범죄 세계에서 캐릭터를 성장시키고, 자동차 운전, 총격전, 미션 완수 등 다양한 활동을 경험해보세요.",
+      "score": "95",
       "develop": "Rockstar Games",
       "platform": [
         "pc"

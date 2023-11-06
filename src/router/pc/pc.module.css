@@ -1,0 +1,203 @@
+.bgColor{ width: 100%; height: auto; background-color:  rgb(255, 255, 255);}
+.container {
+    padding: 100px 0 70px 0;
+    margin: auto;
+}
+
+.separator {
+    margin-top: 30px; background: black; height: 1.5px;
+}
+.gameContainer {
+}
+
+.gameContainer p,
+.gameContainer h3 {
+    color: black;
+}
+.textContainer{
+}
+
+.textContainer h1,
+.textContainer h3 {
+    color: black;
+}
+
+.grid {
+    display: grid;
+    place-items: center;
+}
+
+.gridContainer {
+    margin-top: 25px;
+}
+
+.gameItem {
+    border-radius: 8px; /* 테두리를 둥글게 만듭니다. 원하는 정도로 조절할 수 있습니다. */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35); /* 그림자 효과를 추가합니다. (수평 거리, 수직 거리, 흐림 정도, 그림자 색상) */
+    width: 90%; height: 12vw;
+    display: flex;
+    padding: 10px;
+    margin: 15px 0;
+    transition: box-shadow 0.3s;
+    box-sizing: border-box;
+}
+.gameItem:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* 호버 시 그림자 색상을 더 진한 색으로 변경 */
+}
+
+.gameImg img {
+    width: auto;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.gameDetail {
+    text-align: left;
+    margin-left: 15px;
+    position: relative;
+}
+
+.gameTitle h3{
+    height: 8vw;
+    width: 100%;
+    margin: 0;
+    font-size: 1.6vw;   
+    color: rgb(32, 32, 32); 
+}
+
+.scoreContainer {
+    display: flex;
+    align-items: center;
+}
+
+.scoreContainer p {
+    margin: 0 9px;
+    font-size: 1.4vw;
+    font-weight: 400;
+}
+
+.cookie :nth-child(1){
+    margin-top: 50px;
+    text-align: center;
+    color:#a8a8a8
+}
+.cookie :nth-child(2){
+    user-select: none;
+    text-align: center;
+    color:#a8a8a8
+}
+
+/* 대형 노트북 이상 */
+@media (min-width: 1330px) {
+    .container {
+        width: 60%;
+    }
+    .gridContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .gameItem {
+        width: 95%; height: 10vw;
+    }
+    .gameTitle h3{
+        height: 6.7vw;
+        font-size: 1.1vw;   
+    }
+    .scoreContainer p {
+        margin: 0 9px;
+        font-size: 1.1vw;
+        font-weight: 400;
+    }
+    .scoreBox {
+        background-color: #00ce7a; border-radius: 5px; padding: 5px;
+        font-size: 1.1vw; font-weight: 600; color: white;
+    }
+}
+
+/* 일반 노트북 */
+@media (min-width: 941px) and (max-width: 1330px) {
+    .container {
+        width: 75%;
+    }
+    .gridContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gameItem {
+        width: 95%; height: 18vw;
+        min-width: 0px;
+    }
+    .gameTitle h3{
+        height: 12.5vw;
+        font-size: 2vw;   
+    }
+    .scoreContainer p {
+        margin: 0 9px;
+        font-size: 2vw;
+        font-weight: 400;
+    }
+    .scoreBox {
+        background-color: #00ce7a; border-radius: 5px; padding: 5px;
+        font-size: 2vw; font-weight: 600; color: white;
+    }
+}
+
+/* 대형 휴대기기 */
+@media (min-width: 425px) and (max-width: 940px) {
+    .container {
+        width: 90%;
+    }
+    .gridContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .gameItem {
+        width: 100%; height: 180px;
+    }
+    .gameTitle h3{
+        height: 123px;
+        font-size: 26px;   
+    }
+    .scoreContainer p {
+        margin: 0 9px;
+        font-size: 23px;
+        font-weight: 400;
+    }
+    .scoreBox {
+        background-color: #00ce7a; border-radius: 5px; padding: 5px;
+        font-size: 23px; font-weight: 600; color: white;
+    }
+}
+
+/* 갤럭시 폴드 같은 초소형 휴대기기*/
+@media (max-width: 424px) {
+    .container {
+        width: 90%;
+    }
+    .gridContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .gameItem {
+        width: 100%; height: 95%;
+        display: block;
+    }
+    .gameImg img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .gameTitle{
+        width: 95%;
+    }
+    .gameTitle h3{
+        height: 50px;
+        font-size: 21px; 
+        margin: 10px 0 5px 0;  
+    }
+    .scoreContainer p {
+        margin: 0 9px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .scoreBox {
+        background-color: #00ce7a; border-radius: 5px; padding: 5px;
+        font-size: 18px; font-weight: 600; color: white;
+    }
+}
