@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/database';
 import 'firebase/compat/storage';
@@ -8,8 +9,10 @@ import SmartToyIcon from '@mui/icons-material/SmartToy';
 
 
 const PC = () => {
+  let navigate = useNavigate();
   const [games, setGames] = useState();
 
+  //const game에 filter
   useEffect(() => {
     if (!firebase.apps.length) {
       firebase.initializeApp(firebaseConfig);
@@ -50,11 +53,12 @@ const PC = () => {
           <div className={styles.feature}>
             {/* what i played 필터, search 기능 */}
           </div>
+          
           <div className={styles.gameContainer}>
             {games && games.length > 0 ? (
             <div className={`${styles.gridContainer} ${styles.grid}`}>
               {games.map((game) => (
-                <div key={game.key} className={styles.gameItem}>
+                <div key={game.key} onClick={()=>{navigate(`/Detail/${game.key}`)}} className={styles.gameItem}>
                   <div className={styles.gameImg}>
                     <img src={game.gameCover} alt={game.gameTitle}/>
                   </div>

@@ -38,7 +38,7 @@ const Nav = (props) => {
             </div>
             <ul>
               <li onClick={() => {setPageState(0); sliderClose();}} className={pageState === 0 ? `${styles.active}` : null}>
-                <Link to="/pc"><em>PC</em></Link>
+                <Link to="/PC"><em>PC</em></Link>
               </li>
               <li onClick={() => {setPageState(1); sliderClose();}} className={pageState === 1 ? `${styles.active}` : null}>
                 <Link to="/Switch"><em>Switch</em></Link>

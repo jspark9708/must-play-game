@@ -57,6 +57,8 @@
     position: relative;
 }
 
+
+
 .gameTitle h3{
     height: 8vw;
     width: 100%;
@@ -123,7 +125,6 @@
     }
     .gameItem {
         width: 95%; height: 18vw;
-        min-width: 0px;
     }
     .gameTitle h3{
         height: 12.5vw;
@@ -164,6 +165,7 @@
         background-color: #00ce7a; border-radius: 5px; padding: 5px;
         font-size: 23px; font-weight: 600; color: white;
     }
+
 }
 
 /* 갤럭시 폴드 같은 초소형 휴대기기*/

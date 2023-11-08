@@ -6,6 +6,7 @@ import "./App.css";
 import Nav from "./components/navigator/nav";
 import Main from  "./router/main/main";
 import PC from "./router/pc/pc";
+import Detail from './router/detail/detail';
 
 import './init.css';
 
@@ -43,6 +44,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main></Main>}></Route>
         <Route path="/PC" element={<PC></PC>}></Route>
+        <Route path="/Detail/:id" element={<Detail></Detail>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
