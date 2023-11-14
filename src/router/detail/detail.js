@@ -3,15 +3,33 @@ import { useState, useEffect } from 'react';
 import styles from './detail.module.css';
 
 const Detail = (props) => {
+    let gameData = localStorage.getItem("itemData");
+    gameData = JSON.parse(gameData);
 
     return (
-        <div className={styles.bgColor}>
-            <div className={styles.navCover}></div>
-            <div className={styles.container}> 
-                <div className={styles.header}>
-                    <div className={styles.headerText}><h2>The Legends of Zelda : Breath of The wild</h2></div>
+        <div className={styles.pageContainer}>
+            <div className={styles.headContents}>
+                <div className={styles.gridContainer}>
+                    {/* 초록 게임 설명 칸 */}
+                    <br/><br/><br/><br/><br/>
+                    <h1>{gameData.gameTitle}</h1>
+                    <h1>{gameData.gameTitle}</h1>
+                    <h1>{gameData.gameTitle}</h1>
+                    <h1>{gameData.gameTitle}</h1>
+                    <h1>{gameData.gameTitle}</h1>
+                    <h1>{gameData.gameTitle}</h1>
                 </div>
-                <p>Hello</p>
+                <div className={styles.gameContainer}>
+                    {/* 게임, 설명, 기타등등 요소가 들어갈 칸 */}
+                    <div className={styles.rightContainer}>
+                        <div className={styles.videoArea}></div>
+                        <div className={styles.summary}></div>
+                    </div>
+                    <div className={styles.leftContainer}></div>
+                </div>
+            </div>
+            <div className={styles.midContents}>
+                {/* 리뷰 관련 영역 */}
             </div>
         </div>
     );

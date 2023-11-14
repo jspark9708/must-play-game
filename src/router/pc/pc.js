@@ -7,10 +7,14 @@ import firebaseConfig from '../../service/firebase.js'
 import styles from './pc.module.css';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 
+//data 주고받기 위한 redux 
+import { useDispatch } from 'react-redux';
+import { addDetailData } from '../../store.js';
 
 const PC = () => {
   let navigate = useNavigate();
   const [games, setGames] = useState();
+  let dispatch = useDispatch();
 
   //const game에 filter
   useEffect(() => {
@@ -40,6 +44,10 @@ const PC = () => {
     };
   }, []);
   
+  const handleGameClick = (game) => {
+    dispatch(addDetailData(game));
+    navigate(`/Detail/${game.key}`);
+  }
 
   return (
     <div className={styles.bgColor}>
@@ -58,7 +66,7 @@ const PC = () => {
             {games && games.length > 0 ? (
             <div className={`${styles.gridContainer} ${styles.grid}`}>
               {games.map((game) => (
-                <div key={game.key} onClick={()=>{navigate(`/Detail/${game.key}`)}} className={styles.gameItem}>
+                <div key={game.key} onClick={()=> handleGameClick(game)} className={styles.gameItem}>
                   <div className={styles.gameImg}>
                     <img src={game.gameCover} alt={game.gameTitle}/>
                   </div>

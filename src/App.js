@@ -7,7 +7,6 @@ import Nav from "./components/navigator/nav";
 import Main from  "./router/main/main";
 import PC from "./router/pc/pc";
 import Detail from './router/detail/detail';
-
 import './init.css';
 
 function App() {

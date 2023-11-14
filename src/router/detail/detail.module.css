@@ -1,25 +1,6 @@
 
-.bgColor{ width: 100%; height: auto; background-color:  rgb(255, 255, 255);}
+.pageContainer{ width: 100%; height: auto; background-color:  rgb(255, 255, 255);}
 
-.container {
-    
-    
+.gridContainer h1 {
+    color: red;
 }
-
-.header{
-    display:block;
-}
-
-.navCover {
-    height: 80px; background:#00ce7a;
-}
-
-.headerText {
-    background: #00ce7a;
-    height: 80px;
-    text-align: left;
-    align-items: center;
-    display: flex;
-}
-
-.headerText h2 { color: rgb(255, 255, 255); width: 70%; margin: 0 auto;}
