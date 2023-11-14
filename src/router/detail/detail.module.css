@@ -1,6 +1,11 @@
 
 .pageContainer{ width: 100%; height: auto; background-color:  rgb(255, 255, 255);}
 
-.gridContainer h1 {
-    color: red;
+.gridContainer {
+    height: 150px;
+    background: #00ce7a;
+}
+
+.gridContainer p {
+    color: black;    
 }
