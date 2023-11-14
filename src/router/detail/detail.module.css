@@ -1,11 +1,52 @@
 
 .pageContainer{ width: 100%; height: auto; background-color:  rgb(255, 255, 255);}
 
-.gridContainer {
-    height: 150px;
-    background: #00ce7a;
+
+.navCover {
+    height: 200px;
+    background-color: #00ce7a;
 }
 
-.gridContainer p {
-    color: black;    
+.headContents {
+    box-sizing: border-box;
+    position: relative;
+    top: -110px;
+}
+
+.headContents p {
+    color: black;
+}
+
+.grid {
+    display: grid;
+}
+.gridContainer{
+    width: calc(100vw - 4rem);
+    min-width: 288px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gridContainerWide {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.gridContainerWide p {
+    color: rgb(60, 60, 60);
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.gameContainer {
+    
+}
+
+.leftContainer {
+    width: 30%;
+}
+
+.videoArea iframe{
+    border-radius: 10px;
 }

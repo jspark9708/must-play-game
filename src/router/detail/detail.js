@@ -8,20 +8,37 @@ const Detail = (props) => {
 
     return (
         <div className={styles.pageContainer}>
-            <div className={styles.headContents}>
+            <div className={styles.navCover}></div>
+            <div className={`${styles.headContents} ${styles.grid} ${styles.gridContainer}`}>
                 <div className={styles.gridContainerWide}>
-                    <p>{data.develop}</p>
+                    <p>개발 : {data.develop}</p>
                 </div>
                 <div className={styles.gameContainer}>
                     {/* 게임, 설명, 기타등등 요소가 들어갈 칸 */}
                     <div className={styles.leftContainer}>
-                        <div className={styles.videoArea}></div>
-                        <div className={styles.gridContainerNarrow}>
-                            <p>{data.develop}</p>
+                        <div className={styles.videoArea}>
+                            <iframe src={data.gameVideo}></iframe>
                         </div>
-                        <div className={styles.summary}></div>
+                        <div className={styles.gridContainerNarrow}>
+                        </div>
+                        <p>{data.gameTitle}</p>
                     </div>
-                    <div className={styles.rightContainer}></div>
+                    <div className={styles.rightContainer}>
+                        <img src={data.gameBanner}></img>
+                        <div className={styles.summary}>
+                            <p>{data.gameDescript}</p>
+                        </div>
+                        {data.platform && data.platform.length > 0 && (
+                            <div>
+                                {data.platform.map((platform, index) => (
+                                    <p key={index}>{platform}</p>
+                                ))}
+                            </div>
+                        )}
+                        <div>
+                            <p>{data.link}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className={styles.midContents}>
