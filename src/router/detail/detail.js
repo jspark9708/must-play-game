@@ -35,8 +35,8 @@ const Detail = (props) => {
                                 ))}
                             </div>
                         )}
-                        <div>
-                            <p>{data.link}</p>
+                        <div className={styles.example}>
+                            <p>link: {data.steamLink}</p>
                         </div>
                     </div>
                 </div>

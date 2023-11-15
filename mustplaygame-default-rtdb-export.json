@@ -11,7 +11,7 @@
       "platform": [
         "pc"
       ],
-      "link": "https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/?l=koreana"
+      "steamLink": "https://store.steamLinkpowered.com/app/271590/Grand_Theft_Auto_V/?l=koreana"
     },
     "gta5": {
       "gameTitle": "Grand Theft Auto 5",
@@ -24,7 +24,7 @@
       "platform": [
         "pc"
       ],
-      "link": "https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/?l=koreana"
+      "steamLink": "https://store.steamLinkpowered.com/app/271590/Grand_Theft_Auto_V/?l=koreana"
     },
     "orangebox": {
       "gameTitle": "The Orange Box",
@@ -37,7 +37,7 @@
       "platform": [
         "pc"
       ],
-      "link": "https://store.steampowered.com/sub/469/"
+      "steamLink": "https://store.steamLinkpowered.com/sub/469/"
     },
     "halflife": {
       "gameTitle": "HλLF-LIFE",
@@ -50,7 +50,7 @@
       "platform": [
         "pc"
       ],
-      "link": "https://store.steampowered.com/app/70/HalfLife/"
+      "steamLink": "https://store.steamLinkpowered.com/app/70/HalfLife/"
     },
     "bioshock": {
       "gameTitle": "Bioshock",
@@ -63,7 +63,7 @@
       "platform": [
         "pc"
       ],
-      "link": "https://store.steampowered.com/app/7670/BioShock/"
+      "steamLink": "https://store.steamLinkpowered.com/app/7670/BioShock/"
     },
     "baldursgate": {
       "gameTitle": "Baldur's Gate II: Shadows of Amn",
@@ -76,7 +76,7 @@
       "platform": [
         "pc"
       ],
-      "link": "https://store.steampowered.com/app/257350/Baldurs_Gate_II_Enhanced_Edition/"
+      "steamLink": "https://store.steamLinkpowered.com/app/257350/Baldurs_Gate_II_Enhanced_Edition/"
     },
     "portal2": {
       "gameTitle": "Portal 2",
@@ -89,7 +89,7 @@
       "platform": [
         "pc"
       ],
-      "link": "https://store.steampowered.com/app/620/Portal_2/?l=koreana"
+      "steamLink": "https://store.steamLinkpowered.com/app/620/Portal_2/?l=koreana"
     },
     "skyrim5": {
       "gameTitle": "The Elder Scrolls V: Skyrim",
@@ -102,7 +102,7 @@
       "platform": [
         "pc"
       ],
-      "link": "https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/"
+      "steamLink": "https://store.steamLinkpowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/"
     },
     "masseffect2": {
       "gameTitle": "Mass Effect 2",
@@ -115,7 +115,7 @@
       "platform": [
         "pc"
       ],
-      "link": "https://store.steampowered.com/app/2362420/Mass_Effect_2_2010_Edition/"
+      "steamLink": "https://store.steamLinkpowered.com/app/2362420/Mass_Effect_2_2010_Edition/"
     },
     "gtavicecity": {
       "gameTitle": "Grand Theft Auto: Vice City",
@@ -128,7 +128,7 @@
       "platform": [
         "pc"
       ],
-      "link": "https://store.steampowered.com/app/12110/Grand_Theft_Auto_Vice_City/"
+      "steamLink": "https://store.steamLinkpowered.com/app/12110/Grand_Theft_Auto_Vice_City/"
     }
   }
 }
