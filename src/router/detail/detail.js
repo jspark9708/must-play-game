@@ -1,10 +1,20 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 import styles from './detail.module.css';
+import InfoIcon from '@mui/icons-material/Info';
 
 const Detail = (props) => {
     let data = localStorage.getItem("itemData");
     data = JSON.parse(data);
+
+    const handleClick = () => {
+        // Check if steamLink is available before redirecting
+        if (data.steamLink) {
+            window.open(data.steamLink, '_blank');
+        } else {
+            console.error('Steam Link is not available.');
+        }
+    };
+
 
     return (
         <div className={styles.pageContainer}>
@@ -12,32 +22,53 @@ const Detail = (props) => {
             <div className={`${styles.headContents} ${styles.gridContainer}`}>
                 <div className={styles.fullContainer}>
                     <div className={styles.gridContainerWide}>
-                        <p>개발 : {data.develop}</p>
+                        <p>개발 ·  {data.develop}</p>
                     </div>
                     <div className={`${styles.gameContainer} ${styles.grid}`}>
                         {/* 게임, 설명, 기타등등 요소가 들어갈 칸 */}
                         <div className={styles.leftContainer}>
                             <div className={styles.videoArea}>
-                                <iframe src={data.gameVideo}></iframe>
+                                <iframe src={data.gameVideo}
+                                frameborder="0"></iframe>
                             </div>
-                            <div className={styles.gridContainerNarrow}>
+                            <div className={styles.scoreboard}>
+                                <div>
+                                    <h3>메타스코어</h3>
+                                    <div className={styles.samerow}>
+                                        <InfoIcon sx={{fontSize:13}}/>
+                                        <p>Metacritic에서 제공하는 작품에 대한 평가를 종합한 점수입니다.</p>
+                                    </div>
+                                </div>
+                                <div className={styles.scoreBox}>{data.score}</div>
                             </div>
-                            <p>{data.gameTitle}</p>
+                            <div className={styles.gridContainerNarrow}></div>
                         </div>
                         <div className={styles.rightContainer}>
-                            <img src={data.gameBanner}></img>
-                            <div className={styles.summary}>
-                                <p>{data.gameDescript}</p>
-                            </div>
-                            {data.platform && data.platform.length > 0 && (
-                                <div>
-                                    {data.platform.map((platform, index) => (
-                                        <p key={index}>{platform}</p>
-                                    ))}
+                            <div className={styles.textContents}>
+                                <div className={styles.withLink}>
+                                    <h1>{data.gameTitle}</h1>
+                                    <div className={`${styles.release} ${styles.marginLeft}`}>
+                                        <h3>발매일</h3>
+                                        <p>{data.gameDate}</p>
+                                    </div>
+                                    <div className={`${styles.platform} ${styles.marginLeft}`}>
+                                        <h3>플랫폼</h3>
+                                        {data.platform && data.platform.length > 0 && (
+                                        <div className={styles.platformContainer}>
+                                            {data.platform.map((platform, index) => (
+                                                <p key={index} className={`${styles.platformItem} ${styles[platform]}`}>{platform}</p>
+                                            ))}
+                                        </div>
+                                        )}
+                                    </div>
+                                    
                                 </div>
-                            )}
-                            <div className={styles.example}>
-                                <p>link: {data.steamLink}</p>
+                                <div className={styles.summary}>
+                                    <p>{data.gameDescript}</p>
+                                </div>
+                                <div className={styles.linkButton} onClick={handleClick}>
+                                    <span>스팀에서 보기</span>
+                                </div>
                             </div>
                         </div>
                     </div>

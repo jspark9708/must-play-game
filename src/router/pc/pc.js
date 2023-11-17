@@ -30,7 +30,7 @@ const PC = () => {
       // 필터링된 데이터를 가져오기
       const filteredGames = Object.keys(gamesData).reduce((acc, key) => {
         const game = gamesData[key];
-        if (game.platform.includes('pc')) {
+        if (game.platform.includes('PC')) {
           acc.push({ key, ...game });
         }
         return acc;
