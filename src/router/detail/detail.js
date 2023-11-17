@@ -9,34 +9,36 @@ const Detail = (props) => {
     return (
         <div className={styles.pageContainer}>
             <div className={styles.navCover}></div>
-            <div className={`${styles.headContents} ${styles.grid} ${styles.gridContainer}`}>
-                <div className={styles.gridContainerWide}>
-                    <p>개발 : {data.develop}</p>
-                </div>
-                <div className={styles.gameContainer}>
-                    {/* 게임, 설명, 기타등등 요소가 들어갈 칸 */}
-                    <div className={styles.leftContainer}>
-                        <div className={styles.videoArea}>
-                            <iframe src={data.gameVideo}></iframe>
-                        </div>
-                        <div className={styles.gridContainerNarrow}>
-                        </div>
-                        <p>{data.gameTitle}</p>
+            <div className={`${styles.headContents} ${styles.gridContainer}`}>
+                <div className={styles.fullContainer}>
+                    <div className={styles.gridContainerWide}>
+                        <p>개발 : {data.develop}</p>
                     </div>
-                    <div className={styles.rightContainer}>
-                        <img src={data.gameBanner}></img>
-                        <div className={styles.summary}>
-                            <p>{data.gameDescript}</p>
-                        </div>
-                        {data.platform && data.platform.length > 0 && (
-                            <div>
-                                {data.platform.map((platform, index) => (
-                                    <p key={index}>{platform}</p>
-                                ))}
+                    <div className={`${styles.gameContainer} ${styles.grid}`}>
+                        {/* 게임, 설명, 기타등등 요소가 들어갈 칸 */}
+                        <div className={styles.leftContainer}>
+                            <div className={styles.videoArea}>
+                                <iframe src={data.gameVideo}></iframe>
                             </div>
-                        )}
-                        <div className={styles.example}>
-                            <p>link: {data.steamLink}</p>
+                            <div className={styles.gridContainerNarrow}>
+                            </div>
+                            <p>{data.gameTitle}</p>
+                        </div>
+                        <div className={styles.rightContainer}>
+                            <img src={data.gameBanner}></img>
+                            <div className={styles.summary}>
+                                <p>{data.gameDescript}</p>
+                            </div>
+                            {data.platform && data.platform.length > 0 && (
+                                <div>
+                                    {data.platform.map((platform, index) => (
+                                        <p key={index}>{platform}</p>
+                                    ))}
+                                </div>
+                            )}
+                            <div className={styles.example}>
+                                <p>link: {data.steamLink}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

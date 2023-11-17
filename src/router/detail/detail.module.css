@@ -20,6 +20,11 @@
 .grid {
     display: grid;
 }
+
+.fullContainer {
+    display: block;
+}
+
 .gridContainer{
     width: calc(100vw - 4rem);
     min-width: 288px;
@@ -31,22 +36,82 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .gridContainerWide p {
     color: rgb(60, 60, 60);
-    font-weight: 600;
+    font-weight: 800;
     margin-right: 20px;
 }
 
+/* 첫 왼쪽 그리드와 오른쪽 그리드를 합친 곳  (동영상, 설명, 기타등등) */
 .gameContainer {
-    
+    /* c-productHero_player-scoreInfo */
+    height: auto;
+    grid-gap: 0;
+    gap: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: rgb(169, 116, 116);
+    /* g-grid-container */
+    min-width: 288px;
+    margin-left: auto;
+    margin-right:auto;
 }
 
+/* 좌측 */
 .leftContainer {
-    width: 30%;
+    grid-column: 1; /* 왼쪽에 위치하도록 설정 */
 }
 
-.videoArea iframe{
+/* TODO: 비디오 크기 조절 추후 변경 */
+.videoArea {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 비율의 비디오 크기를 위한 값 */
+}
+
+.videoArea iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
+}
+
+/* 우측 */
+.rightContainer {
+    grid-column: 2; /* 오른쪽에 위치하도록 설정 */
+}
+
+.rightContainer img {
+    width: 100px;
+}
+
+@media (min-width: 1440px) {
+    .gameContainer{
+        grid-template-columns: 1fr 443px;
+        width: 1296px;
+        max-width: 1440px;
+    }
+    .gridContainerWide {
+        width: 1296px;
+        max-width: 1440px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+    .gameContainer{
+        grid-template-columns: 1fr 443px;
+    }
+}
+
+@media (max-width: 767px) {
+    .gameContainer{
+        grid-template-columns: 1fr 443px;
+    }
 }
