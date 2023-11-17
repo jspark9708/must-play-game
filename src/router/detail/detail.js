@@ -27,6 +27,7 @@ const Detail = (props) => {
                     <div className={`${styles.gameContainer} ${styles.grid}`}>
                         {/* 게임, 설명, 기타등등 요소가 들어갈 칸 */}
                         <div className={styles.leftContainer}>
+                            {/* 비디오 */}
                             <div className={styles.videoArea}>
                                 <iframe src={data.gameVideo}
                                 frameborder="0"></iframe>
@@ -43,6 +44,7 @@ const Detail = (props) => {
                             </div>
                             <div className={styles.gridContainerNarrow}></div>
                         </div>
+                        {/* 게임 제목, 플랫폼 등 */}
                         <div className={styles.rightContainer}>
                             <div className={styles.textContents}>
                                 <div className={styles.withLink}>
@@ -61,9 +63,9 @@ const Detail = (props) => {
                                         </div>
                                         )}
                                     </div>
-                                    
                                 </div>
-                                <div className={styles.summary}>
+                                {/* 게임 설명 */}
+                                <div className={styles.description}>
                                     <p>{data.gameDescript}</p>
                                 </div>
                                 <div className={styles.linkButton} onClick={handleClick}>
