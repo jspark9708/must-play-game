@@ -11,7 +11,7 @@ import Detail from './router/detail/detail';
 import './init.css';
 
 function App() {
-
+  
   /* 로그인 */
   const authService = new AuthService();
 
@@ -24,6 +24,8 @@ function App() {
   function loginData(user){
     console.log(user);
     localStorage.setItem("emailCheck", user.emailVerified);
+    localStorage.setItem("userDisplayName", user.displayName);
+    localStorage.setItem("userPhotoURL", user.photoURL);
     loginCheck();
   }
 

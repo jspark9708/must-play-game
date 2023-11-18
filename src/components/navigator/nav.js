@@ -1,12 +1,14 @@
-import { React, useRef, useState } from "react";
+import { React, useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from './nav.module.css';
 import AuthService from '../../service/auth';
+import firebaseApp from '../../service/firebase'; // firebase.js 파일의 경로에 맞게 수정
 
 const Nav = (props) => {
   let slideMenu = useRef(null);
   let hamburger = useRef(null);
   let [pageState, setPageState] = useState(null);
+  
   const authService = new AuthService();
 
   /* 슬라이드 메뉴 */
@@ -45,13 +47,23 @@ const Nav = (props) => {
               </li>
             </ul>
           </div>
+          {
+            props.emailCheck === false ?
+            <div></div>
+            :
+            <div className={styles.userProfileContainer}>
+              <img src={localStorage.getItem("userPhotoURL")} alt="Profile"></img>
+              <span>{localStorage.getItem("userDisplayName")}</span>
+            </div>
+          }
           <div className={styles.login}>
             <ul>
               {
                 props.emailCheck === false ?
                 <li className={styles.login_btt} onClick={props.onLogin}><em>LOGIN</em></li>
                 :
-                <li className={styles.login_btt} onClick={props.onLogout}><em>LOGOUT</em>
+                <li className={styles.login_btt}>
+                  <em onClick={props.onLogout}>LOGOUT</em>
                 </li>
               }
               <li className={`${styles.hamburger} hamburger`} onClick={(e)=>sliderOpen(e.currentTarget)} ref={hamburger}>

@@ -17,7 +17,7 @@
     align-items: center;
 }
 
-.logo { align-items: center; display: block; margin-right: 70px; }
+.logo { align-items: center; display: block; }
   
 .logoContent { display: flex; align-items: center; } 
 
@@ -41,8 +41,14 @@
 .login ul li em{ font-size: 14px; color: #ffffff; }
 .login ul li em .search_icon{ margin-left: 5px;}
 .login ul li em .cart_icon{ font-size: 16px; }
-.login_btt{ cursor: pointer; }
-
+.userProfileContainer{ display: flex; align-items: center;}
+.userProfileContainer img {
+    width: 20px;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+.userProfileContainer span { color: white; font-size: 15px; margin-right: 30px;}
+.login_btt em {  cursor: pointer; }
 .hamburger.active span {
     background: #000000; /* 원하는 다른 색상 */
 }
