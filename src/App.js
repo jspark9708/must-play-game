@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import AuthService from "./service/auth";
+import firebaseApp from './service/firebase';
 import Footer from "./components/footer/footer"
 import "./App.css";
 import Nav from "./components/navigator/nav";
@@ -37,9 +38,23 @@ function App() {
     }
   };
 
+  function onLogout(){
+      firebaseApp.auth().signOut()
+      .then(() => {
+        setEmailCheck(false);
+        // 로그아웃 성공 시 로컬 스토리지와 상태 초기화
+        localStorage.removeItem("emailCheck");
+        localStorage.setEmailCheck(false);
+        localStorage.loginData(null); // 또는 다른 방법으로 사용자 정보를 초기화
+      })
+      .catch((error) => {
+        console.error("로그아웃 에러:", error);
+      });
+  }
+
   return (
     <div className="App">
-      <Nav loginData={loginData} emailCheck={emailCheck} setEmailCheck={setEmailCheck} onLogin={onLogin}></Nav>
+      <Nav loginData={loginData} emailCheck={emailCheck} setEmailCheck={setEmailCheck} onLogin={onLogin} onLogout={onLogout}></Nav>
       <Routes>
         <Route path="/" element={<Main></Main>}></Route>
         <Route path="/PC" element={<PC></PC>}></Route>

@@ -22,7 +22,7 @@
 }
 
 .gridContainer{
-    width: calc(100vw - 10rem);
+    width: calc(100vw - 5rem);
     min-width: 288px;
     margin-left: auto;
     margin-right: auto;
@@ -177,11 +177,11 @@
 
 /* 각 플랫폼에 따른 배경색 설정 */
 .platformItem.PC {
-    background-color: #FFDAB9;
+    background-color: #87CEEB;
 }
 
 .platformItem.PS {
-    background-color: #87CEEB;
+    background-color: #A3D197;
 }
 
 .platformItem.Switch {

@@ -1,11 +1,13 @@
 import { React, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from './nav.module.css';
+import AuthService from '../../service/auth';
 
 const Nav = (props) => {
   let slideMenu = useRef(null);
   let hamburger = useRef(null);
   let [pageState, setPageState] = useState(null);
+  const authService = new AuthService();
 
   /* 슬라이드 메뉴 */
   function sliderOpen(e){
@@ -16,11 +18,6 @@ const Nav = (props) => {
   function sliderClose(){
     hamburger.current.classList.remove(`${styles.active}`);
     slideMenu.current.classList.remove(`${styles.active}`);
-  }
-
-  function logout(){
-    localStorage.removeItem("emailCheck");
-    props.setEmailCheck(false);
   }
 
   return (
@@ -54,7 +51,8 @@ const Nav = (props) => {
                 props.emailCheck === false ?
                 <li className={styles.login_btt} onClick={props.onLogin}><em>LOGIN</em></li>
                 :
-                <li className={styles.login_btt} onClick={logout}><em>LOGOUT</em></li>
+                <li className={styles.login_btt} onClick={props.onLogout}><em>LOGOUT</em>
+                </li>
               }
               <li className={`${styles.hamburger} hamburger`} onClick={(e)=>sliderOpen(e.currentTarget)} ref={hamburger}>
                 <span></span>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './detail.module.css';
 import InfoIcon from '@mui/icons-material/Info';
+import Review from '../../components/review/review'
 
 const Detail = (props) => {
     let data = localStorage.getItem("itemData");
@@ -77,7 +78,7 @@ const Detail = (props) => {
                 </div>
             </div>
             <div className={styles.midContents}>
-                {/* 리뷰 관련 영역 */}
+                <Review/>
             </div>
             <div className={styles.tailContents}>
                 {/* 트위치 방송 API 관련 영역 */}
