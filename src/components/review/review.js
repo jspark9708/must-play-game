@@ -7,6 +7,7 @@ const Review = () => {
   const [rating, setRating] = useState(0);
   const [isReviewSubmitted, setReviewSubmitted] = useState(false);
   const [reviews, setReviews] = useState([]);
+  const [currentLength, setCurrentLength] = useState(0);
 
   let data = localStorage.getItem('itemData');
   data = JSON.parse(data);
@@ -90,7 +91,7 @@ const Review = () => {
       {isReviewSubmitted ? (
         <p style={{ color: 'green' }}>리뷰가 성공적으로 제출되었습니다!</p>
       ) : (
-        <div>
+        <div className={styles.test}>
           <label>
             Rating: {rating}
             <input
@@ -105,8 +106,16 @@ const Review = () => {
             placeholder="리뷰 작성"
             rows={4}
             value={reviewText}
-            onChange={(e) => setReviewText(e.target.value)}
+            onChange={(e) => {
+              const inputText = e.target.value;
+              if (inputText.length <= 200) {
+                setReviewText(inputText);
+                setCurrentLength(inputText.length);
+              }
+            }}
+            maxLength={200}
           />
+          <p>{currentLength}/200</p>
           <button onClick={handleReviewSubmit}>리뷰 제출</button>
         </div>
       )}
