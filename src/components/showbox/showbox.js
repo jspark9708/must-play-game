@@ -32,7 +32,7 @@ const Showbox = () => {
                 <div className={styles.gameContainer}>
                     <div className={styles.imgContainer}>
                         <div ref={ref_item1} className={inViewItem1 ? styles.show_itemL : `${styles.hide} ${styles.translateLTR_item}`}>
-                            <img src={`${process.env.PUBLIC_URL}/img/game3.jpeg`} width={280}></img>
+                            <img src={`${process.env.PUBLIC_URL}/img/game3.jpeg`}></img>
                             <div className={styles.scoreOverlay}>97</div>
                         </div>
                         <div className={styles.commentsR}>
@@ -44,7 +44,7 @@ const Showbox = () => {
                     </div>
                     <div className={styles.imgContainer}>
                         <div ref={ref_item2} className={inViewItem2 ? styles.show_itemR : `${styles.hide} ${styles.translateRTL_item}`}>
-                            <img src={`${process.env.PUBLIC_URL}/img/game2.jpeg`} width={280}></img>
+                            <img src={`${process.env.PUBLIC_URL}/img/game2.jpeg`}></img>
                             <div className={styles.scoreOverlay}>97</div>
                         </div>
                         <div className={styles.commentsL}>
@@ -56,7 +56,7 @@ const Showbox = () => {
                     </div>
                     <div className={styles.imgContainer}>
                         <div  ref={ref_item3} className={inViewItem3 ? styles.show_itemL : `${styles.hide} ${styles.translateLTR_item}`}>
-                            <img src={`${process.env.PUBLIC_URL}/img/game1.jpeg`} width={280}></img>
+                            <img src={`${process.env.PUBLIC_URL}/img/game1.jpeg`}></img>
                             <div className={styles.scoreOverlay}>95</div>
                         </div>
                         <div className={styles.commentsR}>

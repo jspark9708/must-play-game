@@ -47,15 +47,17 @@ const Nav = (props) => {
               </li>
             </ul>
           </div>
-          {
-            props.emailCheck === false ?
-            <div></div>
-            :
-            <div className={styles.userProfileContainer}>
-              <img src={localStorage.getItem("userPhotoURL")} alt="Profile"></img>
-              <span>{localStorage.getItem("userDisplayName")}</span>
-            </div>
-          }
+          <div className={styles.userStatus}>
+            {
+              props.emailCheck === false ?
+              <div></div>
+              :
+              <div className={styles.userProfileContainer}>
+                <img src={localStorage.getItem("userPhotoURL")} alt="Profile"></img>
+                <span>{localStorage.getItem("userDisplayName")}</span>
+              </div>
+            }
+          </div>
           <div className={styles.login}>
             <ul>
               {

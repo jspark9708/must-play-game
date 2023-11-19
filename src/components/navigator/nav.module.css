@@ -17,7 +17,7 @@
     align-items: center;
 }
 
-.logo { align-items: center; display: block; }
+.logo { align-items: center; display: block; margin-right: 20px;}
   
 .logoContent { display: flex; align-items: center; } 
 
@@ -35,6 +35,13 @@
 }
 .slideMenu ul li.active em{ color: #FDBB3D; }
 .slideMenu ul li em:hover{ color: #FDBB3D; }
+
+.userStatus { 
+    position: absolute;
+    right: 130px;
+    z-index: -1;
+    margin-bottom: 4px;
+}
 
 .login ul{ display: flex; align-items: center; }
 .login ul li{ margin-left: 30px; }
@@ -97,4 +104,6 @@
     }
 
     .hamburger{display: block;}
+
+    .userStatus { display: none }
 }
