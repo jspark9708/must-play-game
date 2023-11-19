@@ -11,6 +11,8 @@ const Review = () => {
   let data = localStorage.getItem('itemData');
   data = JSON.parse(data);
 
+  const userEmail = localStorage.getItem('userEmail');
+
   //리뷰 작성
   const handleReviewSubmit = () => {
     const emailCheck = localStorage.getItem('emailCheck');
@@ -22,6 +24,7 @@ const Review = () => {
         text: reviewText,
         rating: rating,
         user: localStorage.getItem('userDisplayName'),
+        email: localStorage.getItem('userEmail'),
       };
 
       firebaseApp
@@ -32,7 +35,7 @@ const Review = () => {
           setReviewText('');
           setRating(0);
           setReviewSubmitted(true);
-          console.error('리뷰 저장 성공');
+          console.log('리뷰 저장 성공');
         })
         .catch((error) => {
           console.error('리뷰 저장 에러:', error);
@@ -114,8 +117,10 @@ const Review = () => {
             <li key={review.id}>
               <p>
                 평점: {review.rating} - 작성자: {review.user}
-                <button onClick={() => handleReviewDelete(review.id)}>삭제</button>
-              </p>
+                {userEmail === review.email && ( // 이 부분을 추가
+                  <button onClick={() => handleReviewDelete(review.id)}>삭제</button>
+                )}
+                </p>
               <p>{review.text}</p>
             </li>
           ))}
