@@ -60,7 +60,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main></Main>}></Route>
         <Route path="/PC" element={<PC></PC>}></Route>
-        <Route path="/Detail/:id" element={<Detail></Detail>}></Route>
+        <Route path="/Detail/:id" loginData={loginData} emailCheck={emailCheck} onLogout={onLogout} element={<Detail></Detail>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

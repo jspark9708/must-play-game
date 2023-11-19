@@ -1,1 +1,20 @@
 .test p { color: red; }
+
+.MuiRating-root {
+    display: flex;
+    align-items: center;
+  }
+  
+  .MuiRating-iconEmpty,
+  .MuiRating-iconFilled {
+    color: #e0e0e0; /* 빈 별점의 색상 */
+    fontSize: 2rem; /* 별 아이콘 크기 */
+  }
+  
+  .MuiRating-iconFilled {
+    color: #ffcc00; /* 채워진 별점의 색상 */
+  }
+
+  .reviewList h1, .reviewList p{
+    color: black;
+  }
