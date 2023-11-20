@@ -35,7 +35,7 @@ const Detail = (props) => {
                             </div>
                             <div className={styles.scoreboard}>
                                 <div>
-                                    <h3>메타스코어</h3>
+                                    <h2>메타스코어</h2>
                                     <div className={styles.samerow}>
                                         <InfoIcon sx={{fontSize:13}}/>
                                         <p>Metacritic에서 제공하는 작품에 대한 평가를 종합한 점수입니다.</p>
@@ -77,7 +77,7 @@ const Detail = (props) => {
                     </div>
                 </div>
             </div>
-            <div className={styles.midContents}>
+            <div className={`${styles.midContents} ${styles.gridContainer}`}>
                 <Review/>
             </div>
             <div className={styles.tailContents}>
