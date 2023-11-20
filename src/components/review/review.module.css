@@ -1,1 +1,59 @@
-.test p { color: red; }
+.test p {
+  color: red;
+}
+
+.reviewList h1,
+.reviewList p {
+  color: black;
+}
+
+.gridContainer {
+  width: calc(100vw - 5rem);
+  min-width: 288px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gridContainer h2 {color: black;}
+.gridContainer p {color: black;}
+
+.titleText {
+  display: flex;
+  margin-top: 1rem;
+  padding: 0 0.5rem;
+  color: #666666;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #262626;
+}
+
+.titleText p {
+  margin: 0;
+  margin-left: 3px;
+  font-weight: 400;
+  color: #555555;
+}
+.samerow {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-left: -1px;
+}
+
+@media (min-width: 1440px) {
+  .reviewContainer{
+      grid-template-columns: 1fr 443px;
+      width: 1296px;
+      max-width: 1440px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .reviewContainer{
+      grid-template-columns: 1fr 443px;
+  }
+}
+
+@media (max-width: 767px) {
+  .reviewContainer{
+      grid-template-columns: 1fr 443px;
+  }
+}

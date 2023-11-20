@@ -237,6 +237,11 @@
     background-color: #eeeeee; /* 클릭 시 배경색 변경 */
 }
 
+.midContents {
+    box-sizing: border-box;
+    position: relative;
+    top: -110px;
+}
 
 @media (min-width: 1440px) {
     .gameContainer{

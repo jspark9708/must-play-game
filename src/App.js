@@ -24,8 +24,9 @@ function App() {
   function loginData(user){
     console.log(user);
     localStorage.setItem("emailCheck", user.emailVerified);
-    localStorage.setItem("userDisplayName", user.displayName);
-    localStorage.setItem("userPhotoURL", user.photoURL);
+    localStorage.setItem("userDisplayName", user.displayName);//사용자 이름 사용
+    localStorage.setItem("userPhotoURL", user.photoURL);      //사용자 사진 사용
+    localStorage.setItem("userEmail", user.email);            //사용자 이메일로 본인 비교용
     loginCheck();
   }
 
@@ -46,6 +47,7 @@ function App() {
         setEmailCheck(false);
         // 로그아웃 성공 시 로컬 스토리지와 상태 초기화
         localStorage.removeItem("emailCheck");
+        localStorage.removeItem("userEmail"); // userEmail 값 삭제 추가
         localStorage.setEmailCheck(false);
         localStorage.loginData(null); // 또는 다른 방법으로 사용자 정보를 초기화
       })
@@ -60,7 +62,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main></Main>}></Route>
         <Route path="/PC" element={<PC></PC>}></Route>
-        <Route path="/Detail/:id" element={<Detail></Detail>}></Route>
+        <Route path="/Detail/:id" loginData={loginData} emailCheck={emailCheck} onLogout={onLogout} element={<Detail></Detail>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
