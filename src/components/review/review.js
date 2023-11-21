@@ -95,7 +95,10 @@ const Review = () => {
     setIsModalOpen(true);
   };
   const closeModal = () => {
+    setReviewText(""); // 텍스트 에어리어의 데이터 초기화
+    setCurrentLength(0); // 길이 표시 초기화
     setIsModalOpen(false);
+    setReviewSubmitted(false);
   };
 
   const handleRatingChange = (rating) => {
@@ -145,8 +148,10 @@ const Review = () => {
                     </div>
                     <div className={styles.sliderContainer}>
                       <Slider onRatingChange={handleRatingChange} />
+                    </div>
+                    <div className={styles.textareaContainer}>
                       <textarea
-                        placeholder="리뷰 작성"
+                        placeholder="이곳에 리뷰를 작성해주세요"
                         rows={4}
                         value={reviewText}
                         onChange={(e) => {
@@ -158,77 +163,37 @@ const Review = () => {
                         }}
                         maxLength={200}
                       />
+                      <p>{currentLength}/200</p>
                     </div>
-                    <p>{currentLength}/200</p>
-                    <button onClick={handleReviewSubmit}>리뷰 제출</button>
+                    <div className={styles.buttonSet}>
+                      <button onClick={closeModal}>작성 취소</button>
+                      <button onClick={handleReviewSubmit}>리뷰 제출</button>
+                    </div>
                   </div>
                 </div>
               )}
             </div>
           </div>
         )}
-      </div>
-    </div>
-    /*
-    <div>
-      <div className={styles.gridContainer}>
-        <div className={styles.reviewContainer}>
-          <div className={styles.titleText}>
-            <h2>유저 평점</h2>
-          </div>
-          {isReviewSubmitted ? (
-            <p style={{ color: "green" }}>리뷰가 성공적으로 제출되었습니다!</p>
-          ) : (
-            <div className={styles.test}>
-              <label>
-                Rating: {rating}
-                <input
-                  type="range"
-                  min="1"
-                  max="100"
-                  value={rating}
-                  onChange={(e) => setRating(e.target.value)}
-                />
-              </label>
-              <textarea
-                placeholder="리뷰 작성"
-                rows={4}
-                value={reviewText}
-                onChange={(e) => {
-                  const inputText = e.target.value;
-                  if (inputText.length <= 200) {
-                    setReviewText(inputText);
-                    setCurrentLength(inputText.length);
-                  }
-                }}
-                maxLength={200}
-              />
-              <p>{currentLength}/200</p>
-              <button onClick={handleReviewSubmit}>리뷰 제출</button>
-            </div>
-          )}
-          <div className={styles.reviewList}>
-            <h1>리뷰 목록</h1>
-            <ul>
-              {reviews.map((review) => (
-                <li key={review.id}>
-                  <p>
-                    평점: {review.rating} - 작성자: {review.user}
-                    {userEmail === review.email && ( // 이 부분을 추가
-                      <button onClick={() => handleReviewDelete(review.id)}>
-                        삭제
-                      </button>
-                    )}
-                  </p>
-                  <p>{review.text}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className={styles.reviewList}>
+          <ul>
+            {reviews.map((review) => (
+              <li key={review.id}>
+                <p>
+                  평점: {review.rating} - 작성자: {review.user}
+                  {userEmail === review.email && ( // 이 부분을 추가
+                    <button onClick={() => handleReviewDelete(review.id)}>
+                      삭제
+                    </button>
+                  )}
+                </p>
+                <p>{review.text}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
-    */
   );
 };
 

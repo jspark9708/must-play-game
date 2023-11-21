@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './slider.css';
+import React, { useState } from "react";
+import "./slider.css";
 
 const RatingSlider = ({ onRatingChange }) => {
   const [rating, setRating] = useState(null);
@@ -15,13 +15,13 @@ const RatingSlider = ({ onRatingChange }) => {
 
   const getRatingColor = (selectedRating) => {
     if (selectedRating >= 1 && selectedRating <= 3) {
-      return 'red';
+      return "#ff6874";
     } else if (selectedRating >= 4 && selectedRating <= 7) {
-      return 'orange';
+      return "#ffbd3f";
     } else if (selectedRating >= 8 && selectedRating <= 10) {
-      return 'green';
+      return "#00ce7a";
     } else {
-      return 'gray'; // 그 외의 값은 회색으로 처리
+      return "rgba(128, 128, 128, 0.4)"; // 회색 및 50% 투명도
     }
   };
 
@@ -43,7 +43,11 @@ const RatingSlider = ({ onRatingChange }) => {
     for (let i = 1; i <= 10; i++) {
       const cellStyle = {
         backgroundColor: getCellColor(i),
-        opacity: (rating !== null && i > rating) || (hoveredRating !== null && i > hoveredRating) ? 0.5 : 1,
+        opacity:
+          (rating !== null && i > rating) ||
+          (hoveredRating !== null && i > hoveredRating)
+            ? 0.4
+            : 1,
       };
       cells.push(
         <div
@@ -61,12 +65,16 @@ const RatingSlider = ({ onRatingChange }) => {
 
   return (
     <div className="rating-slider">
-      <label>
-        Rating: {rating !== null ? rating : ''}
-        <div className="slider-container">
-          {renderSliderCells()}
-        </div>
-      </label>
+      <div
+        className="rate-circle"
+        style={{ backgroundColor: getRatingColor(rating) }}
+      >
+        <p>{rating !== null ? rating : ""}</p>
+      </div>
+      <div className="rating-container">
+        <p>내 점수</p>
+        <div className="slider-container">{renderSliderCells()}</div>
+      </div>
     </div>
   );
 };

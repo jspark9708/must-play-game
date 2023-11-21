@@ -1,32 +1,59 @@
 .rating-slider {
-    margin-top: 20px;
-  }
-  
-  .slider-container {
-    display: flex;
-  }
-  
-  .slider-cell {
-    flex: 1;
-    padding: 5px;
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-  }
-  
-  .slider-cell.red {
-    background-color: rgba(255, 0, 0, 0.5);
-  }
-  
-  .slider-cell.orange {
-    background-color: rgba(255, 165, 0, 0.5);
-  }
-  
-  .slider-cell.green {
-    background-color: rgba(0, 128, 0, 0.5);
-  }
-  
-  .slider-cell.grey {
-    background-color: #808080;
-  }
+  display: flex;
+  align-items: center;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid #979797;
+}
+
+.rating-slider p {
+  color: black;
+}
+
+.rate-circle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #ccc; /* 기본 배경색 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 15px 0px 5px;
+}
+
+.rate-circle p {
+  color: #fff; /* 텍스트 색상 */
+  font-size: 1.5rem; /* 조절 가능한 글꼴 크기 */
+  font-weight: 800;
+  margin: 0; /* 텍스트 주변 여백 제거 */
+}
+
+.rating-container {
+  display: block;
+  width: 80%;
+}
+
+.rating-container p {
+    margin: 0 0 15px 1px;
+}
+
+.slider-container {
+  display: flex;
+}
+
+.slider-cell {
+  flex: 1;
+  padding: 6px 0px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+}
+
+.slider-cell:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.slider-cell:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
