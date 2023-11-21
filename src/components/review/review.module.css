@@ -161,9 +161,9 @@
   border-bottom: 1px solid #262626;
 }
 
-.scoreOverview { display: flex;
+.scoreOverview {
+  display: flex;
   align-items: center;
-  margin-left: auto; margin-right: auto;
  }
 
 .userScore p{
@@ -173,7 +173,6 @@
 .reviewOverview { 
   display: flex;
   align-items: center;
-  margin-left: auto; margin-right: auto;
 }
 
 .reviewGraph {display: flex;}
