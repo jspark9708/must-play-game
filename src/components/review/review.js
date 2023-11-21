@@ -245,6 +245,7 @@ const Review = () => {
               </div>
             </div>
             <div className={styles.reviewOverview}>
+              <div>
               <div className={styles.reviewGraph}>
                 {reviewOverviewData.ratingsCount.map((count, index) => (
                   <div
@@ -279,31 +280,10 @@ const Review = () => {
                     .reduce((sum, count) => sum + count, 0)}
                 </p>
               </div>
+              </div>
             </div>
           </div>
-          {/*
-          <div className={styles.reviewOverview}>
-            <p>리뷰 개수: {reviewOverviewData.reviewCount}</p>
-            <p>평균 평점: {reviewOverviewData.averageRating.toFixed(1)}</p>
-            <p>
-              나쁨 :{" "}
-              {reviewOverviewData.ratingsCount
-                .slice(1, 4)
-                .reduce((sum, count) => sum + count, 0)}
-            </p>
-            <p>
-              보통 :{" "}
-              {reviewOverviewData.ratingsCount
-                .slice(4, 8)
-                .reduce((sum, count) => sum + count, 0)}
-            </p>
-            <p>
-              좋음 :{" "}
-              {reviewOverviewData.ratingsCount
-                .slice(8, 11)
-                .reduce((sum, count) => sum + count, 0)}
-            </p>
-          </div>
+          
           <div className={styles.reviewList}>
             <ul>
               {reviews.map((review) => (
@@ -321,7 +301,6 @@ const Review = () => {
               ))}
             </ul>
           </div>
-              */}
         </div>
       </div>
     </div>

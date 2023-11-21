@@ -83,10 +83,10 @@
 
 .scoreboard {
     display: flex;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     padding: 0 0.5rem;
     color: #666666;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
     border-bottom:1px solid #262626;
 }
 
@@ -202,8 +202,8 @@
 .description {
     border-top:1px solid #262626;
     padding-top: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
     align-self: center;
 }
 
