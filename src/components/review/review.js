@@ -150,7 +150,7 @@ const Review = () => {
     averageRating: 0,
     ratingsCount: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   });
-  
+
   const getBarColor = (score) => {
     if (score >= 1 && score <= 3) {
       return "red"; // 1점부터 3점까지 빨간색
@@ -246,18 +246,39 @@ const Review = () => {
             </div>
             <div className={styles.reviewOverview}>
               <div className={styles.reviewGraph}>
-              {reviewOverviewData.ratingsCount.map((count, index) => (
+                {reviewOverviewData.ratingsCount.map((count, index) => (
                   <div
                     key={index}
                     style={{
                       height: "20px", // 막대의 높이 설정
-                      width: `${(count / reviewOverviewData.reviewCount) * 300}px`, // 비율에 따라 너비 설정
+                      width: `${
+                        (count / reviewOverviewData.reviewCount) * 100
+                      }%`, // 비율에 따라 너비 설정
                       backgroundColor: getBarColor(index + 1), // 각 점수대에 따른 색상 설정
                     }}
                   ></div>
                 ))}
               </div>
-              <div classNane={styles.reviewSum}></div>
+              <div className={styles.reviewSum}>
+                <p>
+                  나쁨 :{" "}
+                  {reviewOverviewData.ratingsCount
+                    .slice(1, 4)
+                    .reduce((sum, count) => sum + count, 0)}
+                </p>
+                <p>
+                  보통 :{" "}
+                  {reviewOverviewData.ratingsCount
+                    .slice(4, 8)
+                    .reduce((sum, count) => sum + count, 0)}
+                </p>
+                <p>
+                  좋음 :{" "}
+                  {reviewOverviewData.ratingsCount
+                    .slice(8, 11)
+                    .reduce((sum, count) => sum + count, 0)}
+                </p>
+              </div>
             </div>
           </div>
           {/*
