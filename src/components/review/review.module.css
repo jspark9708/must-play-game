@@ -164,6 +164,7 @@
 .scoreOverview {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
  }
 
 .userScore p{
@@ -173,6 +174,7 @@
 .reviewOverview { 
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .reviewGraph {display: flex;}
