@@ -108,7 +108,7 @@ const Review = () => {
   useEffect(() => {
     const gameId = data.gameTitle;
     const reviewsRef = firebaseApp.database().ref(`reviews/${gameId}`);
-
+  
     reviewsRef.on("value", (snapshot) => {
       const reviewData = snapshot.val();
       if (reviewData) {
@@ -117,7 +117,7 @@ const Review = () => {
           ...value,
         }));
         setReviews(reviewsArray);
-
+  
         // 추가: 리뷰 개수, 평균 평점, 각 점수대의 개수 계산
         const reviewCount = reviewsArray.length;
         const averageRating =
@@ -125,39 +125,46 @@ const Review = () => {
             ? reviewsArray.reduce((sum, review) => sum + review.rating, 0) /
               reviewCount
             : 0;
-        const ratingsCount = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // 0부터 10까지의 각 점수대 개수
-
+        const ratingsCount = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // 0부터 10까지의 각 점수대 개수
+  
         reviewsArray.forEach((review) => {
           ratingsCount[review.rating]++;
         });
-
+  
         // 리뷰 개수, 평균 평점, 각 점수대 개수를 상태로 저장
         setReviewOverviewData({
           reviewCount,
           averageRating,
           ratingsCount,
         });
+      } else {
+        // 리뷰가 없을 경우 초기값으로 설정
+        setReviewOverviewData({
+          reviewCount: 0,
+          averageRating: 0,
+          ratingsCount: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        });
       }
     });
-
+  
     return () => {
       reviewsRef.off("value");
     };
   }, []);
-
+  
   const [reviewOverviewData, setReviewOverviewData] = useState({
     reviewCount: 0,
     averageRating: 0,
-    ratingsCount: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    ratingsCount: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   });
 
   const getBarColor = (score) => {
     if (score >= 1 && score <= 3) {
-      return "red"; // 1점부터 3점까지 빨간색
+      return "#ff6874"; // 1점부터 3점까지 빨간색
     } else if (score >= 4 && score <= 7) {
-      return "yellow"; // 4점부터 7점까지 노란색
+      return "#ffbd3f"; // 4점부터 7점까지 노란색
     } else if (score >= 8 && score <= 10) {
-      return "green"; // 8점부터 10점까지 초록색
+      return "#00ce7a"; // 8점부터 10점까지 초록색
     } else {
       return "gray"; // 그 외의 경우 회색
     }
@@ -246,44 +253,44 @@ const Review = () => {
             </div>
             <div className={styles.reviewOverview}>
               <div>
-              <div className={styles.reviewGraph}>
-                {reviewOverviewData.ratingsCount.map((count, index) => (
-                  <div
-                    key={index}
-                    style={{
-                      height: "20px", // 막대의 높이 설정
-                      width: `${
-                        (count / reviewOverviewData.reviewCount) * 100
-                      }%`, // 비율에 따라 너비 설정
-                      backgroundColor: getBarColor(index + 1), // 각 점수대에 따른 색상 설정
-                    }}
-                  ></div>
-                ))}
-              </div>
-              <div className={styles.reviewSum}>
-                <p>
-                  나쁨 :{" "}
-                  {reviewOverviewData.ratingsCount
-                    .slice(1, 4)
-                    .reduce((sum, count) => sum + count, 0)}
-                </p>
-                <p>
-                  보통 :{" "}
-                  {reviewOverviewData.ratingsCount
-                    .slice(4, 8)
-                    .reduce((sum, count) => sum + count, 0)}
-                </p>
-                <p>
-                  좋음 :{" "}
-                  {reviewOverviewData.ratingsCount
-                    .slice(8, 11)
-                    .reduce((sum, count) => sum + count, 0)}
-                </p>
-              </div>
+                <div className={styles.reviewGraph}>
+                  {reviewOverviewData.ratingsCount.map((count, index) => (
+                    <div
+                      key={index}
+                      className={styles.progressBar}
+                      style={{
+                        width: `${
+                          (count / reviewOverviewData.reviewCount) * 100
+                        }%`, // 비율에 따라 너비 설정
+                        backgroundColor: getBarColor(index), // 각 점수대에 따른 색상 설정
+                      }}
+                    ></div>
+                  ))}
+                </div>
+                <div className={styles.reviewSum}>
+                  <p>
+                    나쁨 :{" "}
+                    {reviewOverviewData.ratingsCount
+                      .slice(1, 4)
+                      .reduce((sum, count) => sum + count, 0)}
+                  </p>
+                  <p>
+                    보통 :{" "}
+                    {reviewOverviewData.ratingsCount
+                      .slice(4, 8)
+                      .reduce((sum, count) => sum + count, 0)}
+                  </p>
+                  <p>
+                    좋음 :{" "}
+                    {reviewOverviewData.ratingsCount
+                      .slice(8, 11)
+                      .reduce((sum, count) => sum + count, 0)}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          
+
           <div className={styles.reviewList}>
             <ul>
               {reviews.map((review) => (

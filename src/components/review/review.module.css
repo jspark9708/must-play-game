@@ -1,6 +1,6 @@
 .componentArea {
   width: calc(100vw - 5rem);
-  margin: 30px 0;
+  margin: 60px 0 30px 0;
   max-width: 1296px; /* 임시 - 반응형 수정 필요 */
   margin-left: auto;
   margin-right: auto;
@@ -154,9 +154,10 @@
 
 .overview {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-gap: 1.25rem;
   margin-top: auto;
+  width: 100%;
   padding-bottom: 30px;
   border-bottom: 1px solid #262626;
 }
@@ -167,24 +168,51 @@
   justify-content: space-evenly;
  }
 
+ .userScore {
+ }
+
+ .scoreOverlay {
+  background-color: #00ce7a;
+  border-radius: 50%;
+  width: 100px; /* 너비 설정 */
+  height: 100px; /* 높이 설정 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgb(51, 51, 51);
+}
+
+.userScore h4 {
+  font-size: 1.5rem;
+}
+
 .userScore p{
   color: black;
+  font-size: 1.5rem;
 }
 
 .reviewOverview { 
-  display: flex;
+  display: block;
   align-items: center;
-  justify-content: space-evenly;
+  margin-top: 60px;
+  padding: 0 1rem;
 }
 
 .reviewGraph {display: flex;}
+
+
+.progressBar {
+  height: 30px;
+}
 
 .reviewSum {
   display: grid;
   text-align: center;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-evenly;
-  font-size: .75rem;
+  font-size: 1.25rem;
   line-height: 1.25rem;
 }
 .reviewSum p { color: black; }
