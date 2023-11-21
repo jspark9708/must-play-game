@@ -149,12 +149,18 @@
 }
 
 .reviewContainer {
+  display: flex;
+}
 
+.userScore p{
+  color: black;
 }
 
 .reviewOverview {
-  
+
 }
+
+.reviewGraph {display: flex;}
 
 .reviewList h1, .reviewList p { color: black;}
 

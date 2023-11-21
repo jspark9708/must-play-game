@@ -150,6 +150,18 @@ const Review = () => {
     averageRating: 0,
     ratingsCount: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   });
+  
+  const getBarColor = (score) => {
+    if (score >= 1 && score <= 3) {
+      return "red"; // 1점부터 3점까지 빨간색
+    } else if (score >= 4 && score <= 7) {
+      return "yellow"; // 4점부터 7점까지 노란색
+    } else if (score >= 8 && score <= 10) {
+      return "green"; // 8점부터 10점까지 초록색
+    } else {
+      return "gray"; // 그 외의 경우 회색
+    }
+  };
 
   return (
     <div>
@@ -224,11 +236,27 @@ const Review = () => {
         <div className={styles.reviewContainer}>
           <div className={styles.overview}>
             <div className={styles.scoreOverview}>
-              <div className={styles.userScore}></div>
-              <div className={styles.scoreOverlay}></div>
+              <div className={styles.userScore}>
+                <h4>유저 평점</h4>
+                <p>대체로 긍정적</p>
+              </div>
+              <div className={styles.scoreOverlay}>
+                {reviewOverviewData.averageRating.toFixed(1)}
+              </div>
             </div>
             <div className={styles.reviewOverview}>
-              <div className={styles.reviewGraph}></div>
+              <div className={styles.reviewGraph}>
+              {reviewOverviewData.ratingsCount.map((count, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      height: "20px", // 막대의 높이 설정
+                      width: `${(count / reviewOverviewData.reviewCount) * 300}px`, // 비율에 따라 너비 설정
+                      backgroundColor: getBarColor(index + 1), // 각 점수대에 따른 색상 설정
+                    }}
+                  ></div>
+                ))}
+              </div>
               <div classNane={styles.reviewSum}></div>
             </div>
           </div>
