@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import firebaseApp from "../../service/firebase";
 import styles from "./review.module.css";
 import CloseIcon from "@mui/icons-material/Close";
-import Slider from "/Users/popokk/Documents/GitHub/mustplaygame/src/components/slider/slider.js";
+import Slider from "../slider/slider.js";
 
 const Review = () => {
   const [reviewText, setReviewText] = useState("");

@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
 import './slider.css';
 
-const RatingSlider = ({onRatingChange}) => {
-  const [rating, setRating] = useState(0);
+const RatingSlider = ({ onRatingChange }) => {
+  const [rating, setRating] = useState(null);
   const [hoveredRating, setHoveredRating] = useState(null);
 
-  const getBackgroundColor = (value) => {
-    if (rating !== null && value <= rating) {
-      if (value >= 1 && value <= 3) {
-        return 'red';
-      } else if (value >= 4 && value <= 6) {
-        return 'orange';
-      } else if (value >= 7 && value <= 10) {
-        return 'green';
-      }
-    } else if (hoveredRating !== null && value <= hoveredRating) {
-      if (value >= 1 && value <= 3) {
-        return 'red';
-      } else if (value >= 4 && value <= 6) {
-        return 'orange';
-      } else if (value >= 7 && value <= 10) {
-        return 'green';
-      }
+  const getCellColor = (value) => {
+    if (hoveredRating !== null && value <= hoveredRating) {
+      return getRatingColor(hoveredRating);
     }
-    return 'grey';
+
+    return getRatingColor(rating || hoveredRating);
+  };
+
+  const getRatingColor = (selectedRating) => {
+    if (selectedRating >= 1 && selectedRating <= 3) {
+      return 'red';
+    } else if (selectedRating >= 4 && selectedRating <= 7) {
+      return 'orange';
+    } else if (selectedRating >= 8 && selectedRating <= 10) {
+      return 'green';
+    } else {
+      return 'gray'; // 그 외의 값은 회색으로 처리
+    }
   };
 
   const handleMouseOver = (value) => {
@@ -36,7 +35,6 @@ const RatingSlider = ({onRatingChange}) => {
 
   const handleSelect = (value) => {
     setRating(value);
-    setHoveredRating(null); // 클릭 시에 hover된 값 초기화
     onRatingChange(value);
   };
 
@@ -44,20 +42,18 @@ const RatingSlider = ({onRatingChange}) => {
     const cells = [];
     for (let i = 1; i <= 10; i++) {
       const cellStyle = {
-        backgroundColor: getBackgroundColor(i),
+        backgroundColor: getCellColor(i),
+        opacity: (rating !== null && i > rating) || (hoveredRating !== null && i > hoveredRating) ? 0.5 : 1,
       };
-
       cells.push(
         <div
           key={i}
-          className={`slider-cell ${i === rating ? 'selected' : ''}`}
+          className={`slider-cell ${getRatingColor(i)}`}
           style={cellStyle}
           onMouseOver={() => handleMouseOver(i)}
           onMouseLeave={handleMouseLeave}
           onClick={() => handleSelect(i)}
-        >
-          {i}
-        </div>
+        />
       );
     }
     return cells;

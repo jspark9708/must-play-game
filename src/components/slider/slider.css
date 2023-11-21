@@ -11,27 +11,22 @@
     padding: 5px;
     text-align: center;
     cursor: pointer;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
   }
   
-  .slider-cell.selected {
-    color: white;
-  }
-  
-  .slider-cell.grey {
-    background-color: grey;
-  }
-  
-  /* 각 범위에 따른 색상 설정 */
   .slider-cell.red {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.5);
   }
   
   .slider-cell.orange {
-    background-color: orange;
+    background-color: rgba(255, 165, 0, 0.5);
   }
   
   .slider-cell.green {
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.5);
   }
   
+  .slider-cell.grey {
+    background-color: #808080;
+  }
