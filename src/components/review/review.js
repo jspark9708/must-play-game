@@ -105,11 +105,57 @@ const Review = () => {
     setRating(rating);
   };
 
+  useEffect(() => {
+    const gameId = data.gameTitle;
+    const reviewsRef = firebaseApp.database().ref(`reviews/${gameId}`);
+
+    reviewsRef.on("value", (snapshot) => {
+      const reviewData = snapshot.val();
+      if (reviewData) {
+        const reviewsArray = Object.entries(reviewData).map(([key, value]) => ({
+          id: key,
+          ...value,
+        }));
+        setReviews(reviewsArray);
+
+        // 추가: 리뷰 개수, 평균 평점, 각 점수대의 개수 계산
+        const reviewCount = reviewsArray.length;
+        const averageRating =
+          reviewCount > 0
+            ? reviewsArray.reduce((sum, review) => sum + review.rating, 0) /
+              reviewCount
+            : 0;
+        const ratingsCount = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // 0부터 10까지의 각 점수대 개수
+
+        reviewsArray.forEach((review) => {
+          ratingsCount[review.rating]++;
+        });
+
+        // 리뷰 개수, 평균 평점, 각 점수대 개수를 상태로 저장
+        setReviewOverviewData({
+          reviewCount,
+          averageRating,
+          ratingsCount,
+        });
+      }
+    });
+
+    return () => {
+      reviewsRef.off("value");
+    };
+  }, []);
+
+  const [reviewOverviewData, setReviewOverviewData] = useState({
+    reviewCount: 0,
+    averageRating: 0,
+    ratingsCount: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  });
+
   return (
     <div>
       <div className={styles.componentArea}>
         <div className={styles.contentsTitle}>
-          <h2>유저 평점</h2>
+          <h2>유저 리뷰</h2>
           <button type="button" onClick={openModal}>
             리뷰 남기기
           </button>
@@ -175,22 +221,58 @@ const Review = () => {
             </div>
           </div>
         )}
-        <div className={styles.reviewList}>
-          <ul>
-            {reviews.map((review) => (
-              <li key={review.id}>
-                <p>
-                  평점: {review.rating} - 작성자: {review.user}
-                  {userEmail === review.email && ( // 이 부분을 추가
-                    <button onClick={() => handleReviewDelete(review.id)}>
-                      삭제
-                    </button>
-                  )}
-                </p>
-                <p>{review.text}</p>
-              </li>
-            ))}
-          </ul>
+        <div className={styles.reviewContainer}>
+          <div className={styles.overview}>
+            <div className={styles.scoreOverview}>
+              <div className={styles.userScore}></div>
+              <div className={styles.scoreOverlay}></div>
+            </div>
+            <div className={styles.reviewOverview}>
+              <div className={styles.reviewGraph}></div>
+              <div classNane={styles.reviewSum}></div>
+            </div>
+          </div>
+          {/*
+          <div className={styles.reviewOverview}>
+            <p>리뷰 개수: {reviewOverviewData.reviewCount}</p>
+            <p>평균 평점: {reviewOverviewData.averageRating.toFixed(1)}</p>
+            <p>
+              나쁨 :{" "}
+              {reviewOverviewData.ratingsCount
+                .slice(1, 4)
+                .reduce((sum, count) => sum + count, 0)}
+            </p>
+            <p>
+              보통 :{" "}
+              {reviewOverviewData.ratingsCount
+                .slice(4, 8)
+                .reduce((sum, count) => sum + count, 0)}
+            </p>
+            <p>
+              좋음 :{" "}
+              {reviewOverviewData.ratingsCount
+                .slice(8, 11)
+                .reduce((sum, count) => sum + count, 0)}
+            </p>
+          </div>
+          <div className={styles.reviewList}>
+            <ul>
+              {reviews.map((review) => (
+                <li key={review.id}>
+                  <p>
+                    평점: {review.rating} - 작성자: {review.user}
+                    {userEmail === review.email && ( // 이 부분을 추가
+                      <button onClick={() => handleReviewDelete(review.id)}>
+                        삭제
+                      </button>
+                    )}
+                  </p>
+                  <p>{review.text}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+              */}
         </div>
       </div>
     </div>

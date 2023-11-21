@@ -148,6 +148,14 @@
   color: rgb(25, 25, 25); /* 텍스트 색상 설정 */
 }
 
+.reviewContainer {
+
+}
+
+.reviewOverview {
+  
+}
+
 .reviewList h1, .reviewList p { color: black;}
 
 /* 리뷰 목록 전체 컨테이너 */
