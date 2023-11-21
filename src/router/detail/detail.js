@@ -31,7 +31,7 @@ const Detail = (props) => {
                             {/* 비디오 */}
                             <div className={styles.videoArea}>
                                 <iframe src={data.gameVideo}
-                                frameborder="0"></iframe>
+                                frameBorder="0"></iframe>
                             </div>
                             <div className={styles.scoreboard}>
                                 <div>
