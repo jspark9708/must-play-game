@@ -5,22 +5,22 @@ import CloseIcon from "@mui/icons-material/Close";
 import Slider from "../slider/slider.js";
 
 const Review = () => {
-  const [reviewText, setReviewText] = useState("");
-  const [rating, setRating] = useState(0);
-  const [isReviewSubmitted, setReviewSubmitted] = useState(false);
-  const [reviews, setReviews] = useState([]);
-  const [currentLength, setCurrentLength] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [reviewState, setReviewState] = useState({
+    reviewText: "",
+    rating: 0,
+    isReviewSubmitted: false,
+    reviews: [],
+    currentLength: 0,
+    isModalOpen: false,
+    filter: "all",
+    sort: "desc",
+  });
 
-  const [filter, setFilter] = useState("all"); // Default: "all"
-  const [sort, setSort] = useState("desc"); // Default: "desc"
+  const { reviewText, rating, isReviewSubmitted, reviews, currentLength, isModalOpen, filter, sort } = reviewState;
 
-  let data = localStorage.getItem("itemData");
-  data = JSON.parse(data);
-
+  const data = JSON.parse(localStorage.getItem("itemData"));
   const userEmail = localStorage.getItem("userEmail");
 
-  //리뷰 작성
   const handleReviewSubmit = () => {
     const emailCheck = localStorage.getItem("emailCheck");
 
@@ -44,9 +44,12 @@ const Review = () => {
         .ref(`reviews/${gameId}`)
         .push(reviewData)
         .then(() => {
-          setReviewText("");
-          setRating(0);
-          setReviewSubmitted(true);
+          setReviewState((prevState) => ({
+            ...prevState,
+            reviewText: "",
+            rating: 0,
+            isReviewSubmitted: true,
+          }));
           console.log("리뷰 저장 성공");
         })
         .catch((error) => {
@@ -58,7 +61,6 @@ const Review = () => {
     }
   };
 
-  //리뷰 삭제
   const handleReviewDelete = (reviewId) => {
     const gameId = data.gameTitle;
 
@@ -67,10 +69,8 @@ const Review = () => {
       .ref(`reviews/${gameId}/${reviewId}`)
       .remove()
       .then(() => {
-        const updatedReviews = reviews.filter(
-          (review) => review.id !== reviewId
-        );
-        setReviews(updatedReviews);
+        const updatedReviews = reviews.filter((review) => review.id !== reviewId);
+        setReviewState((prevState) => ({ ...prevState, reviews: updatedReviews }));
         console.log("리뷰 삭제 성공");
         console.log(reviewId, "의 리뷰 삭제를 진행했습니다.");
       })
@@ -83,87 +83,90 @@ const Review = () => {
     const gameId = data.gameTitle;
     const reviewsRef = firebaseApp.database().ref(`reviews/${gameId}`);
 
-    reviewsRef.on("value", (snapshot) => {
+    const updateReviews = (snapshot) => {
       const reviewData = snapshot.val();
       if (reviewData) {
         const reviewsArray = Object.entries(reviewData).map(([key, value]) => ({
           id: key,
           ...value,
         }));
-        setReviews(reviewsArray);
+        setReviewState((prevState) => ({ ...prevState, reviews: reviewsArray }));
       }
-    });
+    };
+
+    reviewsRef.on("value", updateReviews);
 
     return () => {
-      reviewsRef.off("value");
+      reviewsRef.off("value", updateReviews);
     };
   }, [data.gameTitle]);
 
   const openModal = () => {
-    setIsModalOpen(true);
+    setReviewState((prevState) => ({
+      ...prevState,
+      isModalOpen: true,
+    }));
   };
+
   const closeModal = () => {
-    setReviewText(""); // 텍스트 에어리어의 데이터 초기화
-    setCurrentLength(0); // 길이 표시 초기화
-    setIsModalOpen(false);
-    setReviewSubmitted(false);
+    setReviewState((prevState) => ({
+      ...prevState,
+      reviewText: "",
+      currentLength: 0,
+      isModalOpen: false,
+      isReviewSubmitted: false,
+    }));
   };
 
   const handleRatingChange = (rating) => {
-    setRating(rating);
+    setReviewState((prevState) => ({ ...prevState, rating }));
   };
 
   useEffect(() => {
     const gameId = data.gameTitle;
     const reviewsRef = firebaseApp.database().ref(`reviews/${gameId}`);
 
-    reviewsRef.on("value", (snapshot) => {
+    const updateReviews = (snapshot) => {
       const reviewData = snapshot.val();
       if (reviewData) {
         const reviewsArray = Object.entries(reviewData).map(([key, value]) => ({
           id: key,
           ...value,
         }));
-        setReviews(reviewsArray);
+        setReviewState((prevState) => ({ ...prevState, reviews: reviewsArray }));
 
-        // 추가: 리뷰 개수, 평균 평점, 각 점수대의 개수 계산
         const reviewCount = reviewsArray.length;
         const averageRating =
           reviewCount > 0
-            ? reviewsArray.reduce((sum, review) => sum + review.rating, 0) /
-              reviewCount
+            ? reviewsArray.reduce((sum, review) => sum + review.rating, 0) / reviewCount
             : 0;
-        const ratingsCount = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // 0부터 10까지의 각 점수대 개수
+        const ratingsCount = Array.from({ length: 11 }, (_, index) => reviewsArray.filter(review => review.rating === index).length);
 
-        reviewsArray.forEach((review) => {
-          ratingsCount[review.rating]++;
-        });
-
-        // 리뷰 개수, 평균 평점, 각 점수대 개수를 상태로 저장
         setReviewOverviewData({
           reviewCount,
           averageRating,
           ratingsCount,
         });
       } else {
-        // 리뷰가 없을 경우 초기값으로 설정
         setReviewOverviewData({
           reviewCount: 0,
           averageRating: 0,
-          ratingsCount: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          ratingsCount: Array(11).fill(0),
         });
       }
-    });
+    };
+
+    reviewsRef.on("value", updateReviews);
 
     return () => {
-      reviewsRef.off("value");
+      reviewsRef.off("value", updateReviews);
     };
   }, [data.gameTitle]);
 
   const [reviewOverviewData, setReviewOverviewData] = useState({
     reviewCount: 0,
     averageRating: 0,
-    ratingsCount: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    ratingsCount: Array(11).fill(0),
   });
 
   const getBarColor = (score) => {
@@ -179,11 +182,11 @@ const Review = () => {
   };
 
   const handleFilter = (filterType) => {
-    setFilter(filterType);
+    setReviewState((prevState) => ({ ...prevState, filter: filterType }));
   };
 
   const handleSort = (event) => {
-    setSort(event.target.value);
+    setReviewState((prevState) => ({ ...prevState, sort: event.target.value }));
   };
 
   const filteredReviews = reviews.filter((review) => {
@@ -208,9 +211,11 @@ const Review = () => {
       case "desc":
         return b.rating - a.rating;
       case "registration":
-        return a.date.localeCompare(b.date);
+        console.log(a.date, b.date);
+        return a.date.localeCompare(b.date);//오류 존재
+        // TODO: 날짜가 같으면 시간 비교를 수행하여 더 정확한 정렬이 필요
       default:
-        return a.date.localeCompare(b.date);
+        return 0;
     }
   });
 
@@ -233,9 +238,7 @@ const Review = () => {
                       <CloseIcon />
                     </button>
                   </div>
-                  <p style={{ color: "green" }}>
-                    리뷰가 성공적으로 제출되었습니다!
-                  </p>
+                  <p style={{ color: "green" }}>리뷰가 성공적으로 제출되었습니다!</p>
                 </div>
               ) : (
                 <div className={styles.modalContents}>
@@ -249,9 +252,7 @@ const Review = () => {
                     <div className={styles.banner}>
                       <img src={data.gameCover} alt="gameCover"></img>
                       <p>
-                        <span style={{ fontWeight: "bold" }}>
-                          {data.gameTitle}
-                        </span>
+                        <span style={{ fontWeight: "bold" }}>{data.gameTitle}</span>
                         에 대한 리뷰를 남겨주세요!
                       </p>
                     </div>
@@ -266,8 +267,7 @@ const Review = () => {
                         onChange={(e) => {
                           const inputText = e.target.value;
                           if (inputText.length <= 200) {
-                            setReviewText(inputText);
-                            setCurrentLength(inputText.length);
+                            setReviewState((prevState) => ({ ...prevState, reviewText: inputText, currentLength: inputText.length }));
                           }
                         }}
                         maxLength={200}
@@ -310,7 +310,6 @@ const Review = () => {
               <div
                 className={styles.scoreOverlay}
                 style={{
-                  // 수정된 부분: 조건에 따라 다른 배경색 설정
                   backgroundColor:
                     reviewOverviewData.averageRating.toFixed(1) >= 1 &&
                     reviewOverviewData.averageRating.toFixed(1) < 4
@@ -332,36 +331,16 @@ const Review = () => {
                       key={index}
                       className={styles.progressBar}
                       style={{
-                        width: `${
-                          (count / reviewOverviewData.reviewCount) * 100
-                        }%`, // 비율에 따라 너비 설정
-                        backgroundColor: getBarColor(index), // 각 점수대에 따른 색상 설정
+                        width: `${(count / reviewOverviewData.reviewCount) * 100}%`,
+                        backgroundColor: getBarColor(index),
                       }}
                     ></div>
                   ))}
                 </div>
                 <div className={styles.reviewSum}>
-                  <p>
-                    부정적{" "}
-                    {reviewOverviewData.ratingsCount
-                      .slice(1, 4)
-                      .reduce((sum, count) => sum + count, 0)}
-                    명
-                  </p>
-                  <p>
-                    보통{" "}
-                    {reviewOverviewData.ratingsCount
-                      .slice(4, 8)
-                      .reduce((sum, count) => sum + count, 0)}
-                    명
-                  </p>
-                  <p>
-                    긍정적{" "}
-                    {reviewOverviewData.ratingsCount
-                      .slice(8, 11)
-                      .reduce((sum, count) => sum + count, 0)}
-                    명
-                  </p>
+                  <p>부정적 {reviewOverviewData.ratingsCount.slice(1, 4).reduce((sum, count) => sum + count, 0)}명</p>
+                  <p>보통 {reviewOverviewData.ratingsCount.slice(4, 8).reduce((sum, count) => sum + count, 0)}명</p>
+                  <p>긍정적 {reviewOverviewData.ratingsCount.slice(8, 11).reduce((sum, count) => sum + count, 0)}명</p>
                 </div>
               </div>
             </div>
@@ -370,18 +349,10 @@ const Review = () => {
           <div className={styles.reviewList}>
             <div className={styles.functionBtnContainer}>
               <div className={styles.filterBtn}>
-                <button onClick={() => handleFilter("all")}>
-                  모든 리뷰 보기
-                </button>
-                <button onClick={() => handleFilter("positive")}>
-                  긍정적 리뷰 보기
-                </button>
-                <button onClick={() => handleFilter("mixed")}>
-                  복합적 리뷰 보기
-                </button>
-                <button onClick={() => handleFilter("negative")}>
-                  부정적 리뷰 보기
-                </button>
+                <button onClick={() => handleFilter("all")}>모든 리뷰 보기</button>
+                <button onClick={() => handleFilter("positive")}>긍정적 리뷰 보기</button>
+                <button onClick={() => handleFilter("mixed")}>복합적 리뷰 보기</button>
+                <button onClick={() => handleFilter("negative")}>부정적 리뷰 보기</button>
               </div>
               <div className={styles.sortBtn}>
                 <select value={sort} onChange={handleSort}>
@@ -395,12 +366,9 @@ const Review = () => {
               {sortedReviews.map((review) => (
                 <li key={review.id}>
                   <p>
-                    평점: {review.rating} - 작성자: {review.user} - 날짜:{" "}
-                    {review.date}
-                    {userEmail === review.email && ( // 이 부분을 추가
-                      <button onClick={() => handleReviewDelete(review.id)}>
-                        삭제
-                      </button>
+                    평점: {review.rating} - 작성자: {review.user} - 날짜: {review.date}
+                    {userEmail === review.email && (
+                      <button onClick={() => handleReviewDelete(review.id)}>삭제</button>
                     )}
                   </p>
                   <p>{review.text}</p>
