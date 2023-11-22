@@ -12,9 +12,9 @@ Must Play Game은 각 플랫폼, 콘솔 별로 '메타크리틱'에서 선정한
 3. **게임 상세 정보 페이지**: 각 게임이 발매된 콘솔, 일자와 같은 정보와 유저들의 평점과 리뷰 그리고 관련 방송을 볼 수 있습니다.
 
 ## 기술 스택
-- **Front-End**: React
+- **Front-End**: React, Material-UI
 - **인증**: Firebase Authentication
-- **DB**: Firebase Realtime DB
+- **DB**: Firebase Realtime DB, Firebase Storage
 - **웹 스크래핑**: Twitch API
 
 ## 기능
