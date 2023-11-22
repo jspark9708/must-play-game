@@ -1,9 +1,12 @@
+
+
 .componentArea {
   width: calc(100vw - 5rem);
   margin: 60px 0 30px 0;
   max-width: 1296px; /* 임시 - 반응형 수정 필요 */
   margin-left: auto;
   margin-right: auto;
+  border-bottom: 1px solid #262626;
 }
 
 /* 타이틀 요소 */
@@ -233,8 +236,62 @@
   border-right: 1px solid #cccccc;
 }
 
+.functionBtnContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filterBtn button {
+  color: black;
+  border: none;
+  padding: 15px 15px;
+  cursor: pointer;
+  margin-left: 8px;
+  background-color: transparent;
+  outline: none;
+  font-size: 1rem;
+}
+
+.filterBtn button.active {
+  border-top: 2px solid rgb(0, 0, 0);
+  font-weight: bolder;
+}
+
+.sortBtn {
+  position: relative;
+}
+
+.customSelect {
+  position: relative;
+  display: inline-block;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 8px 10px 8px 8px;
+  border: 1px solid #cccccc;
+  margin-top: 8px;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  width: 80px; /* Adjust the width as needed */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right center; /* Adjust the position of the arrow icon */
+}
+
+.pageContainer {
+  margin-bottom: 20px;
+}
+
 /* 리뷰 목록 전체 컨테이너 */
 .reviewList {
+  display: block;
   width: 100%;
   max-width: 1440px; /* 최대 너비 설정 */
   margin: 0 auto; /* 중앙 정렬 */
@@ -246,7 +303,7 @@
 .reviewList ul {
   list-style: none;
   padding: 0;
-  margin: 2.5rem 0;
+  margin: 2.5rem 0 1.5rem 0;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* 초기에는 한 줄에 한 개씩 */
@@ -265,23 +322,69 @@
   font-size: 16px; /* 폰트 크기 */
 }
 
-/* 삭제 버튼 스타일 */
-.reviewList button {
-  background-color: #ff5b5b; /* 빨간색 배경색 */
-  color: #fff; /* 텍스트 색상 */
+.userInfoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.userInfoContainer p {
+  margin-left: auto;
+  color: rgb(51, 51, 51);
+}
+
+.userInfoContainer h2 {
+  color: rgb(51, 51, 51);
+  margin-left: 1rem;
+  font-size: 25px;
+}
+
+.scoreOverlay2 {
+  border-radius: 10px;
+  width: 60px; /* 너비 설정 */
+  height: 60px; /* 높이 설정 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgb(51, 51, 51);
+}
+
+.reviewBody {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-top: 1px solid #979797;
+}
+
+.reviewBody p{ font-size: 1rem; }
+
+.deletButton {
+  display: flex;
+}
+
+.deletButton button {
+  margin-left: auto;
+  background-color: #ff6874;
+  color: #262626;
+  font-weight: bolder;
   border: none;
-  padding: 8px 12px; /* 버튼 내부 여백 */
-  border-radius: 4px; /* border-radius 설정 */
+  border-radius: 10px;
+  padding: 5px 10px;
   cursor: pointer;
-  margin-left: 8px; /* 삭제 버튼과의 간격 */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.reviewList button:hover {
-  background-color: #d64444; /* 버튼에 호버 효과 적용 */
+.deletButton button:hover {
+  background-color: #c95561;
 }
 
-.functionBtnContainer button{
-  background-color: green;
+.deletButton button:active {
+  background-color: rgb(255, 153, 173);
+  color: #fff; /* Optional: Adjust the text color on click */
+}
+
+.page {
+  text-align: center;
 }
 
 @media (min-width: 1050px) {

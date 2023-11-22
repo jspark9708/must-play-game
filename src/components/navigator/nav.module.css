@@ -53,6 +53,7 @@
     width: 20px;
     border-radius: 100%;
     margin-right: 5px;
+    border: 1px solid white;
 }
 .userProfileContainer span { color: white; font-size: 1rem; margin-right: 10px;}
 .login_btt em {  cursor: pointer; }

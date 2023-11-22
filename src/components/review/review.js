@@ -219,6 +219,21 @@ const Review = () => {
     }
   });
 
+  // 페이지 구현 위한 const
+  const reviewsPerPage = 6; //페이지당 컨텐츠 개수
+  const [currentPage, setCurrentPage] = useState(1);//현재 페이지 표시
+
+  //현재 페이지에 표시될 리뷰 나타내는 변수
+  const currentReviews = sortedReviews.slice(
+    (currentPage - 1) * reviewsPerPage,
+    currentPage * reviewsPerPage
+  );
+
+  //페이지 변경 함수
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
+
   return (
     <div>
       <div className={styles.componentArea}>
@@ -228,6 +243,7 @@ const Review = () => {
             리뷰 남기기
           </button>
         </div>
+        {/* 리뷰 작성 모달 */}
         {isModalOpen && (
           <div className={styles.modalBg}>
             <div className={styles.modal}>
@@ -252,7 +268,9 @@ const Review = () => {
                     <div className={styles.banner}>
                       <img src={data.gameCover} alt="gameCover"></img>
                       <p>
-                        <span style={{ fontWeight: "bold" }}>{data.gameTitle}</span>
+                        <span style={{ fontWeight: "bold" }}>
+                          {data.gameTitle}
+                        </span>
                         에 대한 리뷰를 남겨주세요!
                       </p>
                     </div>
@@ -267,7 +285,11 @@ const Review = () => {
                         onChange={(e) => {
                           const inputText = e.target.value;
                           if (inputText.length <= 200) {
-                            setReviewState((prevState) => ({ ...prevState, reviewText: inputText, currentLength: inputText.length }));
+                            setReviewState((prevState) => ({
+                              ...prevState,
+                              reviewText: inputText,
+                              currentLength: inputText.length,
+                            }));
                           }
                         }}
                         maxLength={200}
@@ -285,6 +307,7 @@ const Review = () => {
           </div>
         )}
         <div className={styles.reviewContainer}>
+          {/* 점수 overview 섹션 */}
           <div className={styles.overview}>
             <div className={styles.scoreOverview}>
               <div className={styles.userScore}>
@@ -315,7 +338,7 @@ const Review = () => {
                     reviewOverviewData.averageRating.toFixed(1) < 4
                       ? "#ff6874" // red
                       : reviewOverviewData.averageRating.toFixed(1) >= 4 &&
-                        reviewOverviewData.averageRating.toFixed(1) < 7
+                        reviewOverviewData.averageRating.toFixed(1) < 8
                       ? "#ffbd3f" // orange
                       : "#00ce7a", // green
                 }}
@@ -338,43 +361,124 @@ const Review = () => {
                   ))}
                 </div>
                 <div className={styles.reviewSum}>
-                  <p>부정적 {reviewOverviewData.ratingsCount.slice(1, 4).reduce((sum, count) => sum + count, 0)}명</p>
-                  <p>보통 {reviewOverviewData.ratingsCount.slice(4, 8).reduce((sum, count) => sum + count, 0)}명</p>
-                  <p>긍정적 {reviewOverviewData.ratingsCount.slice(8, 11).reduce((sum, count) => sum + count, 0)}명</p>
+                  <p>
+                    부정적{" "}
+                    {reviewOverviewData.ratingsCount
+                      .slice(1, 4)
+                      .reduce((sum, count) => sum + count, 0)}
+                    명
+                  </p>
+                  <p>
+                    보통{" "}
+                    {reviewOverviewData.ratingsCount
+                      .slice(4, 8)
+                      .reduce((sum, count) => sum + count, 0)}
+                    명
+                  </p>
+                  <p>
+                    긍정적{" "}
+                    {reviewOverviewData.ratingsCount
+                      .slice(8, 11)
+                      .reduce((sum, count) => sum + count, 0)}
+                    명
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-
           <div className={styles.reviewList}>
+            {/* 필터링, 정렬 버튼 섹션 */}
             <div className={styles.functionBtnContainer}>
               <div className={styles.filterBtn}>
-                <button onClick={() => handleFilter("all")}>모든 리뷰 보기</button>
-                <button onClick={() => handleFilter("positive")}>긍정적 리뷰 보기</button>
-                <button onClick={() => handleFilter("mixed")}>복합적 리뷰 보기</button>
-                <button onClick={() => handleFilter("negative")}>부정적 리뷰 보기</button>
+                <button
+                  className={reviewState.filter === "all" ? styles.active : ""}
+                  onClick={() => handleFilter("all")}
+                >
+                  모든 리뷰
+                </button>
+                <button
+                  className={
+                    reviewState.filter === "positive" ? styles.active : ""
+                  }
+                  onClick={() => handleFilter("positive")}
+                >
+                  긍정적 리뷰
+                </button>
+                <button
+                  className={
+                    reviewState.filter === "mixed" ? styles.active : ""
+                  }
+                  onClick={() => handleFilter("mixed")}
+                >
+                  복합적 리뷰
+                </button>
+                <button
+                  className={
+                    reviewState.filter === "negative" ? styles.active : ""
+                  }
+                  onClick={() => handleFilter("negative")}
+                >
+                  부정적 리뷰
+                </button>
               </div>
               <div className={styles.sortBtn}>
-                <select value={sort} onChange={handleSort}>
-                  <option value="asc">낮은 순</option>
-                  <option value="desc">높은 순</option>
-                  <option value="registration">등록 순</option>
-                </select>
+                <div className={styles.customSelect}>
+                  <select value={sort} onChange={handleSort}>
+                    <option value="asc">낮은 순</option>
+                    <option value="desc">높은 순</option>
+                    <option value="registration">등록 순</option>
+                  </select>
+                </div>
               </div>
             </div>
-            <ul>
-              {sortedReviews.map((review) => (
-                <li key={review.id}>
-                  <p>
-                    평점: {review.rating} - 작성자: {review.user} - 날짜: {review.date}
+            {/* 유저 후기 목록 */}
+            <div className={styles.pageContainer}>
+              <ul>
+                {currentReviews.map((review) => (
+                  <li key={review.id}>
+                    <div className={styles.userInfoContainer}>
+                      <div
+                        className={styles.scoreOverlay2}
+                        style={{
+                        backgroundColor:
+                          review.rating >= 1 && review.rating < 4
+                            ? "#ff6874" // red
+                          : review.rating >= 4 && review.rating < 8
+                            ? "#ffbd3f" // orange
+                          : "#00ce7a", // green
+                        }}
+                      >
+                        {review.rating}
+                      </div>
+                      <h2>{review.user}</h2>
+                      <p>{review.date}</p>
+                    </div>
+                    <div className={styles.reviewBody}>
+                      <p>{review.text}</p>
+                    </div>
+                    <div className={styles.deletButton}>
                     {userEmail === review.email && (
-                      <button onClick={() => handleReviewDelete(review.id)}>삭제</button>
+                      <button onClick={() => handleReviewDelete(review.id)}>
+                        리뷰 삭제
+                      </button>
                     )}
-                  </p>
-                  <p>{review.text}</p>
-                </li>
-              ))}
-            </ul>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <div className={styles.page}>
+                {/* 페이지 숫자를 표시하고 각 페이지를 클릭하면 handlePageChange 함수를 호출하여 페이지 변경 */}
+                  {Array.from({ length: Math.ceil(sortedReviews.length / reviewsPerPage) }, (_, index) => (
+                  <span
+                    key={index + 1}
+                    onClick={() => handlePageChange(index + 1)}
+                    style={{ cursor: "pointer", margin: "0.5rem", textDecoration: currentPage === index + 1 ? "underline" : "none" }}
+                  >
+                    {index + 1}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
