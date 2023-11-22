@@ -34,7 +34,7 @@ const Detail = (props) => {
                                 frameBorder="0"></iframe>
                             </div>
                             <div className={styles.scoreboard}>
-                                <div>
+                                <div className={styles.scoreboardText}>
                                     <h2>메타스코어</h2>
                                     <div className={styles.samerow}>
                                         <InfoIcon sx={{fontSize:13}}/>

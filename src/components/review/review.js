@@ -29,6 +29,11 @@ const Review = () => {
         rating: rating,
         user: localStorage.getItem("userDisplayName"),
         email: localStorage.getItem("userEmail"),
+        date: new Date().toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        }),
       };
 
       firebaseApp
@@ -108,7 +113,7 @@ const Review = () => {
   useEffect(() => {
     const gameId = data.gameTitle;
     const reviewsRef = firebaseApp.database().ref(`reviews/${gameId}`);
-  
+
     reviewsRef.on("value", (snapshot) => {
       const reviewData = snapshot.val();
       if (reviewData) {
@@ -117,7 +122,7 @@ const Review = () => {
           ...value,
         }));
         setReviews(reviewsArray);
-  
+
         // 추가: 리뷰 개수, 평균 평점, 각 점수대의 개수 계산
         const reviewCount = reviewsArray.length;
         const averageRating =
@@ -126,11 +131,11 @@ const Review = () => {
               reviewCount
             : 0;
         const ratingsCount = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // 0부터 10까지의 각 점수대 개수
-  
+
         reviewsArray.forEach((review) => {
           ratingsCount[review.rating]++;
         });
-  
+
         // 리뷰 개수, 평균 평점, 각 점수대 개수를 상태로 저장
         setReviewOverviewData({
           reviewCount,
@@ -146,12 +151,12 @@ const Review = () => {
         });
       }
     });
-  
+
     return () => {
       reviewsRef.off("value");
     };
   }, []);
-  
+
   const [reviewOverviewData, setReviewOverviewData] = useState({
     reviewCount: 0,
     averageRating: 0,
@@ -244,10 +249,39 @@ const Review = () => {
           <div className={styles.overview}>
             <div className={styles.scoreOverview}>
               <div className={styles.userScore}>
-                <h4>유저 평점</h4>
-                <p>대체로 긍정적</p>
+                <h3>유저 평점</h3>
+                <div className={styles.userAver}>
+                  <p>
+                    {reviewOverviewData.averageRating.toFixed(1) >= 1 &&
+                    reviewOverviewData.averageRating.toFixed(1) < 2
+                      ? "매우 부정적"
+                      : reviewOverviewData.averageRating.toFixed(1) >= 2 &&
+                        reviewOverviewData.averageRating.toFixed(1) < 4
+                      ? "대체로 부정적"
+                      : reviewOverviewData.averageRating.toFixed(1) >= 4 &&
+                        reviewOverviewData.averageRating.toFixed(1) < 7
+                      ? "보통"
+                      : reviewOverviewData.averageRating.toFixed(1) >= 7 &&
+                        reviewOverviewData.averageRating.toFixed(1) < 9
+                      ? "대체로 긍정적"
+                      : "매우 긍정적"}
+                  </p>
+                </div>
               </div>
-              <div className={styles.scoreOverlay}>
+              <div
+                className={styles.scoreOverlay}
+                style={{
+                  // 수정된 부분: 조건에 따라 다른 배경색 설정
+                  backgroundColor:
+                    reviewOverviewData.averageRating.toFixed(1) >= 1 &&
+                    reviewOverviewData.averageRating.toFixed(1) < 4
+                      ? "#ff6874" // red
+                      : reviewOverviewData.averageRating.toFixed(1) >= 4 &&
+                        reviewOverviewData.averageRating.toFixed(1) < 7
+                      ? "#ffbd3f" // orange
+                      : "#00ce7a", // green
+                }}
+              >
                 {reviewOverviewData.averageRating.toFixed(1)}
               </div>
             </div>
@@ -269,22 +303,25 @@ const Review = () => {
                 </div>
                 <div className={styles.reviewSum}>
                   <p>
-                    나쁨 :{" "}
+                    부정적{" "}
                     {reviewOverviewData.ratingsCount
                       .slice(1, 4)
                       .reduce((sum, count) => sum + count, 0)}
+                    명
                   </p>
                   <p>
-                    보통 :{" "}
+                    보통{" "}
                     {reviewOverviewData.ratingsCount
                       .slice(4, 8)
                       .reduce((sum, count) => sum + count, 0)}
+                    명
                   </p>
                   <p>
-                    좋음 :{" "}
+                    긍정적{" "}
                     {reviewOverviewData.ratingsCount
                       .slice(8, 11)
                       .reduce((sum, count) => sum + count, 0)}
+                    명
                   </p>
                 </div>
               </div>
@@ -296,7 +333,7 @@ const Review = () => {
               {reviews.map((review) => (
                 <li key={review.id}>
                   <p>
-                    평점: {review.rating} - 작성자: {review.user}
+                    평점: {review.rating} - 작성자: {review.user} - 날짜: {review.date}
                     {userEmail === review.email && ( // 이 부분을 추가
                       <button onClick={() => handleReviewDelete(review.id)}>
                         삭제

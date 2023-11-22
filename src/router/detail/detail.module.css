@@ -97,6 +97,10 @@
     color: #555555;
 }
 
+.scoreboardText {
+    margin: auto 0;
+}
+
 .samerow {
     display: flex;
     align-items: center;
@@ -105,8 +109,12 @@
 }
 
 .scoreBox {
-    background-color: #00ce7a; border-radius: 5px; padding: 10px;
-    font-size: 1.3rem; font-weight: 800; color: rgb(51, 51, 51);
+    background-color: #00ce7a; border-radius: 5px;
+    width: 75px; height: 75px;
+    font-size: 2rem; font-weight: 800; color: rgb(51, 51, 51);
+    align-items: center;
+    justify-content: center;
+    display: flex;
     margin-left: auto;
 }
 
