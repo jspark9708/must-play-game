@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Must-Play-Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 소개
 
-## Available Scripts
+Must Play Game은 각 플랫폼, 콘솔 별로 '메타크리틱'에서 선정한 최고의 게임들을 소개하는 웹사이트입니다. 이 프로젝트는 게임 애호가들에게 다양하고 명작으로 손곱히는 게임을 찾아보고 서로 의견을 공유할 수 있게하기위해 시작했습니다.
 
-In the project directory, you can run:
+## 구성
+프로젝트는 다음과 같은 구성으로 이루어져 있습니다:
 
-### `npm start`
+1. **메인 페이지**: 해당 페이지에 대한 간략한 설명을 제공합니다.
+2. **게임 상세 정보 페이지**: 각 게임이 발매된 콘솔, 일자와 같은 정보와 유저들의 평점과 리뷰 그리고 관련 방송을 볼 수 있습니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 기술 스택
+- **Front-End**: React
+- **인증**: Firebase Authentication
+- **DB**: Firebase Realtime DB
+- **웹 스크래핑**: Twitch API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 기능
+1. **메인 페이지**: 애니메이션을 이용해 부드럽게 게임에 대한 정보를 제공합니다.
+2. **게임 콘솔 페이지**: 해당 콘솔에 해당하는 게임들을 firebase DB에서 읽어와 사용자에게 보여줍니다.
+3. **게임 상세 정보 페이지**: DB에서 읽어온 data를 바탕으로 게임에 대한 상세 정보를 표시합니다. 사용자는 평점과 후기를 남길 수 있으며 별점은 실시간으로 반영되어 평균 점수를 볼 수 있습니다. 추가로 인증된 사용자만 글을 작성, 삭제할 수 있습니다.
 
-### `npm test`
+## 사용 방법
+1. 리포지토리를 클론합니다.
+   ```bash
+   git clone https://github.com/jspark9708/must-play-game.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. 클라이언트 폴더로 이동해 종속성을 설치합니다.
+   ```bash
+   cd must-play-game
+   npm install
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. 프로젝트를 실행하고 http://localhost:3000 로 접속하여 프로젝트를 확인합니다.
+   ```bash
+   npm start
