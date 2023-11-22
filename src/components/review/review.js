@@ -12,6 +12,9 @@ const Review = () => {
   const [currentLength, setCurrentLength] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const [filter, setFilter] = useState("all"); // Default: "all"
+  const [sort, setSort] = useState("desc"); // Default: "desc"
+
   let data = localStorage.getItem("itemData");
   data = JSON.parse(data);
 
@@ -94,7 +97,7 @@ const Review = () => {
     return () => {
       reviewsRef.off("value");
     };
-  }, []);
+  }, [data.gameTitle]);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -155,7 +158,7 @@ const Review = () => {
     return () => {
       reviewsRef.off("value");
     };
-  }, []);
+  }, [data.gameTitle]);
 
   const [reviewOverviewData, setReviewOverviewData] = useState({
     reviewCount: 0,
@@ -174,6 +177,42 @@ const Review = () => {
       return "gray"; // 그 외의 경우 회색
     }
   };
+
+  const handleFilter = (filterType) => {
+    setFilter(filterType);
+  };
+
+  const handleSort = (event) => {
+    setSort(event.target.value);
+  };
+
+  const filteredReviews = reviews.filter((review) => {
+    switch (filter) {
+      case "all":
+        return true;
+      case "positive":
+        return review.rating >= 8;
+      case "mixed":
+        return review.rating >= 4 && review.rating <= 7;
+      case "negative":
+        return review.rating <= 3;
+      default:
+        return true;
+    }
+  });
+
+  const sortedReviews = [...filteredReviews].sort((a, b) => {
+    switch (sort) {
+      case "asc":
+        return a.rating - b.rating;
+      case "desc":
+        return b.rating - a.rating;
+      case "registration":
+        return a.date.localeCompare(b.date);
+      default:
+        return a.date.localeCompare(b.date);
+    }
+  });
 
   return (
     <div>
@@ -208,7 +247,7 @@ const Review = () => {
                   <h2>리뷰 남기기</h2>
                   <div className={styles.container}>
                     <div className={styles.banner}>
-                      <img src={data.gameCover}></img>
+                      <img src={data.gameCover} alt="gameCover"></img>
                       <p>
                         <span style={{ fontWeight: "bold" }}>
                           {data.gameTitle}
@@ -329,11 +368,35 @@ const Review = () => {
           </div>
 
           <div className={styles.reviewList}>
+            <div className={styles.functionBtnContainer}>
+              <div className={styles.filterBtn}>
+                <button onClick={() => handleFilter("all")}>
+                  모든 리뷰 보기
+                </button>
+                <button onClick={() => handleFilter("positive")}>
+                  긍정적 리뷰 보기
+                </button>
+                <button onClick={() => handleFilter("mixed")}>
+                  복합적 리뷰 보기
+                </button>
+                <button onClick={() => handleFilter("negative")}>
+                  부정적 리뷰 보기
+                </button>
+              </div>
+              <div className={styles.sortBtn}>
+                <select value={sort} onChange={handleSort}>
+                  <option value="asc">낮은 순</option>
+                  <option value="desc">높은 순</option>
+                  <option value="registration">등록 순</option>
+                </select>
+              </div>
+            </div>
             <ul>
-              {reviews.map((review) => (
+              {sortedReviews.map((review) => (
                 <li key={review.id}>
                   <p>
-                    평점: {review.rating} - 작성자: {review.user} - 날짜: {review.date}
+                    평점: {review.rating} - 작성자: {review.user} - 날짜:{" "}
+                    {review.date}
                     {userEmail === review.email && ( // 이 부분을 추가
                       <button onClick={() => handleReviewDelete(review.id)}>
                         삭제

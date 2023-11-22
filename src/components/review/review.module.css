@@ -280,7 +280,11 @@
   background-color: #d64444; /* 버튼에 호버 효과 적용 */
 }
 
-@media (min-width: 1045px) {
+.functionBtnContainer button{
+  background-color: green;
+}
+
+@media (min-width: 1050px) {
   .reviewList ul {
     grid-template-columns: repeat(auto-fill, minmax(48%, 1fr)); /* 1060px 이상일 때는 한 줄에 두 개씩 */
   }
