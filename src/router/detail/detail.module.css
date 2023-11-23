@@ -1,5 +1,7 @@
 
-.pageContainer{ width: 100%; height: auto; background-color:  rgb(255, 255, 255);}
+.pageContainer{
+    width: 100%; height: auto; background-color:  rgb(255, 255, 255);
+}
 
 
 .navCover {
@@ -246,6 +248,11 @@
 }
 
 .midContents {
+    box-sizing: border-box;
+    position: relative;
+    top: -110px;
+}
+.tailContents {
     box-sizing: border-box;
     position: relative;
     top: -110px;

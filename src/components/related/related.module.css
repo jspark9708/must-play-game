@@ -1,0 +1,9 @@
+.container {
+    background-color: rgb(193, 138, 193);
+    width: calc(100vw - 5rem);
+    margin: 60px 0 30px 0;
+    max-width: 1296px; /* 임시 - 반응형 수정 필요 */
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #262626;
+}
