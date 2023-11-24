@@ -13,6 +13,7 @@ Must Play Game은 각 플랫폼, 콘솔 별로 '메타크리틱'에서 선정한
 
 ## 기술 스택
 - **Front-End**: React, Material-UI
+- **Back-End**: node.js
 - **인증**: Firebase Authentication
 - **DB**: Firebase Realtime DB, Firebase Storage
 - **웹 스크래핑**: Twitch API
