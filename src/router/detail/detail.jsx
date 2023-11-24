@@ -2,7 +2,8 @@ import React from 'react';
 import styles from './detail.module.css';
 import InfoIcon from '@mui/icons-material/Info';
 import Review from '../../components/review/review'
-import Related from '../../components/related/related';
+import Streams from '../../components/streams/streams';
+
 const Detail = (props) => {
     let data = localStorage.getItem("itemData");
     data = JSON.parse(data);
@@ -82,7 +83,7 @@ const Detail = (props) => {
             </div>
             <div className={styles.tailContents}>
                 {/* 트위치 방송 API 관련 영역 */}
-                <Related/>
+                <Streams/>
             </div>
         </div>
     );
