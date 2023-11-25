@@ -1,10 +1,12 @@
+// streams.jsx
 import React, { useEffect, useState } from 'react';
-import styles from './streams.module.css'
+import styles from './streams.module.css';
 import api from '../../service/api';
 
 function Streams() {
-    const [games, setGames] = useState ([]);
-    
+    const [channels, setChannels] = useState([]);
+    const data = JSON.parse(localStorage.getItem("itemData"));
+
     useEffect(() => {
         const fetchData = async () => {
           try {
@@ -20,28 +22,32 @@ function Streams() {
           } catch (error) {
             console.error('Error fetching data:', error.message);
           }
-        };
-      
-        fetchData();
-      }, []); // 두번째 인자에 빈 배열을 전달하여 최초 한 번만 호출되도록 함
-      
 
+                setChannels(modifiedData);
+                console.log("채널목록 : ", modifiedData);
+            } catch (error) {
+                console.error('Error fetching data:', error.message);
+            }
+        };
+
+        fetchChannels();
+    }, []);
 
     return (
         <div>
             <div className={styles.container}>
                 <h4>트위치 목록</h4>
             </div>
-            <div>
-                {games.map(game => (
-                    <div>
-                        <img src={game.box_art_url} alt="none"></img>
-                        <h5>{game.name}</h5>
-                    </div>
+            <ul>
+                {channels.map(channel => (
+                    <li key={channel.id}>
+                        <strong>{channel.user_name}</strong> - Views: {channel.viewer_count}
+                        <img src={channel.thumbnail_url}></img>
+                    </li>
                 ))}
-            </div>
+            </ul>
         </div>
     );
-};
+}
 
 export default Streams;
