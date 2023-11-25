@@ -183,6 +183,7 @@ const Review = () => {
 
   const handleFilter = (filterType) => {
     setReviewState((prevState) => ({ ...prevState, filter: filterType }));
+    handlePageChange(1); //페이지가 1번이 아닌상태에서 필터 적용시 페이지 초기화
   };
 
   const handleSort = (event) => {

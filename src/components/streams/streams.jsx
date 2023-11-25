@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styles from './streams.module.css'
-import axios from "axios";
 import api from '../../service/api';
 
 function Streams() {
@@ -10,7 +9,6 @@ function Streams() {
         const fetchData = async () => {
           try {
             const result = await api.get('https://api.twitch.tv/helix/games/top');
-            
             // 새로운 배열을 생성하고, 각 요소를 새로운 객체로 만들어서 값을 할당
             const modifiedData = result.data.data.map(game => ({
               ...game,
@@ -37,7 +35,7 @@ function Streams() {
             <div>
                 {games.map(game => (
                     <div>
-                        <img src={game.box_art_url}></img>
+                        <img src={game.box_art_url} alt="none"></img>
                         <h5>{game.name}</h5>
                     </div>
                 ))}
