@@ -5,26 +5,25 @@ import api from '../../service/api';
 
 function Streams() {
     const [channels, setChannels] = useState([]);
+    const [currentIndex, setCurrentIndex] = useState(0); // 슬라이드 인덱스 추가
     const data = JSON.parse(localStorage.getItem("itemData"));
 
     useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const result = await api.get('https://api.twitch.tv/helix/games/top');
-            // 새로운 배열을 생성하고, 각 요소를 새로운 객체로 만들어서 값을 할당
-            const modifiedData = result.data.data.map(game => ({
-              ...game,
-              box_art_url: game.box_art_url.replace('{width}', '300').replace('{height}', '400')
-            }));
-      
-            console.log(modifiedData);
-            setGames(modifiedData);
-          } catch (error) {
-            console.error('Error fetching data:', error.message);
-          }
+        const fetchChannels = async () => {
+            try {
+                const response = await api.get('https://api.twitch.tv/helix/streams', {
+                    params: {
+                        game_id: data.gameId,
+                        first: 10,
+                    },
+                });
+
+                const modifiedData = response.data.data.map(game => ({
+                  ...game,
+                  thumbnail_url: game.thumbnail_url.replace('{width}', '450').replace('{height}', '300')
+                }));
 
                 setChannels(modifiedData);
-                console.log("채널목록 : ", modifiedData);
             } catch (error) {
                 console.error('Error fetching data:', error.message);
             }
@@ -33,19 +32,31 @@ function Streams() {
         fetchChannels();
     }, []);
 
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % (channels.length / 5 ));
+    };
+
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 +  (channels.length / 5 )) %  (channels.length / 5 ));
+    };
+
     return (
         <div>
             <div className={styles.container}>
                 <h4>트위치 목록</h4>
             </div>
-            <ul>
-                {channels.map(channel => (
-                    <li key={channel.id}>
-                        <strong>{channel.user_name}</strong> - Views: {channel.viewer_count}
-                        <img src={channel.thumbnail_url}></img>
-                    </li>
-                ))}
-            </ul>
+            <div className={styles.carousel}>
+                <ul style={{ transform: `translateX(${-currentIndex * 100}%)` }}>
+                    {channels.map((channel, index) => (
+                        <li key={channel.id} className={index === currentIndex ? styles.active : ''}>
+                            <strong>{channel.user_name}</strong> - Views: {channel.viewer_count}
+                            <img src={channel.thumbnail_url} alt={`Thumbnail ${index}`}></img>
+                        </li>
+                    ))}
+                </ul>
+                <button onClick={handlePrev} className={styles.prevButton}>이전</button>
+                <button onClick={handleNext} className={styles.nextButton}>다음</button>
+            </div>
         </div>
     );
 }

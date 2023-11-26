@@ -7,3 +7,43 @@
     margin-right: auto;
     border-bottom: 1px solid #262626;
 }
+
+/* styles.module.css */
+.carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel ul {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel ul li {
+    list-style: none;
+    display: block;
+  }
+  
+  .prevButton,
+  .nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .prevButton {
+    left: 10px;
+  }
+  
+  .nextButton {
+    right: 10px;
+  }
+  
+  .active {
+    border: 2px solid #007BFF; /* 선택된 슬라이드 강조 스타일 */
+  }
+  

@@ -1,167 +1,212 @@
 {
   "games": {
-    "halflife2": {
-      "gameTitle": "HλLF-LIFE 2",
-      "gameVideo": "https://www.youtube.com/embed/UKA7JkV51Jw?si=eBQRHzTcMWsKkWrq",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fhafelife2cover.jpg?alt=media&token=5083bba0-f3d3-401b-8da3-edb8acd0915b&_gl=1*1m4k6ms*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2MjQuNDEuMC4w",
-      "gameDate": "NOV 16, 2004",
-      "gameDescript": "엄청난 자유로움과 역동적인 오픈 월드 환경에서의 흥미진진한 범죄 어드벤처를 제공하는 인기 있는 액션 어드벤처 게임입니다. 캘리포니아를 모티브로 한 거대한 맵에서 플레이어는 세 명의 주인공으로 전환하며, 자유로운 탐험, 자동차 경주, 범죄 행위, 그리고 다양한 임무를 수행하며 즐기세요.",
-      "score": "96",
-      "develop": "Valve",
-      "platform": [
-        "PC"
-      ],
-      "steamLink": "https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/?l=koreana"
-    },
-    "gta5": {
-      "gameTitle": "Grand Theft Auto 5",
-      "gameVideo": "https://www.youtube.com/embed/QkkoHAzjnUs?si=OU8eln8ptJh8yFzD",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fgta5cover.jpg?alt=media&token=1451d0c4-af1d-4656-9e4f-0ea69ede597c&_gl=1*1ty3h72*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI0NTYuMzQuMC4w",
-      "gameDate": "NOV 18, 2014",
-      "gameDescript": "엄청난 자유로움과 역동적인 오픈 월드 환경에서의 흥미진진한 범죄 어드벤처를 제공하는 인기 있는 액션 어드벤처 게임입니다. 캘리포니아를 모티브로 한 거대한 맵에서 플레이어는 세 명의 주인공으로 전환하며, 자유로운 탐험, 자동차 경주, 범죄 행위, 그리고 다양한 임무를 수행하며 즐기세요.",
-      "score": "97",
-      "develop": "Rockstar Games",
-      "platform": [
-        "PC", "PS"
-      ],
-      "steamLink": "https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/?l=koreana"
-    },
-    "orangebox": {
-      "gameTitle": "The Orange Box",
-      "gameVideo": "https://www.youtube.com/embed/9FYQ1tynj6U?si=GqAEav-BQ9E2BOzT",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Forangecover.jpg?alt=media&token=8c7c6020-6558-4786-927f-b75e58417055&_gl=1*1d5fj9j*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2NjYuNjAuMC4w",
-      "gameDate": "OCT 10, 2007",
-      "gameDescript": "팀 기반 FPS 게임인 '팀 포트리스 2'와 '하프 라이프 2', 그리고 물리학 기반 퍼즐 게임 '포털'을 포함하고 있습니다. 이 번들은 각각의 게임이 독립적으로 우수한 퀄리티를 보유하며, 한 번에 다양한 장르의 게임을 즐길 수 있는 패키지로 유명합니다.",
-      "score": "96",
-      "develop": "Valve",
-      "platform": [
-        "PC"
-      ],
-      "steamLink": "https://store.steampowered.com/sub/469/"
-    },
-    "halflife": {
-      "gameTitle": "HλLF-LIFE",
-      "gameVideo": "https://www.youtube.com/embed/5Wavn29LMrs?si=ZTlJZwo3J9gVc8MG",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fhalflifecover.jpg?alt=media&token=3bc4576f-6d31-49c5-8e95-fae78359fde7&_gl=1*1onow15*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2MzguMjcuMC4w",
-      "gameDate": "NOV 19, 1998",
-      "gameDescript": "유명한 FPS 시리즈로, 뛰어난 스토리텔링과 혁신적인 게임 플레이로 극찬받는 작품입니다. 주인공 고든 프리먼은 다양한 적과 퍼즐을 해결하며 혁신적인 무기와 상상력을 요구하는 환경 속에서 스릴 넘치는 경험해보세요.",
-      "score": "96",
-      "develop": "Valve",
-      "platform": [
-        "PC"
-      ],
-      "steamLink": "https://store.steampowered.com/app/70/HalfLife/"
-    },
-    "bioshock": {
-      "gameTitle": "Bioshock",
-      "gameVideo": "https://www.youtube.com/embed/rrqfPG4ZcAA?si=JqYZy79rGXo9SZ7Y",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fbioshockcover.jpg?alt=media&token=197f5d3d-db86-4f9f-af13-37fd5b528895&_gl=1*n63cyj*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI1OTAuMTUuMC4w",
-      "gameDate": "AUG 21, 2007",
-      "gameDescript": "공상과학 FPS 요소와 깊은 스토리, 철학적 요소를 결합한 히트 게임입니다. 바이오쇼크 를! 해보세요",
-      "score": "96",
-      "develop": "IRRATIONAL GAMES",
-      "platform": [
-        "PC"
-      ],
-      "steamLink": "https://store.steampowered.com/app/7670/BioShock/"
-    },
     "baldursgate": {
-      "gameTitle": "Baldur's Gate II: Shadows of Amn",
-      "gameVideo": "https://www.youtube.com/embed/tONHtATupkw?si=vekXK5NruPLMWxF5",
+      "gameId":"9769",
+      "develop": "BioWare",
       "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fbaldurscover.jpg?alt=media&token=36a3aac2-ea06-4e2c-bace-542776b62804&_gl=1*1my2iqd*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI1NDguNTcuMC4w",
       "gameDate": "SEP 24, 2000",
       "gameDescript": "고전적인 어드벤처 RPG로, 플레이어는 희귀한 힘을 가진 주인공을 조종하여 아드, 페어런스, 아몬, 아이린델 등의 도시와 던전을 탐험합니다. 다양한 퀘스트, 파티 멤버, 전략적인 전투, 그리고 선택에 따라 바뀌는 이야기 선이 특징입니다.",
-      "score": "95",
-      "develop": "BioWare",
+      "gameTitle": "Baldur's Gate II: Shadows of Amn",
+      "gameVideo": "https://www.youtube.com/embed/tONHtATupkw?si=vekXK5NruPLMWxF5",
       "platform": [
         "PC"
       ],
+      "score": "95",
       "steamLink": "https://store.steampowered.com/app/257350/Baldurs_Gate_II_Enhanced_Edition/"
     },
-    "portal2": {
-      "gameTitle": "Portal 2",
-      "gameVideo": "https://www.youtube.com/embed/tax4e4hBBZc?si=qC1san1PUFCeRW-Z",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fportal2cover.jpg?alt=media&token=1e36fa9b-7109-4423-a563-2039502cba88&_gl=1*eu19pa*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2ODIuNDQuMC4w",
-      "gameDate": "APR 19, 2011",
-      "gameDescript": "고유한 퍼즐 해결과 흥미진진한 이야기가 결합된 인기 퍼즐 플랫폼 게임입니다. 플레이어는 고유한 플로우를 가진 무한한 포탈을 생성하여 다양한 퍼즐과 도전을 해결하며, 로봇 GLaDOS와의 상호작용을 통해 게임 세계를 탐험하세요.",
-      "score": "95",
-      "develop": "Valve",
+    "bioshock": {
+      "gameId":"15867",
+      "develop": "IRRATIONAL GAMES",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fbioshockcover.jpg?alt=media&token=197f5d3d-db86-4f9f-af13-37fd5b528895&_gl=1*n63cyj*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI1OTAuMTUuMC4w",
+      "gameDate": "AUG 21, 2007",
+      "gameDescript": "공상과학 FPS 요소와 깊은 스토리, 철학적 요소를 결합한 히트 게임입니다. 바이오쇼크 를! 해보세요",
+      "gameTitle": "Bioshock",
+      "gameVideo": "https://www.youtube.com/embed/rrqfPG4ZcAA?si=JqYZy79rGXo9SZ7Y",
       "platform": [
         "PC"
       ],
-      "steamLink": "https://store.steampowered.com/app/620/Portal_2/?l=koreana"
-    },
-    "skyrim5": {
-      "gameTitle": "The Elder Scrolls V: Skyrim",
-      "gameVideo": "https://www.youtube.com/embed/JSRtYpNRoN0?si=H39R_SQBwzivoUIe",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fskyrim5cover.jpg?alt=media&token=dd0b5fa7-d16f-4439-b1b3-4496dd5ed351&_gl=1*1nqdat6*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI3NDcuNDEuMC4w",
-      "gameDate": "NOV 11, 2011",
-      "gameDescript": "오픈 월드 액션 RPG 게임으로, 환상적인 고대 북유럽 판타지 세계에 입문할 수 있는 플레이어를 위한 환상적인 모험을 제공합니다. 플레이어는 용을 퇴치하고 영토를 탐험하며, 다양한 퀘스트를 완수하고 마법을 사용하여 자신만의 이야기를 만들어나갑니다.",
       "score": "96",
-      "develop": "Bethesda",
-      "platform": [
-        "PC"
-      ],
-      "steamLink": "https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/"
+      "steamLink": "https://store.steampowered.com/app/7670/BioShock/"
     },
-    "masseffect2": {
-      "gameTitle": "Mass Effect 2",
-      "gameVideo": "https://www.youtube.com/embed/lx9sPQpjgjU?si=KEsxuTKICQAm9Egt",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fmasseffect2cover.jpg?alt=media&token=7802ceb4-dc47-4812-bb4b-8cc28302f529&_gl=1*1wknwtc*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMyNjkwOS4xNi4xLjE2OTkzMjg1NjkuNDcuMC4w",
-      "gameDate": "JAN 26, 2010",
-      "gameDescript": "과학 판타지 액션 RPG 게임으로, 우주 선박 Normandy를 이끄는 Commander Shepard의 이야기를 중심으로 합니다. 은하계를 위협하는 신종 적인 적과의 전투, 팀원들과의 관계 형성, 그리고 선택에 따라 변화하는 다양한 엔딩이 게임의 핵심을 이룹니다",
-      "score": "96",
-      "develop": "BioWare",
+    "gta5": {
+      "gameId":"32982",
+      "develop": "Rockstar Games",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fgta5cover.jpg?alt=media&token=1451d0c4-af1d-4656-9e4f-0ea69ede597c&_gl=1*1ty3h72*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI0NTYuMzQuMC4w",
+      "gameDate": "NOV 18, 2014",
+      "gameDescript": "엄청난 자유로움과 역동적인 오픈 월드 환경에서의 흥미진진한 범죄 어드벤처를 제공하는 인기 있는 액션 어드벤처 게임입니다. 캘리포니아를 모티브로 한 거대한 맵에서 플레이어는 세 명의 주인공으로 전환하며, 자유로운 탐험, 자동차 경주, 범죄 행위, 그리고 다양한 임무를 수행하며 즐기세요.",
+      "gameTitle": "Grand Theft Auto 5",
+      "gameVideo": "https://www.youtube.com/embed/QkkoHAzjnUs?si=OU8eln8ptJh8yFzD",
       "platform": [
-        "PC"
+        "PC",
+        "PS"
       ],
-      "steamLink": "https://store.steampowered.com/app/2362420/Mass_Effect_2_2010_Edition/"
+      "score": "97",
+      "steamLink": "https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/?l=koreana"
     },
     "gtavicecity": {
-      "gameTitle": "Grand Theft Auto: Vice City",
-      "gameVideo": "https://www.youtube.com/embed/BcqMaYdYow0?si=PITD8DxzIfBpN14K",
+      "gameId":"15631",
+      "develop": "Rockstar Games",
       "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fgtavicecover.jpg?alt=media&token=3a0a26aa-71a0-4057-bf9e-0be4bf3baefa&_gl=1*u25ir6*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2MDUuNjAuMC4w",
       "gameDate": "OCT 29, 2002",
       "gameDescript": "1980년대 마이애미를 배경으로 한 Rockstar Games의 역동적인 액션 어드벤처 비디오 게임입니다. 이 게임은 자유로운 탐험과 미션 수행을 통해 범죄 세계에서 캐릭터를 성장시키고, 자동차 운전, 총격전, 미션 완수 등 다양한 활동을 경험해보세요.",
-      "score": "95",
-      "develop": "Rockstar Games",
+      "gameTitle": "Grand Theft Auto: Vice City",
+      "gameVideo": "https://www.youtube.com/embed/BcqMaYdYow0?si=PITD8DxzIfBpN14K",
       "platform": [
         "PC"
       ],
+      "score": "95",
       "steamLink": "https://store.steampowered.com/app/12110/Grand_Theft_Auto_Vice_City/"
+    },
+    "halflife": {
+      "gameId":"2755",
+      "develop": "Valve",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fhalflifecover.jpg?alt=media&token=3bc4576f-6d31-49c5-8e95-fae78359fde7&_gl=1*1onow15*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2MzguMjcuMC4w",
+      "gameDate": "NOV 19, 1998",
+      "gameDescript": "유명한 FPS 시리즈로, 뛰어난 스토리텔링과 혁신적인 게임 플레이로 극찬받는 작품입니다. 주인공 고든 프리먼은 다양한 적과 퍼즐을 해결하며 혁신적인 무기와 상상력을 요구하는 환경 속에서 스릴 넘치는 경험해보세요.",
+      "gameTitle": "HλLF-LIFE",
+      "gameVideo": "https://www.youtube.com/embed/5Wavn29LMrs?si=ZTlJZwo3J9gVc8MG",
+      "platform": [
+        "PC"
+      ],
+      "score": "96",
+      "steamLink": "https://store.steampowered.com/app/70/HalfLife/"
+    },
+    "halflife2": {
+      "gameId":"1420",
+      "develop": "Valve",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fhafelife2cover.jpg?alt=media&token=5083bba0-f3d3-401b-8da3-edb8acd0915b&_gl=1*1m4k6ms*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2MjQuNDEuMC4w",
+      "gameDate": "NOV 16, 2004",
+      "gameDescript": "엄청난 자유로움과 역동적인 오픈 월드 환경에서의 흥미진진한 범죄 어드벤처를 제공하는 인기 있는 액션 어드벤처 게임입니다. 캘리포니아를 모티브로 한 거대한 맵에서 플레이어는 세 명의 주인공으로 전환하며, 자유로운 탐험, 자동차 경주, 범죄 행위, 그리고 다양한 임무를 수행하며 즐기세요.",
+      "gameTitle": "HλLF-LIFE 2",
+      "gameVideo": "https://www.youtube.com/embed/UKA7JkV51Jw?si=eBQRHzTcMWsKkWrq",
+      "platform": [
+        "PC"
+      ],
+      "score": "96",
+      "steamLink": "https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/?l=koreana"
+    },
+    "masseffect2": {
+      "gameId":"19676",
+      "develop": "BioWare",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fmasseffect2cover.jpg?alt=media&token=7802ceb4-dc47-4812-bb4b-8cc28302f529&_gl=1*1wknwtc*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMyNjkwOS4xNi4xLjE2OTkzMjg1NjkuNDcuMC4w",
+      "gameDate": "JAN 26, 2010",
+      "gameDescript": "과학 판타지 액션 RPG 게임으로, 우주 선박 Normandy를 이끄는 Commander Shepard의 이야기를 중심으로 합니다. 은하계를 위협하는 신종 적인 적과의 전투, 팀원들과의 관계 형성, 그리고 선택에 따라 변화하는 다양한 엔딩이 게임의 핵심을 이룹니다",
+      "gameTitle": "Mass Effect 2",
+      "gameVideo": "https://www.youtube.com/embed/lx9sPQpjgjU?si=KEsxuTKICQAm9Egt",
+      "platform": [
+        "PC"
+      ],
+      "score": "96",
+      "steamLink": "https://store.steampowered.com/app/2362420/Mass_Effect_2_2010_Edition/"
+    },
+    "orangebox": {
+      "gameId":"16271",
+      "develop": "Valve",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Forangecover.jpg?alt=media&token=8c7c6020-6558-4786-927f-b75e58417055&_gl=1*1d5fj9j*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2NjYuNjAuMC4w",
+      "gameDate": "OCT 10, 2007",
+      "gameDescript": "팀 기반 FPS 게임인 '팀 포트리스 2'와 '하프 라이프 2', 그리고 물리학 기반 퍼즐 게임 '포털'을 포함하고 있습니다. 이 번들은 각각의 게임이 독립적으로 우수한 퀄리티를 보유하며, 한 번에 다양한 장르의 게임을 즐길 수 있는 패키지로 유명합니다.",
+      "gameTitle": "The Orange Box",
+      "gameVideo": "https://www.youtube.com/embed/9FYQ1tynj6U?si=GqAEav-BQ9E2BOzT",
+      "platform": [
+        "PC"
+      ],
+      "score": "96",
+      "steamLink": "https://store.steampowered.com/sub/469/"
+    },
+    "portal2": {
+      "gameId":"19731",
+      "develop": "Valve",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fportal2cover.jpg?alt=media&token=1e36fa9b-7109-4423-a563-2039502cba88&_gl=1*eu19pa*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2ODIuNDQuMC4w",
+      "gameDate": "APR 19, 2011",
+      "gameDescript": "고유한 퍼즐 해결과 흥미진진한 이야기가 결합된 인기 퍼즐 플랫폼 게임입니다. 플레이어는 고유한 플로우를 가진 무한한 포탈을 생성하여 다양한 퍼즐과 도전을 해결하며, 로봇 GLaDOS와의 상호작용을 통해 게임 세계를 탐험하세요.",
+      "gameTitle": "Portal 2",
+      "gameVideo": "https://www.youtube.com/embed/tax4e4hBBZc?si=qC1san1PUFCeRW-Z",
+      "platform": [
+        "PC"
+      ],
+      "score": "95",
+      "steamLink": "https://store.steampowered.com/app/620/Portal_2/?l=koreana"
+    },
+    "skyrim5": {
+      "gameId":"30028",
+      "develop": "Bethesda",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fskyrim5cover.jpg?alt=media&token=dd0b5fa7-d16f-4439-b1b3-4496dd5ed351&_gl=1*1nqdat6*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI3NDcuNDEuMC4w",
+      "gameDate": "NOV 11, 2011",
+      "gameDescript": "오픈 월드 액션 RPG 게임으로, 환상적인 고대 북유럽 판타지 세계에 입문할 수 있는 플레이어를 위한 환상적인 모험을 제공합니다. 플레이어는 용을 퇴치하고 영토를 탐험하며, 다양한 퀘스트를 완수하고 마법을 사용하여 자신만의 이야기를 만들어나갑니다.",
+      "gameTitle": "The Elder Scrolls V: Skyrim",
+      "gameVideo": "https://www.youtube.com/embed/JSRtYpNRoN0?si=H39R_SQBwzivoUIe",
+      "platform": [
+        "PC"
+      ],
+      "score": "96",
+      "steamLink": "https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/"
     }
   },
   "reviews": {
-    "halflife2": {
-      
-    },
-    "gta5": {
-      
-    },
-    "orangebox": {
-      
-    },
-    "halflife": {
-      
-    },
-    "bioshock": {
-      
-    },
-    "baldursgate": {
-      
-    },
-    "portal2": {
-      
-    },
-    "skyrim5": {
-      
-    },
-    "masseffect2": {
-      
-    },
-    "gtavicecity": {
-      
+    "Baldur's Gate II: Shadows of Amn": {
+      "-NjoPP6ma0tLrepn5Ksc": {
+        "date": "Nov 22, 2023",
+        "email": "ashpng789@gmail.com",
+        "rating": 1,
+        "text": "really bad game",
+        "user": "Dewimps"
+      },
+      "-NjoPZOYsEvEHo4tUN-l": {
+        "date": "Nov 22, 2023",
+        "email": "ashpng789@gmail.com",
+        "rating": 8,
+        "text": "gooood",
+        "user": "Dewimps"
+      },
+      "-Njon003i-KJDTnbR929": {
+        "date": "Nov 22, 2023",
+        "email": "ashpng789@gmail.com",
+        "rating": 7,
+        "text": "좋네요",
+        "user": "Dewimps"
+      },
+      "-NjonBDfGQcGa6zOqCS_": {
+        "date": "Nov 22, 2023",
+        "email": "ashpng789@gmail.com",
+        "rating": 8,
+        "text": "좋아요",
+        "user": "Dewimps"
+      },
+      "-NjonCXnCXMYYMdH_DGO": {
+        "date": "Nov 22, 2023",
+        "email": "ashpng789@gmail.com",
+        "rating": 3,
+        "text": "그저그래요",
+        "user": "Dewimps"
+      },
+      "-NjotKlvgx7yBnme9e-M": {
+        "date": "Nov 22, 2023",
+        "email": "ashpng789@gmail.com",
+        "rating": 10,
+        "text": "10점 만점!",
+        "user": "Dewimps"
+      },
+      "-NjouPK5imNdVstTE6QA": {
+        "date": "Nov 22, 2023",
+        "email": "ashpng789@gmail.com",
+        "rating": 3,
+        "text": "3점... 그냥 3점입니다",
+        "user": "Dewimps"
+      },
+      "-NjpW9kl8p-OzTlw4V6Y": {
+        "date": "Nov 22, 2023",
+        "email": "ashpng789@gmail.com",
+        "rating": 5,
+        "text": "리그 오브 레전드는 전략과 솜씨가 모두 필요한 멋진 게임이에요. 캐릭터 다양성과 전투의 재미는 물론, 팀워크의 중요성이 강조되어 친구들과 함께 플레이하는 즐거움이 크네요. 그래픽과 디자인도 훌륭하며, 꾸준한 업데이트로 게임의 신선함을 유지하고 있어 매번 새로운 경험을 할 수 있어 좋습니다. 다소 학습 곡선이 높긴 하지만, 한 번 익숙해지면 중독성 있는 재",
+        "user": "Dewimps"
+      },
+      "-NjqxgemwZc6fq0MLTHP": {
+        "date": "Nov 22, 2023",
+        "email": "rekurokumol@gmail.com",
+        "rating": 9,
+        "text": "이게임 너무 재미잇습니다.!! 기습 숭대 대종우 또 너야..?\n이게임 너무 재미잇습니다.!! 기습 숭대 대종우 또 너야..?\n이게임 너무 재미잇습니다.!! 기습 숭대 대종우 또 너야..?\n이게임 너무 재미잇습니다.!! 기습 숭대 대종우 또 너야..?\n이게임 너무 재미잇습니다.!! 기습 숭대 대종우 또 너야..?",
+        "user": "キョヌヌ"
+      }
     }
   }
 }
-
