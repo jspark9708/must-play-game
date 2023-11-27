@@ -9,14 +9,31 @@
 
 /* 타이틀 요소 */
 .contentsTitle {
-  display: flex;
+  display: block;
   align-items: center;
   border-bottom: 1px solid #262626;
   padding: 0 0.5rem;
   padding-bottom: 1.5rem;
 }
-.contentsTitle h2 {
+
+.contentsTitle h2{
   color: black;
+}
+
+.samerow p {
+  font-size: 0.8rem;
+  color: #555555;
+  font-weight: 400;
+  margin-left: 3px;
+  margin-top: 5px; margin-bottom: 0;
+}
+
+.samerow {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-left: -1px;
+  color: #666666;
 }
 
 .streamContainer {
@@ -55,7 +72,24 @@
   padding: 5px;
 }
 
-/* styles.module.css */
+.forNone {
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.forNone svg{
+  height: 150px;
+  color: #b9a3e3;
+}
+
+.forNone p{
+  color: #262626;
+  font-size: 1rem;
+  font-weight: bolder;
+}
 
 .thumbnail {
   position: relative;
