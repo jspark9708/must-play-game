@@ -70,7 +70,15 @@
   scroll-snap-align: start; /* 스냅 정렬 */
   width: 440px;
   padding: 5px;
+  margin-right: 5px;
 }
+
+.streamContainer ul li:hover {
+  transform: translate(3px, -3px);
+  box-shadow: -3px 3px #b9a3e3; /* 보라색 그림자 추가 */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* 부드러운 전환을 위해 추가 */
+}
+
 
 .forNone {
   height: 330px;

@@ -75,6 +75,12 @@ function Streams() {
     fetchChannels();
   }, [data.gameId]);
 
+
+  const toTwitch = (channel) => {
+    const twitchUrl = `https://twitch.tv/${channel.user_login}`;
+    window.open(twitchUrl, '_blank');
+  };
+
   return (
     <div>
       <div className={styles.componentArea}>
@@ -99,7 +105,7 @@ function Streams() {
           ) : (
             <ul>
               {channels.map((channel, index) => (
-                <li key={channel.id}>
+                <li key={channel.id} onClick={() => toTwitch(channel)}>
                   <div className={styles.thumbnail}>
                     <img
                       src={channel.thumbnail_url}
