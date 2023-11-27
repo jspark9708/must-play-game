@@ -73,9 +73,9 @@
   margin-right: 5px;
 }
 
-.streamContainer ul li:hover {
+.streamContainer ul li:not(:last-child):hover {
   transform: translate(3px, -3px);
-  box-shadow: -3px 3px #b9a3e3; /* 보라색 그림자 추가 */
+  box-shadow: -3px 3px #b9a3e3;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* 부드러운 전환을 위해 추가 */
 }
 
