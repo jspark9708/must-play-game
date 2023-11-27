@@ -240,6 +240,18 @@
   align-items: center;
 }
 
+.filterBtn {
+  display: flex;
+  grid-gap: 1rem;
+  gap: 1rem;
+  overflow: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
 .filterBtn button {
   color: black;
   border: none;
@@ -249,6 +261,8 @@
   background-color: transparent;
   outline: none;
   font-size: 1rem;
+  position: relative;
+  flex-shrink: 0;
 }
 
 .filterBtn button.active {
@@ -258,6 +272,13 @@
 
 .sortBtn {
   position: relative;
+  padding: 0 7px;
+
+}
+
+.sortBtn {
+  position: relative;
+  padding: 0 7px;
 }
 
 .customSelect {
@@ -271,7 +292,6 @@ select {
   appearance: none;
   padding: 8px 10px 8px 8px;
   border: 1px solid #cccccc;
-  margin-top: 8px;
   border-radius: 5px;
   background-color: transparent;
   font-size: 1rem;

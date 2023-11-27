@@ -1,6 +1,7 @@
 
 .pageContainer{
     width: 100%; height: auto; background-color:  rgb(255, 255, 255);
+    min-width: 260px;
 }
 
 
@@ -25,7 +26,7 @@
 
 .gridContainer{
     width: calc(100vw - 5rem);
-    min-width: 288px;
+
     margin-left: auto;
     margin-right: auto;
 }
@@ -46,7 +47,6 @@
 
 /* 첫 왼쪽 그리드와 오른쪽 그리드를 합친 곳  (동영상, 설명, 기타등등) */
 .gameContainer {
-    /* c-productHero_player-scoreInfo */
     height: auto;
     grid-gap: 0;
     gap: 0;
@@ -54,9 +54,6 @@
     overflow: hidden;
     background-color: rgb(255, 255, 255);
     /* g-grid-container */
-    min-width: 288px;
-    margin-left: auto;
-    margin-right:auto;
 }
 .gameContainer p, .gameContainer h1, .gameContainer h2, .gameContainer h3 { color: black;}
 
@@ -125,7 +122,6 @@
 /* 우측 */
 .rightContainer {
     grid-column: 2; /* 오른쪽에 위치하도록 설정 */
-    
     background-color: white;
     grid-row: span 2;
     display: flex;
@@ -271,14 +267,163 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
     .gameContainer{
         grid-template-columns: 1fr 443px;
     }
 }
 
-@media (max-width: 767px) {
-    .gameContainer{
-        grid-template-columns: 1fr 443px;
+@media (min-width: 768px) and (max-width: 1023px) {
+ 
+    .gridContainer {
+        width: 100%;
+        max-width: 100%;
+        
+    }
+
+    .gameContainer {
+        grid-template-columns: 1fr; /* Use 1fr to make the columns flexible */
+        gap: 1rem; /* Add some gap between the columns */
+        padding: 1rem; /* Add padding for better spacing */
+    }
+
+    .leftContainer, .rightContainer {
+        grid-column: 1; /* Set both containers to full width */
+    }
+
+    .scoreboard {
+        flex-direction: row; /* Stack the elements vertically in smaller screens */
+        margin-top: 1rem;
+        padding: 0 0.5rem;
+        color: #666666;
+        padding-bottom: 1.0rem;
+        border-bottom: 1px solid #262626;
+    }
+    .scoreBox {
+        margin-left: auto; /* Adjust margin for better spacing */
+    }
+    .textContents {
+        padding: 0;
+    }
+
+    .textContents h1 {
+        font-size: 2rem; /* Adjust font size for better readability */
+    }
+}
+
+
+
+/* 일반 노트북 */
+@media (min-width: 425px) and (max-width: 767px) {
+    .gridContainer {
+        width: 100%;
+        max-width: 100%;
+        
+    }
+
+    .gameContainer {
+        grid-template-columns: 1fr; /* Use 1fr to make the columns flexible */
+        gap: 1rem; /* Add some gap between the columns */
+        padding: 0.5rem; /* Add padding for better spacing */
+    }
+
+    .leftContainer, .rightContainer {
+        grid-column: 1; /* Set both containers to full width */
+    }
+
+    .scoreboard {
+        flex-direction: row; /* Stack the elements vertically in smaller screens */
+        margin-top: 1rem;
+        padding: 0;
+        color: #666666;
+        padding-bottom: 1.0rem;
+        border-bottom: 1px solid #262626;
+    }
+
+    .scoreBox {
+        margin-left: auto; /* Adjust margin for better spacing */
+        width: 55px; height: 55px;
+        font-size: 1.7rem; font-weight: 700;
+    }
+    .textContents {
+        padding: 0;
+    }
+
+    .textContents h1 {
+        font-size: 1.5rem; /* Adjust font size for better readability */
+        margin-bottom: 1rem;
+    }
+}
+
+/* 갤럭시 폴드 같은 초소형 휴대기기*/
+@media (max-width: 424px) {
+    .gridContainer {
+        width: 100%;
+        max-width: 100%;
+        
+    }
+
+    .gameContainer {
+        grid-template-columns: 1fr; /* Use 1fr to make the columns flexible */
+        gap: 1rem; /* Add some gap between the columns */
+    }
+
+    .gridContainerWide p{
+        font-size: 0.75rem;
+        margin: 0 0.5rem 0.5rem 0;
+    }
+
+    .leftContainer, .rightContainer {
+        grid-column: 1; /* Set both containers to full width */
+    }
+
+    .scoreboard {
+        flex-direction: row; /* Stack the elements vertically in smaller screens */
+        margin-top: 1rem;
+        padding: 0 0.5rem;
+        color: #666666;
+        padding-bottom: 1.0rem;
+        border-bottom: 1px solid #262626;
+    }
+
+    .scoreBox {
+        margin-left: auto; /* Adjust margin for better spacing */
+        width: 40px; height: 40px;
+        font-size: 1.45rem; font-weight: 650;
+    }
+
+    .scoreboardText h2{
+        font-size: 1.25rem;
+    }
+    
+    .samerow{
+        display: none;
+    }
+
+    .textContents {
+        padding: 0;
+    }
+
+    .textContents h1 {
+        font-size: 1.25rem; /* Adjust font size for better readability */
+        margin-bottom: 1rem;
+        padding: 0 8px;
+        margin: 5px 0;
+    }
+
+    .withLink h3, .withLink p {
+        font-size: 1.0rem;
+        padding: 0 8px;
+        margin: 5px 0;
+    }
+
+    .description p {
+        padding: 0 8px;
+        font-size: 0.8rem;
+    }
+
+    .linkButton {
+        padding: 5px 8px;
+        margin: 0 8px;
     }
 }
