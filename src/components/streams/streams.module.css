@@ -1,49 +1,135 @@
-.container {
-    background-color: rgb(193, 138, 193);
-    width: calc(100vw - 5rem);
-    margin: 60px 0 30px 0;
-    max-width: 1296px; /* 임시 - 반응형 수정 필요 */
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: 1px solid #262626;
+.componentArea {
+  width: calc(100vw - 5rem);
+  margin: 60px 0 30px 0;
+  max-width: 1296px; /* 임시 - 반응형 수정 필요 */
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #262626;
+}
+
+/* 타이틀 요소 */
+.contentsTitle {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #262626;
+  padding: 0 0.5rem;
+  padding-bottom: 1.5rem;
+}
+.contentsTitle h2 {
+  color: black;
+}
+
+.streamContainer {
+  margin: 1.5rem 0;
+}
+
+/* 현재 방송중인 목록 전체 영역, 슬라이더 사용시 */
+.streamContainer ul {
+  display: flex;
+  align-items: center;
+  overflow-x: auto; /* 가로 스크롤 가능하도록 설정 */
+  scroll-snap-type: x mandatory; /* 스크롤 시 각 li 요소에 스냅 적용 */
+  -webkit-overflow-scrolling: touch; /* iOS 스크롤 성능 최적화 */
+}
+
+.streamContainer ul::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* 스크롤바 손잡이 스타일 */
+.streamContainer ul::-webkit-scrollbar-thumb {
+  background-color: #262626;
+  border-radius: 5px;
+}
+
+/* 스크롤바 트랙 배경 스타일 */
+.streamContainer ul::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+/* 방송 개별 영역 */
+.streamContainer ul li {
+  display: inline-block;
+  scroll-snap-align: start; /* 스냅 정렬 */
+  width: 440px;
+  padding: 5px;
 }
 
 /* styles.module.css */
-.carousel {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .carousel ul {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel ul li {
-    list-style: none;
-    display: block;
-  }
-  
-  .prevButton,
-  .nextButton {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-  
-  .prevButton {
-    left: 10px;
-  }
-  
-  .nextButton {
-    right: 10px;
-  }
-  
-  .active {
-    border: 2px solid #007BFF; /* 선택된 슬라이드 강조 스타일 */
-  }
-  
+
+.thumbnail {
+  position: relative;
+}
+
+.liveInfo span,
+.liveInfo p {
+  padding: 4px;
+  margin: 10px;
+  position: absolute;
+}
+
+.liveInfo span {
+  background-color: red; /* 배경색은 필요에 따라 조절하세요 */
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.liveInfo p {
+  background-color: rgba(0, 0, 0, 0.6); /* 배경색은 필요에 따라 조절하세요 */
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.streamerInfo {
+  display: flex;
+  margin: 5px 0;
+}
+
+.streamerInfo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 10px;
+}
+
+.streamerInfoText {
+  display: block;
+  margin: auto 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.streamerInfoText strong {
+  font-size: 1rem;
+}
+
+.streamerInfoText p {
+  font-size: 0.9rem;
+  color: black;
+  margin: 5px 0;
+}
+
+.twitchButton a svg {
+  color: #6441a5;
+  width: 50px;
+  margin: 3rem;
+  cursor: pointer;
+}
+
+.twitchButton a svg:hover {
+  color: #262626;
+}
+
+.twitchButton a svg:active{
+  transform: translateY(2px);
+}

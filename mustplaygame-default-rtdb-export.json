@@ -1,7 +1,7 @@
 {
   "games": {
     "baldursgate": {
-      "gameId":"9769",
+      "gameId":"512923",
       "develop": "BioWare",
       "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fbaldurscover.jpg?alt=media&token=36a3aac2-ea06-4e2c-bace-542776b62804&_gl=1*1my2iqd*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI1NDguNTcuMC4w",
       "gameDate": "SEP 24, 2000",
@@ -15,7 +15,7 @@
       "steamLink": "https://store.steampowered.com/app/257350/Baldurs_Gate_II_Enhanced_Edition/"
     },
     "bioshock": {
-      "gameId":"15867",
+      "gameId":"15866",
       "develop": "IRRATIONAL GAMES",
       "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fbioshockcover.jpg?alt=media&token=197f5d3d-db86-4f9f-af13-37fd5b528895&_gl=1*n63cyj*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI1OTAuMTUuMC4w",
       "gameDate": "AUG 21, 2007",
