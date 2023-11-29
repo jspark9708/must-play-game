@@ -1,7 +1,7 @@
 .componentArea {
   width: calc(100vw - 5rem);
-  margin: 60px 0 30px 0;
-  max-width: 1296px; /* 임시 - 반응형 수정 필요 */
+  margin: 60px 0 0 0;
+  max-width: 1296px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -183,9 +183,6 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .componentArea {
-    margin: 60px 0;
-    margin-left: 0;
-    margin-right: 0;
     padding: 0 1rem;
     width: auto;
   }
@@ -193,9 +190,6 @@
 
 @media (max-width: 767px) {
   .componentArea {
-    margin: 60px 0;
-    margin-left: 0;
-    margin-right: 0;
     padding: 0 0.5rem;
     width: auto;
   }
@@ -204,7 +198,7 @@
   }
   .contentsTitle h2 {
     color: black;
-    font-size: 20px;
+    font-size: 24px;
   }
   .samerow {
     display: none;
@@ -231,11 +225,12 @@
 
 @media (max-width: 424px) {
   .componentArea {
-    margin: 60px 0;
-    margin-left: 0;
-    margin-right: 0;
     padding: 0;
     width: auto;
+  }
+  .contentsTitle h2 {
+    color: black;
+    font-size: 20px;
   }
 
   .streamerInfoText strong {

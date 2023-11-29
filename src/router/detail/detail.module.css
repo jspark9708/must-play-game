@@ -1,9 +1,10 @@
 
 .pageContainer{
-    width: 100%; height: auto; background-color:  rgb(255, 255, 255);
+    width: 100%; height:auto;
+    background-color:  rgb(255, 255, 255);
     min-width: 260px;
+    margin-bottom: -100px; /* 이상하게 생기는 아래 공간 제거 */
 }
-
 
 .navCover {
     height: 200px;
@@ -26,7 +27,6 @@
 
 .gridContainer{
     width: calc(100vw - 5rem);
-
     margin-left: auto;
     margin-right: auto;
 }
@@ -68,7 +68,6 @@
 .videoArea {
     position: relative;
     width: 100%;
-    height: 0;
     padding-bottom: 56.25%; /* 16:9 비율의 비디오 크기를 위한 값 */
 }
 
@@ -359,6 +358,7 @@
 
 /* 갤럭시 폴드 같은 초소형 휴대기기*/
 @media (max-width: 424px) {
+    
     .gridContainer {
         width: 100%;
         max-width: 100%;
@@ -368,6 +368,11 @@
     .gameContainer {
         grid-template-columns: 1fr; /* Use 1fr to make the columns flexible */
         gap: 1rem; /* Add some gap between the columns */
+        border-radius: 0px;
+    }
+
+    .videoArea iframe {
+        border-radius: 0px;
     }
 
     .gridContainerWide p{
