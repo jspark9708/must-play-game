@@ -54,6 +54,8 @@
     overflow: hidden;
     background-color: rgb(255, 255, 255);
     /* g-grid-container */
+    margin-left: auto;
+    margin-right:auto;
 }
 .gameContainer p, .gameContainer h1, .gameContainer h2, .gameContainer h3 { color: black;}
 

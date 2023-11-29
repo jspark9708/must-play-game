@@ -61,7 +61,10 @@
   padding: 20px 0;
 }
 
-.modalContents h2 { color:black; margin: 10px 0 10px 5px; } 
+.modalContents h2 {
+  color: black;
+  margin: 10px 0 10px 5px;
+}
 
 .closeBtn {
   position: absolute;
@@ -77,20 +80,26 @@
   color: rgb(50, 50, 50);
 }
 
-.container { 
+.container {
   display: block;
 }
 
 .banner {
-  display: flex; align-items: center; text-align: left;
+  display: flex;
+  align-items: center;
+  text-align: left;
   border-bottom: 1px solid #979797;
   padding-bottom: 10px;
 }
-.banner p { color:black; font-size: 1rem; }
+.banner p {
+  color: black;
+  font-size: 1rem;
+}
 .banner img {
   margin: 0px 15px 0px 5px;
   border-radius: 50px;
-  width: 55px; height: 55px;
+  width: 55px;
+  height: 55px;
 }
 
 .textareaContainer {
@@ -105,7 +114,6 @@
   margin: 0;
   color: rgb(70, 70, 70);
   font-size: 0.7rem;
-  
 }
 
 .textareaContainer textarea {
@@ -169,12 +177,12 @@
   align-items: center;
   justify-content: space-evenly;
   border-right: 1px solid #cccccc;
- }
+}
 
- .userScore {
- }
+.userScore {
+}
 
- .scoreOverlay {
+.scoreOverlay {
   border-radius: 50%;
   width: 80px; /* 너비 설정 */
   height: 80px; /* 높이 설정 */
@@ -192,13 +200,13 @@
   margin: 15px 0;
 }
 
-.userScore p{
+.userScore p {
   color: black;
   font-size: 1rem;
-  margin:15px 0;
+  margin: 15px 0;
 }
 
-.reviewOverview { 
+.reviewOverview {
   display: block;
   margin-top: 50px;
   padding: 0 1rem;
@@ -209,7 +217,6 @@
   border-radius: 5px;
   border: 5px solid #d8d8d8;
 }
-
 
 .progressBar {
   height: 20px;
@@ -226,11 +233,11 @@
 .reviewSum p {
   color: black;
   font-weight: 500;
- }
-.reviewSum p:first-child{
+}
+.reviewSum p:first-child {
   border-right: 1px solid #cccccc;
 }
-.reviewSum p:nth-child(2){
+.reviewSum p:nth-child(2) {
   border-right: 1px solid #cccccc;
 }
 
@@ -273,12 +280,6 @@
 .sortBtn {
   position: relative;
   padding: 0 7px;
-
-}
-
-.sortBtn {
-  position: relative;
-  padding: 0 7px;
 }
 
 .customSelect {
@@ -315,7 +316,10 @@ select {
   margin: 0 auto; /* 중앙 정렬 */
 }
 
-.reviewList h1, .reviewList p { color: black;}
+.reviewList h1,
+.reviewList p {
+  color: black;
+}
 
 /* 각 리뷰 항목 스타일 */
 .reviewList ul {
@@ -324,9 +328,11 @@ select {
   margin: 2.5rem 0 1.5rem 0;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* 초기에는 한 줄에 한 개씩 */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(100%, 1fr)
+  ); /* 초기에는 한 줄에 한 개씩 */
 }
-
 
 .reviewList li {
   background-color: #ececec; /* 배경색 */
@@ -374,7 +380,9 @@ select {
   border-top: 1px solid #979797;
 }
 
-.reviewBody p{ font-size: 1rem; }
+.reviewBody p {
+  font-size: 1rem;
+}
 
 .deletButton {
   display: flex;
@@ -405,66 +413,221 @@ select {
   text-align: center;
 }
 
-@media (min-width: 1050px) {
-  .reviewList ul {
-    grid-template-columns: repeat(auto-fill, minmax(48%, 1fr)); /* 1060px 이상일 때는 한 줄에 두 개씩 */
-  }
-}
-
-/*
-.reviewList h1,
-.reviewList p {
-  color: black;
-}
-
-.gridContainer {
-  width: calc(100vw - 5rem);
-  min-width: 288px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.gridContainer h2 {color: black;}
-.gridContainer p {color: black;}
-
-.titleText {
-  display: flex;
-  margin-top: 1rem;
-  padding: 0 0.5rem;
-  color: #666666;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #262626;
-}
-
-.titleText p {
-  margin: 0;
-  margin-left: 3px;
-  font-weight: 400;
-  color: #555555;
-}
-.samerow {
-  display: flex;
-  align-items: center;
-  font-size: 0.8rem;
-  margin-left: -1px;
-}
-
 @media (min-width: 1440px) {
-  .reviewContainer{
-      grid-template-columns: 1fr 443px;
-      width: 1296px;
-      max-width: 1440px;
-  }
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
-  .reviewContainer{
-      grid-template-columns: 1fr 443px;
+@media (min-width: 1024px) and (max-width: 1439px) {
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .componentArea {
+    margin: 60px 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 1rem;
+    width: auto;
   }
 }
 
 @media (max-width: 767px) {
-  .reviewContainer{
-      grid-template-columns: 1fr 443px;
+  .componentArea {
+    margin: 60px 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0.5rem;
+    width: auto;
+  }
+
+  .overview {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+    margin: 15px 0 0 0;
+    width: 100%;
+    border-bottom: 1px solid #262626;
+    max-width: 1440px;
+  }
+
+  .scoreOverview {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    border-right: none;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  .userScore {
+    text-align: center;
+  }
+  .scoreOverlay {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 3.5px solid #d8d8d8;
+  }
+  .reviewOverview {
+    display: block;
+    margin-top: 0px;
+    padding: 10px 0.7rem 0 0.5rem;
+  }
+  .progressBar {
+    height: 15px;
+  }
+  .reviewSum {
+    justify-content: space-evenly;
+    font-size: 0.75em;
+    line-height: 1rem;
+  }
+
+  /*유저 리뷰 스타일*/
+  .userInfoContainer h2 {
+    font-size: 20px;
+  }
+
+  .scoreOverlay2 {
+    width: 50px;
+    height: 50px;
+    font-size: 1.9em;
+    font-weight: 800;
   }
 }
-*/
+
+@media (max-width: 424px) {
+  .contentsTitle h2 {
+    font-size: 1.25rem;
+  }
+  .contentsTitle button {
+    padding: 5px 15px;
+  }
+
+  .componentArea {
+    margin: 60px 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    width: auto;
+  }
+
+  /* 버튼 부분 */
+  .filterBtn button {
+    padding: 10px 10px;
+    margin-left: 5px;
+    font-size: 0.8rem;
+  }
+
+  .sortBtn {
+    padding: 0 4px;
+  }
+
+  select {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  /* 유저 리뷰 부분 */
+  .reviewList p {
+    font-size: 13px;
+  }
+
+  .userInfoContainer h2 {
+    margin-left: 0.5rem;
+    font-size: 20px;
+  }
+
+  .scoreOverlay2 {
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .reviewBody {
+    padding: 0.8rem 0;
+  }
+
+  .reviewBody p {
+    font-size: 0.9rem;
+  }
+
+  .deletButton {
+    display: flex;
+  }
+
+  .deletButton button {
+    border-radius: 5px;
+    padding: 3px 5px;
+    font-size: 0.7rem;
+  }
+  .reviewList li {
+    border-radius: 0px;
+    padding: 10px;
+  }
+
+  /* modal */
+
+  .modal {
+    position: absolute;
+    top: 80px;
+    left: 0%;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    border-radius: 0px;
+    box-shadow: none;
+    z-index: 999;
+  }
+
+  .modalContents h2 {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .banner {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border-bottom: 1px solid #979797;
+    padding-bottom: 20px;
+  }
+  .banner p {
+    color: black;
+    font-size: 0.75rem;
+  }
+  .banner img {
+    margin: 0px 15px 0px 5px;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+  }
+  .textareaContainer textarea {
+    width: 95%;
+    padding: 10px;
+    height: 200px;
+  }
+  .textareaContainer p {
+    text-align: right;
+    margin: 2%;
+    color: rgb(70, 70, 70);
+    font-size: 0.7rem;
+  }
+  .buttonSet button {
+    margin: 80px 10px 0 10px;
+    height: 2.5rem;
+    border-radius: 5px; /* border-radius 설정 */
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+}
+
+/* 유저 리뷰 반응형 */
+@media (min-width: 767px) {
+  .reviewList ul {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(48%, 1fr)
+    ); /* 767px 이상일 때는 한 줄에 두 개씩 */
+  }
+}

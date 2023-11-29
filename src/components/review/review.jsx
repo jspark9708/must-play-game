@@ -363,7 +363,7 @@ const Review = () => {
                 </div>
                 <div className={styles.reviewSum}>
                   <p>
-                    부정적{" "}
+                    부정{" "}
                     {reviewOverviewData.ratingsCount
                       .slice(1, 4)
                       .reduce((sum, count) => sum + count, 0)}
@@ -377,7 +377,7 @@ const Review = () => {
                     명
                   </p>
                   <p>
-                    긍정적{" "}
+                    긍정{" "}
                     {reviewOverviewData.ratingsCount
                       .slice(8, 11)
                       .reduce((sum, count) => sum + count, 0)}
