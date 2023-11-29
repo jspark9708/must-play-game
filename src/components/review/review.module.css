@@ -4,7 +4,6 @@
   max-width: 1296px; /* 임시 - 반응형 수정 필요 */
   margin-left: auto;
   margin-right: auto;
-  border-bottom: 1px solid #262626;
 }
 
 /* 타이틀 요소 */
@@ -306,6 +305,8 @@ select {
 
 .pageContainer {
   margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #262626;
 }
 
 /* 리뷰 목록 전체 컨테이너 */

@@ -4,7 +4,6 @@
   max-width: 1296px; /* 임시 - 반응형 수정 필요 */
   margin-left: auto;
   margin-right: auto;
-  border-bottom: 1px solid #262626;
 }
 
 /* 타이틀 요소 */
@@ -16,7 +15,7 @@
   padding-bottom: 1.5rem;
 }
 
-.contentsTitle h2{
+.contentsTitle h2 {
   color: black;
 }
 
@@ -25,7 +24,8 @@
   color: #555555;
   font-weight: 400;
   margin-left: 3px;
-  margin-top: 5px; margin-bottom: 0;
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
 .samerow {
@@ -38,6 +38,8 @@
 
 .streamContainer {
   margin: 1.5rem 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #262626;
 }
 
 /* 현재 방송중인 목록 전체 영역, 슬라이더 사용시 */
@@ -77,7 +79,8 @@
   transform: translate(3px, -3px);
   box-shadow: -3px 3px 0 0 #b9a3e3;
   border-radius: 5px; /* 적절한 값을 사용하여 조절하세요 */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-radius 0.3s ease-in-out; /* 부드러운 전환을 위해 추가 */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    border-radius 0.3s ease-in-out; /* 부드러운 전환을 위해 추가 */
 }
 
 .forNone {
@@ -88,12 +91,12 @@
   justify-content: center;
 }
 
-.forNone svg{
+.forNone svg {
   height: 150px;
   color: #b9a3e3;
 }
 
-.forNone p{
+.forNone p {
   color: #262626;
   font-size: 1rem;
   font-weight: bolder;
@@ -133,6 +136,8 @@
 .streamerInfo {
   display: flex;
   margin: 5px 0;
+  height: auto;
+  width: 100%;
 }
 
 .streamerInfo img {
@@ -172,6 +177,77 @@
   color: #262626;
 }
 
-.twitchButton a svg:active{
+.twitchButton a svg:active {
   transform: translateY(2px);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .componentArea {
+    margin: 60px 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 1rem;
+    width: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .componentArea {
+    margin: 60px 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 0.5rem;
+    width: auto;
+  }
+  .contentsTitle {
+    padding-bottom: 1rem;
+  }
+  .contentsTitle h2 {
+    color: black;
+    font-size: 20px;
+  }
+  .samerow {
+    display: none;
+  }
+
+  .streamContainer ul li {
+    min-width: 250px;
+    width: auto;
+    padding: 5px;
+    margin-right: 5px;
+  }
+  .streamContainer ul li img {
+    width: 100%;
+  }
+  .streamerInfo img {
+    max-width: 40px;
+    width: auto;
+    height: 40px;
+  }
+  .twitchButton a svg {
+    width: 40px;
+  }
+}
+
+@media (max-width: 424px) {
+  .componentArea {
+    margin: 60px 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    width: auto;
+  }
+
+  .streamerInfoText strong {
+    font-size: 0.8rem;
+  }
+
+  .streamerInfoText p {
+    font-size: 0.7rem;
+    color: black;
+    margin: 5px 0;
+  }
+  .twitchButton a svg {
+    width: 40px;
+  }
 }
