@@ -4,14 +4,14 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import "firebase/compat/storage";
 import firebaseConfig from "../../service/firebase.js";
-import styles from "./pc.module.css";
+import styles from "./switch.module.css";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
 
 //data 주고받기 위한 redux
 import { useDispatch } from "react-redux";
 import { addDetailData } from "../../store.js";
 
-const PC = () => {
+const Switch = () => {
   let navigate = useNavigate();
   const [games, setGames] = useState();
   const [showWarning, setShowWarning] = useState(false);
@@ -35,7 +35,7 @@ const PC = () => {
       // 필터링된 데이터를 가져오기
       const filteredGames = Object.keys(gamesData).reduce((acc, key) => {
         const game = gamesData[key];
-        if (game.platform.includes("PC")) {
+        if (game.platform.includes("Switch")) {
           acc.push({ key, ...game });
         }
         return acc;
@@ -61,8 +61,8 @@ const PC = () => {
     <div className={styles.bgColor}>
       <div className={styles.container}>
         <div className={styles.textContainer}>
-          <h1>Must Play PC Game</h1>
-          <h3>다음에 플레이할 PC 최고의 명작들을 소개해드립니다!</h3>
+          <h1>Must Play Switch Game</h1>
+          <h3>다음에 플레이할 Switch 최고의 명작들을 소개해드립니다!</h3>
           <div className={styles.separator}></div>
         </div>
         <div className={styles.listContainer}>
@@ -122,4 +122,4 @@ const PC = () => {
   );
 };
 
-export default PC;
+export default Switch;
