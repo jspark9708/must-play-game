@@ -19,6 +19,7 @@
 
 .textContainer h1,
 .textContainer h3 {
+    margin: 10px 0 15px 0;
     color: black;
 }
 
@@ -53,9 +54,10 @@
 
 .gameDetail {
     text-align: left;
-    margin-left: 15px;
+    margin-left: 10px;
     position: relative;
 }
+
 
 
 

@@ -4,7 +4,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import "firebase/compat/storage";
 import firebaseConfig from "../../service/firebase.js";
-import styles from "./ps.module.css";
+import styles from "./playstation.module.css";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
 
 //data 주고받기 위한 redux
