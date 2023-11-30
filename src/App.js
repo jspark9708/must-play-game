@@ -7,7 +7,8 @@ import "./App.css";
 import Nav from "./components/navigator/nav";
 import Main from  "./router/main/main";
 import PC from "./router/pc/pc";
-import Switch from "./router/switch/switch"
+import Switch from "./router/switch/switch";
+import PS from "./router/ps/ps";
 import Detail from './router/detail/detail';
 import './init.css';
 
@@ -64,6 +65,7 @@ function App() {
         <Route path="/" element={<Main></Main>}></Route>
         <Route path="/PC" element={<PC></PC>}></Route>
         <Route path="/Switch" element={<Switch></Switch>}></Route>
+        <Route path="/PS" element={<PS></PS>}></Route>
         <Route path="/Detail/:id" loginData={loginData} emailCheck={emailCheck} onLogout={onLogout} element={<Detail></Detail>}></Route>
       </Routes>
       <Footer></Footer>
