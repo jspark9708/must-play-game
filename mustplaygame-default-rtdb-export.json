@@ -287,6 +287,120 @@
       ],
       "score": "93",
       "steamLink": "https://www.nintendo.com/us/store/products/super-smash-bros-ultimate-switch/"
+    },
+    "reddeadredemption": {
+      "develop": "Rockstar Games",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Freddeadcover.jpg?alt=media&token=016d3dfd-1b89-40aa-a4a2-afedc065ca26",
+      "gameDate": "OCT 26, 2018",
+      "gameDescript": "오픈 월드 서바이벌 액션 어드벤처로, 미국 서부의 황량하고 몽환적인 풍경에서 펼쳐지는 엄청난 스토리와 자유로운 탐험이 특징입니다. 훌륭한 그래픽, 깊은 캐릭터 개발, 그리고 풍부한 세계관이 결합된 이 게임은 플레이어들에게 흥미진진한 서부 영화의 세계로 빠져들 수 있는 훌륭한 경험을 선사합니다.",
+      "gameId": "493959",
+      "gameTitle": "Red Dead Redemption 2",
+      "gameVideo": "https://www.youtube.com/embed/gmA6MrX81z4?si=BBWbvx85Q0yvgIrB",
+      "platform": [
+        "PS"
+      ],
+      "score": "97",
+      "steamLink": "https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/"
+    },
+    "lastofus": {
+      "develop": "Naughty Dog",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Flastofuscover.jpg?alt=media&token=18f0a419-9e94-45fe-92d7-b21455c20f1b",
+      "gameDate": "JUN 19, 2020",
+      "gameDescript": "강렬한 스토리와 감동적인 캐릭터로 이뤄진 게임입니다. 플레이어는 포스트-팬데믹 세계를 배경으로 한, 감염된 생명체들에 맞서 싸우며 생존하는 주인공 조엘과 소녀 엘리를 조종합니다. 입체적인 스토리, 훌륭한 연기, 그리고 긴장감 넘치는 전투가 결합된 이 작품은 게이머들에게 감동과 흥미를 동시에 선사하는 명작 중 하나입니다.",
+      "gameId": "33180",
+      "gameTitle": "The Last of Us",
+      "gameVideo": "https://www.youtube.com/embed/gmA6MrX81z4?si=BBWbvx85Q0yvgIrB",
+      "platform": [
+        "PS"
+      ],
+      "score": "95",
+      "steamLink": "https://www.playstation.com/en-us/the-last-of-us/"
+    },
+    "godofwar": {
+      "develop": "Santa Monica Studio",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fgodofwarcover.jpg?alt=media&token=928df88c-054c-4eaf-84b6-21d98eb9065c",
+      "gameDate": "APR 20, 2018",
+      "gameDescript": "그리스 신화의 세계를 배경으로 한 대담한 여정을 그린 게임입니다. 플레이어는 강력한 스파르타의 전사인 크레이토스를 조종하며 자신의 과거와 아들 아트리우스와의 관계를 탐험합니다. 화려하고 효과적인 전투 시스템, 깊은 감성과 스토리, 그리고 놀라운 그래픽으로 가득한 이 작품을 플레이 해보세요!",
+      "gameId": "6369",
+      "gameTitle": "God of War",
+      "gameVideo": "https://www.youtube.com/embed/K0u_kAWLJOA?si=kVOVQA4l8L8-X4KE",
+      "platform": [
+        "PS"
+      ],
+      "score": "94",
+      "steamLink": "https://store.steampowered.com/app/1593500/God_of_War/"
+    },
+    "persona5": {
+      "develop": "ATLUS",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fpersonacover.jpg?alt=media&token=5314ca62-3f52-4a70-ac67-5e0167ca883a",
+      "gameDate": "APR 4, 2017",
+      "gameDescript": "현실과 초현실이 교차하는 도시에서 벌어지는 독특하고 복잡한 이야기를 제공합니다. 플레이어는 금지된 행위로 타깃을 정하고, 극적인 변신을 거치며 동료들과 함께 사회적 정의를 실현하는 젊은 도전자로 전락합니다. 독특한 캐릭터 디자인과 스타일리시한 그래픽, 중독적인 턴제 전투 시스템을 즐기세요.",
+      "gameId": "27473",
+      "gameTitle": "Persona 5",
+      "gameVideo": "https://www.youtube.com/embed/QnDzJ9KzuV4?si=MV0cCXcUA0RouksH",
+      "platform": [
+        "PS"
+      ],
+      "score": "93",
+      "steamLink": "https://store.playstation.com/en-us/product/UP2611-CUSA05877_00-PERSONA512345678"
+    },
+    "metalgearsolid": {
+      "develop": "KOJIMA PRODUCTIONS",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fmetalgearcover.jpg?alt=media&token=442337e0-c298-4dcc-aa51-ce4c215035ea",
+      "gameDate": "OCT 6, 2015",
+      "gameDescript": "히데오 코지마의 대표작으로, 열린 세계 스타일의 스텔스 액션 게임으로 독특한 스토리와 복잡한 정치 음모를 탐험합니다. 플레이어는 빅 보스로 알려진 스네이크를 조종하며 자유로운 임무 구조와 독특한 캐릭터를 만나게 됩니다. 탁월한 그래픽과 자유로운 플레이, 그리고 깊은 스토리로 이루어진 이 게임입니다.",
+      "gameId": "66138",
+      "gameTitle": "Metal Gear Solid V: The Phantom Pain",
+      "gameVideo": "https://www.youtube.com/embed/A9JV0EvCkMI?si=Ak1sBANGgWT0x_1P",
+      "platform": [
+        "PS"
+      ],
+      "score": "93",
+      "steamLink": "https://store.steampowered.com/app/287700/METAL_GEAR_SOLID_V_THE_PHANTOM_PAIN/"
+    },
+    "uncharted4": {
+      "develop": "Naughty Dog",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Funcharted4cover.jpg?alt=media&token=83a0e7a7-a04d-42ae-bed1-bc896307da7f",
+      "gameDate": "MAY 10, 2016",
+      "gameDescript": "정통한 트레저 헌팅 어드벤처의 정점을 찍은 작품입니다. 주인공 네이슨 드레이크는 오랜 동료들과 함께 전 세계를 탐험하며 놀라운 퍼즐, 화려한 액션, 그리고 깊은 스토리를 경험합니다. 높은 수준의 연기와 몰입감 있는 그래픽이 결합된 이 작품은 어드벤처 게임의 수준을 끌어올렸으며, 플레이어들에게 감동적이고 잊지 못할 경험을 선사합니다.",
+      "gameId": "458641",
+      "gameTitle": "Uncharted 4: A Thief's End",
+      "gameVideo": "https://www.youtube.com/embed/hh5HV4iic1Y?si=41kIOesuo7RrZLv7",
+      "platform": [
+        "PS"
+      ],
+      "score": "93",
+      "steamLink": "https://store.playstation.com/en-us/product/UP9000-CUSA00341_00-UNCHARTED0000000"
+    },
+    "journey": {
+      "develop": "thatgamecompany",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fjourneycover.jpg?alt=media&token=bf40d252-727b-4028-adc5-7318ac4c23f8",
+      "gameDate": "MAR 13, 2012",
+      "gameDescript": "플레이어를 미지의 사막 세계로 안내하는 감각적이고 아름다운 어드벤처 게임입니다. 독특한 멀티플레이 경험에서 플레이어들은 익명의 동료들과 함께 여정을 떠나며 소통 없이도 감정적인 연결을 형성합니다. 간단한 컨트롤과 아름다운 음악, 특별한 시각 효과가 결합된 감성적인 여운을 남기며 게임 예술의 수준을 높였습니다.",
+      "gameId": "19829",
+      "gameTitle": "Journey",
+      "gameVideo": "https://www.youtube.com/embed/mU3nNT4rcFg?si=FilwPfYXB3YvA4kU",
+      "platform": [
+        "PS"
+      ],
+      "score": "92",
+      "steamLink": "https://www.playstation.com/ko-kr/games/journey/"
+    },
+    "undertale": {
+      "develop": "Toby Fox",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fundertalecover.jpg?alt=media&token=fec4f619-84de-4e17-b26e-ba199da387c7",
+      "gameDate": "SEP 15, 2015",
+      "gameDescript": "언더테일 아시는구나! 혹시 모르시는 분들에 대해 설명해드립니다. 샌즈랑 언더테일의 세 가지 엔딩 루트 중 몰살 엔딩의 최종 보스로 진짜 겁나 어렵습니다. 공격은 전부다 회피하고 만피가 92인데 샌즈의 공격은 1초당 60이라는데다가 독 데미지까지 추가로 붙어있습니다. 하지만 이러면 결코 게임을 깰 수가 없으니 제작진이 치명적인 약점을 만들었죠. 샌즈의 치명적인 약점이 바로 지친다는 것입니다. 패턴들을 다 견디고 나면 지쳐서 자신의 턴을 유지한 채로 잠에 듭니다. 하지만 잠이 들었을 때 창을 옮겨서 공격을 시도하고 샌즈는 1차 공격은 피하지만 그 후에 바로 날아오는 2차 공격을 맞고 죽습니다",
+      "gameId": "490713",
+      "gameTitle": "Undertale",
+      "gameVideo": "https://www.youtube.com/embed/ycsnBIX8wTU?si=-KEVcfzGpnEit31E",
+      "platform": [
+        "PS",
+        "PC",
+        "Switch"
+      ],
+      "score": "92",
+      "steamLink": "https://store.steampowered.com/app/391540/Undertale/"
     }
   },
   "reviews": {
