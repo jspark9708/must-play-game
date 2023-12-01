@@ -11,33 +11,38 @@ const Best = () => {
       firebase.initializeApp(firebaseConfig);
     }
 
-    const dbRef = firebase.database().ref("reviews");
+    const dbRefReviews = firebase.database().ref("reviews");
+    const dbRefGames = firebase.database().ref("games");
 
-    dbRef.once("value").then((snapshot) => {
+    dbRefReviews.once("value").then((snapshot) => {
       const reviews = snapshot.val();
 
       if (reviews) {
-        const gameAverage = Object.keys(reviews).map((game) => {
+        const gameAverage = Object.keys(reviews).map(async (game) => {
           const reviewsForGame = Object.values(reviews[game]);
           const averageRate =
             reviewsForGame.reduce((sum, review) => sum + review.rating, 0) /
             reviewsForGame.length;
 
+          const gameSnapshot = await dbRefGames.orderByChild("gameTitle").equalTo(game).once("value");
+          const gameData = gameSnapshot.val();
+          const gameKey = Object.keys(gameData)[0];
+
           return {
-            game,
+            game: gameData[gameKey].gameTitle,
             averageRate,
+            gameCover: gameData[gameKey].gameCover || null,
           };
         });
 
-        const sortedGames = gameAverage.sort(
-          (a, b) => b.averageRate - a.averageRate
-        );
+        Promise.all(gameAverage).then((gamesWithCovers) => {
+          const sortedGames = gamesWithCovers.sort(
+            (a, b) => b.averageRate - a.averageRate
+          );
 
-        /*console.log("sort", sortedGames);*/
-
-        const bestGames = sortedGames.slice(0, 5);
-
-        setBestGames(bestGames);
+          const bestGames = sortedGames.slice(0, 5);
+          setBestGames(bestGames);
+        });
       }
     });
     return () => {};
@@ -48,8 +53,11 @@ const Best = () => {
       <h1>최고의 5개 게임들</h1>
       <ul>
         {bestGames.map((game) => (
-          <li keys={game.game}>
+          <li key={game.game}>
             <strong>{game.game}</strong> : {game.averageRate.toFixed(1)}
+            {game.gameCover && (
+              <img src={game.gameCover} alt={`${game.game} cover`} sx={{ width: "100px" }} />
+            )}
           </li>
         ))}
       </ul>
