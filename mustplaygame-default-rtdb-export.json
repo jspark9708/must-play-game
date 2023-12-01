@@ -28,6 +28,36 @@
       "score": "96",
       "steamLink": "https://store.steampowered.com/app/7670/BioShock/"
     },
+    "divinity2": {
+      "develop": "Larian Studios",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fdivinitycover.jpg?alt=media&token=66586345-152e-46f3-8191-e5471876db37",
+      "gameDate": "SEP 17, 2020",
+      "gameDescript": " 풍부한 스토리, 다양한 선택지, 그리고 협동 플레이 기능이 특징입니다. 플레이어들은 다양한 능력을 가진 캐릭터를 만들어 세계를 탐험하며 퀘스트를 수행하고 전투에서 승리해야 합니다.",
+      "gameId": "490644",
+      "gameTitle": "Divinity: Original Sin II",
+      "gameVideo": "https://www.youtube.com/embed/bTWTFX8qzPI?si=trHq-h4aD4fC1Unm",
+      "platform": [
+        "Switch",
+        "PS",
+        "PC"
+      ],
+      "score": "93",
+      "steamLink": "https://store.steampowered.com/app/435150/Divinity_Original_Sin_2__Definitive_Edition/"
+    },
+    "godofwar": {
+      "develop": "Santa Monica Studio",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fgodofwarcover.jpg?alt=media&token=928df88c-054c-4eaf-84b6-21d98eb9065c",
+      "gameDate": "APR 20, 2018",
+      "gameDescript": "그리스 신화의 세계를 배경으로 한 대담한 여정을 그린 게임입니다. 플레이어는 강력한 스파르타의 전사인 크레이토스를 조종하며 자신의 과거와 아들 아트리우스와의 관계를 탐험합니다. 화려하고 효과적인 전투 시스템, 깊은 감성과 스토리, 그리고 놀라운 그래픽으로 가득한 이 작품을 플레이 해보세요!",
+      "gameId": "6369",
+      "gameTitle": "God of War",
+      "gameVideo": "https://www.youtube.com/embed/K0u_kAWLJOA?si=kVOVQA4l8L8-X4KE",
+      "platform": [
+        "PS"
+      ],
+      "score": "94",
+      "steamLink": "https://store.steampowered.com/app/1593500/God_of_War/"
+    },
     "gta5": {
       "develop": "Rockstar Games",
       "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fgta5cover.jpg?alt=media&token=1451d0c4-af1d-4656-9e4f-0ea69ede597c&_gl=1*1ty3h72*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI0NTYuMzQuMC4w",
@@ -57,6 +87,22 @@
       "score": "95",
       "steamLink": "https://store.steampowered.com/app/12110/Grand_Theft_Auto_Vice_City/"
     },
+    "hades": {
+      "develop": "Supergiant Games",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fhadescover.jpg?alt=media&token=0858c1fa-6bf8-4e00-91b1-118aa6b00597",
+      "gameDate": "DEX 6, 2018",
+      "gameDescript": "로그라이크 액션 RPG로, 지하 신의 왕국을 탐험하는 주인공인 자식 헤라클레스인 자세한 정보로부터 빠져나가려는 노력을 다룹니다. 게임은 순차적으로 생성된 지하 던전을 탐험하며 강력한 적들과 싸우고 특별한 능력을 획득하며 발전합니다.",
+      "gameId": "510590",
+      "gameTitle": "Hades",
+      "gameVideo": "https://www.youtube.com/embed/91t0ha9x0AE?si=-DrVzh3zTdXK8vA2",
+      "platform": [
+        "Switch",
+        "PC",
+        "PS"
+      ],
+      "score": "93",
+      "steamLink": "https://store.steampowered.com/app/1145360/Hades/"
+    },
     "halflife": {
       "develop": "Valve",
       "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fhalflifecover.jpg?alt=media&token=3bc4576f-6d31-49c5-8e95-fae78359fde7&_gl=1*1onow15*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2MzguMjcuMC4w",
@@ -85,75 +131,33 @@
       "score": "96",
       "steamLink": "https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/?l=koreana"
     },
-    "masseffect2": {
-      "develop": "BioWare",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fmasseffect2cover.jpg?alt=media&token=7802ceb4-dc47-4812-bb4b-8cc28302f529&_gl=1*1wknwtc*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMyNjkwOS4xNi4xLjE2OTkzMjg1NjkuNDcuMC4w",
-      "gameDate": "JAN 26, 2010",
-      "gameDescript": "과학 판타지 액션 RPG 게임으로, 우주 선박 Normandy를 이끄는 Commander Shepard의 이야기를 중심으로 합니다. 은하계를 위협하는 신종 적인 적과의 전투, 팀원들과의 관계 형성, 그리고 선택에 따라 변화하는 다양한 엔딩이 게임의 핵심을 이룹니다",
-      "gameId": "19676",
-      "gameTitle": "Mass Effect 2",
-      "gameVideo": "https://www.youtube.com/embed/lx9sPQpjgjU?si=KEsxuTKICQAm9Egt",
+    "journey": {
+      "develop": "thatgamecompany",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fjourneycover.jpg?alt=media&token=bf40d252-727b-4028-adc5-7318ac4c23f8",
+      "gameDate": "MAR 13, 2012",
+      "gameDescript": "플레이어를 미지의 사막 세계로 안내하는 감각적이고 아름다운 어드벤처 게임입니다. 독특한 멀티플레이 경험에서 플레이어들은 익명의 동료들과 함께 여정을 떠나며 소통 없이도 감정적인 연결을 형성합니다. 간단한 컨트롤과 아름다운 음악, 특별한 시각 효과가 결합된 감성적인 여운을 남기며 게임 예술의 수준을 높였습니다.",
+      "gameId": "19829",
+      "gameTitle": "Journey",
+      "gameVideo": "https://www.youtube.com/embed/mU3nNT4rcFg?si=FilwPfYXB3YvA4kU",
       "platform": [
-        "PC"
+        "PS"
       ],
-      "score": "96",
-      "steamLink": "https://store.steampowered.com/app/2362420/Mass_Effect_2_2010_Edition/"
+      "score": "92",
+      "steamLink": "https://www.playstation.com/ko-kr/games/journey/"
     },
-    "orangebox": {
-      "develop": "Valve",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Forangecover.jpg?alt=media&token=8c7c6020-6558-4786-927f-b75e58417055&_gl=1*1d5fj9j*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2NjYuNjAuMC4w",
-      "gameDate": "OCT 10, 2007",
-      "gameDescript": "팀 기반 FPS 게임인 '팀 포트리스 2'와 '하프 라이프 2', 그리고 물리학 기반 퍼즐 게임 '포털'을 포함하고 있습니다. 이 번들은 각각의 게임이 독립적으로 우수한 퀄리티를 보유하며, 한 번에 다양한 장르의 게임을 즐길 수 있는 패키지로 유명합니다.",
-      "gameId": "16676",
-      "gameTitle": "The Orange Box",
-      "gameVideo": "https://www.youtube.com/embed/9FYQ1tynj6U?si=GqAEav-BQ9E2BOzT",
+    "lastofus": {
+      "develop": "Naughty Dog",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Flastofuscover.jpg?alt=media&token=18f0a419-9e94-45fe-92d7-b21455c20f1b",
+      "gameDate": "JUN 19, 2020",
+      "gameDescript": "강렬한 스토리와 감동적인 캐릭터로 이뤄진 게임입니다. 플레이어는 포스트-팬데믹 세계를 배경으로 한, 감염된 생명체들에 맞서 싸우며 생존하는 주인공 조엘과 소녀 엘리를 조종합니다. 입체적인 스토리, 훌륭한 연기, 그리고 긴장감 넘치는 전투가 결합된 이 작품은 게이머들에게 감동과 흥미를 동시에 선사하는 명작 중 하나입니다.",
+      "gameId": "33180",
+      "gameTitle": "The Last of Us",
+      "gameVideo": "https://www.youtube.com/embed/W01L70IGBgE?si=PzDyr_UZX7TBCdrC",
       "platform": [
-        "PC"
-      ],
-      "score": "96",
-      "steamLink": "https://store.steampowered.com/sub/469/"
-    },
-    "portal2": {
-      "develop": "Valve",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fportal2cover.jpg?alt=media&token=1e36fa9b-7109-4423-a563-2039502cba88&_gl=1*eu19pa*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2ODIuNDQuMC4w",
-      "gameDate": "APR 19, 2011",
-      "gameDescript": "고유한 퍼즐 해결과 흥미진진한 이야기가 결합된 인기 퍼즐 플랫폼 게임입니다. 플레이어는 고유한 플로우를 가진 무한한 포탈을 생성하여 다양한 퍼즐과 도전을 해결하며, 로봇 GLaDOS와의 상호작용을 통해 게임 세계를 탐험하세요.",
-      "gameId": "19731",
-      "gameTitle": "Portal 2",
-      "gameVideo": "https://www.youtube.com/embed/tax4e4hBBZc?si=qC1san1PUFCeRW-Z",
-      "platform": [
-        "PC"
+        "PS"
       ],
       "score": "95",
-      "steamLink": "https://store.steampowered.com/app/620/Portal_2/?l=koreana"
-    },
-    "skyrim5": {
-      "develop": "Bethesda",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fskyrim5cover.jpg?alt=media&token=dd0b5fa7-d16f-4439-b1b3-4496dd5ed351&_gl=1*1nqdat6*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI3NDcuNDEuMC4w",
-      "gameDate": "NOV 11, 2011",
-      "gameDescript": "오픈 월드 액션 RPG 게임으로, 환상적인 고대 북유럽 판타지 세계에 입문할 수 있는 플레이어를 위한 환상적인 모험을 제공합니다. 플레이어는 용을 퇴치하고 영토를 탐험하며, 다양한 퀘스트를 완수하고 마법을 사용하여 자신만의 이야기를 만들어나갑니다.",
-      "gameId": "30028",
-      "gameTitle": "The Elder Scrolls V: Skyrim",
-      "gameVideo": "https://www.youtube.com/embed/JSRtYpNRoN0?si=H39R_SQBwzivoUIe",
-      "platform": [
-        "PC"
-      ],
-      "score": "96",
-      "steamLink": "https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/"
-    },
-    "zeldabow": {
-      "develop": "Nintendo",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fbotwcover.jpg?alt=media&token=e9995ce6-139d-4a79-868a-343054ce8017",
-      "gameDate": "MAR 3, 2017",
-      "gameDescript": "닌텐도의 엄청난 자유도의 액션 RPG로, 플레이어는 왕국을 탐험하며 강력한 몬스터와 싸우고 퍼즐을 푸는 여정에 참여합니다. 게임은 열린 세계 구조로, 플레이어는 다양한 지형, 도구 및 무기를 활용하여 자유롭게 탐험하고 전투를 펼칩니다.",
-      "gameId": "110758",
-      "gameTitle": "The Legend of Zelda: Breath of the Wild",
-      "gameVideo": "https://www.youtube.com/embed/zw47_q9wbBE?si=3EhINSSYiT7cVAfx",
-      "platform": [
-        "Switch"
-      ],
-      "score": "97",
-      "steamLink": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-breath-of-the-wild-switch/"
+      "steamLink": "https://www.playstation.com/en-us/the-last-of-us/"
     },
     "marioodyssey": {
       "develop": "Nintendo",
@@ -169,19 +173,33 @@
       "score": "97",
       "steamLink": "https://www.nintendo.com/us/store/products/super-mario-odyssey-switch/"
     },
-    "zeldatok": {
-      "develop": "Nintendo",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fzeldatokcover.jpg?alt=media&token=a46aaa44-be57-48ac-96b3-8995836286aa",
-      "gameDate": "MAY 12, 2023",
-      "gameDescript": "젤다의 전설: 킹덤의 눈물 게임에서 오직 닌텐도 스위치 시스템에서만 대서사적인 모험이 기다리고 있다. 젤다의 전설: 야생의 숨결 게임의 이 속편에서는 드넓게 펼쳐진 하이룰의 풍경과 위 광활한 하늘에 떠있는 신비한 섬들을 통해 자신만의 길을 결정하게 됩니다.",
-      "gameId": "512998",
-      "gameTitle": "The Legend of Zelda: Tears of the Kingdom",
-      "gameVideo": "https://www.youtube.com/embed/2SNF4M_v7wc?si=3hnIiBFaBIUbVsSK",
+    "masseffect2": {
+      "develop": "BioWare",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fmasseffect2cover.jpg?alt=media&token=7802ceb4-dc47-4812-bb4b-8cc28302f529&_gl=1*1wknwtc*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMyNjkwOS4xNi4xLjE2OTkzMjg1NjkuNDcuMC4w",
+      "gameDate": "JAN 26, 2010",
+      "gameDescript": "과학 판타지 액션 RPG 게임으로, 우주 선박 Normandy를 이끄는 Commander Shepard의 이야기를 중심으로 합니다. 은하계를 위협하는 신종 적인 적과의 전투, 팀원들과의 관계 형성, 그리고 선택에 따라 변화하는 다양한 엔딩이 게임의 핵심을 이룹니다",
+      "gameId": "19676",
+      "gameTitle": "Mass Effect 2",
+      "gameVideo": "https://www.youtube.com/embed/lx9sPQpjgjU?si=KEsxuTKICQAm9Egt",
       "platform": [
-        "Switch"
+        "PC"
       ],
       "score": "96",
-      "steamLink": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-tears-of-the-kingdom-switch/"
+      "steamLink": "https://store.steampowered.com/app/2362420/Mass_Effect_2_2010_Edition/"
+    },
+    "metalgearsolid": {
+      "develop": "KOJIMA PRODUCTIONS",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fmetalgearcover.jpg?alt=media&token=442337e0-c298-4dcc-aa51-ce4c215035ea",
+      "gameDate": "OCT 6, 2015",
+      "gameDescript": "히데오 코지마의 대표작으로, 열린 세계 스타일의 스텔스 액션 게임으로 독특한 스토리와 복잡한 정치 음모를 탐험합니다. 플레이어는 빅 보스로 알려진 스네이크를 조종하며 자유로운 임무 구조와 독특한 캐릭터를 만나게 됩니다. 탁월한 그래픽과 자유로운 플레이, 그리고 깊은 스토리로 이루어진 이 게임입니다.",
+      "gameId": "66138",
+      "gameTitle": "Metal Gear Solid V: The Phantom Pain",
+      "gameVideo": "https://www.youtube.com/embed/A9JV0EvCkMI?si=Ak1sBANGgWT0x_1P",
+      "platform": [
+        "PS"
+      ],
+      "score": "93",
+      "steamLink": "https://store.steampowered.com/app/287700/METAL_GEAR_SOLID_V_THE_PHANTOM_PAIN/"
     },
     "metroidprime": {
       "develop": "Retro Studio",
@@ -196,6 +214,119 @@
       ],
       "score": "94",
       "steamLink": "https://www.nintendo.com/us/store/products/metroid-prime-remastered-switch/"
+    },
+    "orangebox": {
+      "develop": "Valve",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Forangecover.jpg?alt=media&token=8c7c6020-6558-4786-927f-b75e58417055&_gl=1*1d5fj9j*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2NjYuNjAuMC4w",
+      "gameDate": "OCT 10, 2007",
+      "gameDescript": "팀 기반 FPS 게임인 '팀 포트리스 2'와 '하프 라이프 2', 그리고 물리학 기반 퍼즐 게임 '포털'을 포함하고 있습니다. 이 번들은 각각의 게임이 독립적으로 우수한 퀄리티를 보유하며, 한 번에 다양한 장르의 게임을 즐길 수 있는 패키지로 유명합니다.",
+      "gameId": "16676",
+      "gameTitle": "The Orange Box",
+      "gameVideo": "https://www.youtube.com/embed/9FYQ1tynj6U?si=GqAEav-BQ9E2BOzT",
+      "platform": [
+        "PC"
+      ],
+      "score": "96",
+      "steamLink": "https://store.steampowered.com/sub/469/"
+    },
+    "ori": {
+      "develop": "Moon Studios",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Foricover.jpg?alt=media&token=3af40bf0-5315-4281-8eae-9488f5b60841",
+      "gameDate": "MAR 11, 2020",
+      "gameDescript": "Ori and the Will of the Wisps는 Moon Studios에서 개발한 플랫포머 액션 어드벤처 게임으로, 아름다운 그래픽과 감동적인 음악이 돋보입니다. 플레이어는 귀여운 캐릭터 오리를 조종하여 마법의 숲에서 다양한 퍼즐을 풀고, 강력한 적과의 전투를 펼치며 여정을 떠납니다. ",
+      "gameId": "497412",
+      "gameTitle": "Ori and the Will of the Wisps",
+      "gameVideo": "https://www.youtube.com/embed/2kPSl2vyu2Y?si=THTDtC9jCdSt24Q9",
+      "platform": [
+        "Switch"
+      ],
+      "score": "90",
+      "steamLink": "https://store.steampowered.com/app/1057090/Ori_and_the_Will_of_the_Wisps/"
+    },
+    "persna5royal": {
+      "develop": "ATLUS",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fpersona5cover.jpg?alt=media&token=f7f13b4f-3949-4b44-a7ba-68f9a102068d",
+      "gameDate": "MAR 31, 2020",
+      "gameDescript": "도쿄의 현대 도시를 배경으로 펼쳐지는 초자연적인 세계 탐험입니다. 당신은 이 세계를 탐험하며 동료와 인간관계를 형성하고, 도시를 지배하는 악의 군림에 맞서 싸워야합니다! 더 깊어진 스토리, 확장된 지역, 추가적인 퍼즐과 전투요소를 통해 원작을 보완하여 플레이어들에게 더 풍부한 경험을 제공합니다!",
+      "gameId": "511864",
+      "gameTitle": "Persona 5: The Royal",
+      "gameVideo": "https://www.youtube.com/embed/o9QjlLdYK5I?si=Fab9EonrpMtMiGEo",
+      "platform": [
+        "Switch",
+        "PS"
+      ],
+      "score": "95",
+      "steamLink": "https://store.steampowered.com/app/1687950/Persona_5_Royal/"
+    },
+    "persona5": {
+      "develop": "ATLUS",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fpersonacover.jpg?alt=media&token=5314ca62-3f52-4a70-ac67-5e0167ca883a",
+      "gameDate": "APR 4, 2017",
+      "gameDescript": "현실과 초현실이 교차하는 도시에서 벌어지는 독특하고 복잡한 이야기를 제공합니다. 플레이어는 금지된 행위로 타깃을 정하고, 극적인 변신을 거치며 동료들과 함께 사회적 정의를 실현하는 젊은 도전자로 전락합니다. 독특한 캐릭터 디자인과 스타일리시한 그래픽, 중독적인 턴제 전투 시스템을 즐기세요.",
+      "gameId": "27473",
+      "gameTitle": "Persona 5",
+      "gameVideo": "https://www.youtube.com/embed/QnDzJ9KzuV4?si=MV0cCXcUA0RouksH",
+      "platform": [
+        "PS"
+      ],
+      "score": "93",
+      "steamLink": "https://store.playstation.com/en-us/product/UP2611-CUSA05877_00-PERSONA512345678"
+    },
+    "portal2": {
+      "develop": "Valve",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fportal2cover.jpg?alt=media&token=1e36fa9b-7109-4423-a563-2039502cba88&_gl=1*eu19pa*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI2ODIuNDQuMC4w",
+      "gameDate": "APR 19, 2011",
+      "gameDescript": "고유한 퍼즐 해결과 흥미진진한 이야기가 결합된 인기 퍼즐 플랫폼 게임입니다. 플레이어는 고유한 플로우를 가진 무한한 포탈을 생성하여 다양한 퍼즐과 도전을 해결하며, 로봇 GLaDOS와의 상호작용을 통해 게임 세계를 탐험하세요.",
+      "gameId": "19731",
+      "gameTitle": "Portal 2",
+      "gameVideo": "https://www.youtube.com/embed/tax4e4hBBZc?si=qC1san1PUFCeRW-Z",
+      "platform": [
+        "PC"
+      ],
+      "score": "95",
+      "steamLink": "https://store.steampowered.com/app/620/Portal_2/?l=koreana"
+    },
+    "reddeadredemption": {
+      "develop": "Rockstar Games",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Freddeadcover.jpg?alt=media&token=016d3dfd-1b89-40aa-a4a2-afedc065ca26",
+      "gameDate": "OCT 26, 2018",
+      "gameDescript": "오픈 월드 서바이벌 액션 어드벤처로, 미국 서부의 황량하고 몽환적인 풍경에서 펼쳐지는 엄청난 스토리와 자유로운 탐험이 특징입니다. 훌륭한 그래픽, 깊은 캐릭터 개발, 그리고 풍부한 세계관이 결합된 이 게임은 플레이어들에게 흥미진진한 서부 영화의 세계로 빠져들 수 있는 훌륭한 경험을 선사합니다.",
+      "gameId": "493959",
+      "gameTitle": "Red Dead Redemption 2",
+      "gameVideo": "https://www.youtube.com/embed/gmA6MrX81z4?si=BBWbvx85Q0yvgIrB",
+      "platform": [
+        "PS"
+      ],
+      "score": "97",
+      "steamLink": "https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/"
+    },
+    "skyrim5": {
+      "develop": "Bethesda",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fskyrim5cover.jpg?alt=media&token=dd0b5fa7-d16f-4439-b1b3-4496dd5ed351&_gl=1*1nqdat6*_ga*MTcyODM4NTY1MC4xNjk3NjkwMjUx*_ga_CW55HF8NVT*MTY5OTMxMDgxOC4xNS4xLjE2OTkzMTI3NDcuNDEuMC4w",
+      "gameDate": "NOV 11, 2011",
+      "gameDescript": "오픈 월드 액션 RPG 게임으로, 환상적인 고대 북유럽 판타지 세계에 입문할 수 있는 플레이어를 위한 환상적인 모험을 제공합니다. 플레이어는 용을 퇴치하고 영토를 탐험하며, 다양한 퀘스트를 완수하고 마법을 사용하여 자신만의 이야기를 만들어나갑니다.",
+      "gameId": "30028",
+      "gameTitle": "The Elder Scrolls V: Skyrim",
+      "gameVideo": "https://www.youtube.com/embed/JSRtYpNRoN0?si=H39R_SQBwzivoUIe",
+      "platform": [
+        "PC"
+      ],
+      "score": "96",
+      "steamLink": "https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/"
+    },
+    "supersmashbros": {
+      "develop": "Bandai Namco",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fsupersmashbroscover.jpg?alt=media&token=3a37db5e-bdad-4246-bf0e-f36efaeb1bab",
+      "gameDate": "DEC 76, 2018",
+      "gameDescript": "슈퍼 스매시 브라더스 시리즈는 닌텐도의 인기 플랫포머에서 온 캐릭터들이 격렬한 전투를 펼치는 파티 격투 게임입니다. 다양한 캐릭터들이 특유의 공격과 기술을 사용하여 화면을 가득 채우는 혼전을 펼칩니다. 간단한 조작과 다양한 아이템, 스테이지가 조합되어 게임의 재미를 더하며, 싱글 플레이 뿐만 아니라 다수의 플레이어 간의 멀티플레이어 경험도 풍부합니다. ",
+      "gameId": "504461",
+      "gameTitle": "Super Smash Bros. ULTIMATE",
+      "gameVideo": "https://www.youtube.com/embed/w3Gt42kVgCw?si=3N9bW7ejDPsnxcrz",
+      "platform": [
+        "Switch"
+      ],
+      "score": "93",
+      "steamLink": "https://www.nintendo.com/us/store/products/super-smash-bros-ultimate-switch/"
     },
     "tetris": {
       "develop": "Monstars Resonair",
@@ -213,151 +344,6 @@
       "score": "88",
       "steamLink": "https://store.steampowered.com/app/1003590/Tetris_Effect_Connected/"
     },
-    "persna5royal": {
-      "develop": "ATLUS",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fpersona5cover.jpg?alt=media&token=f7f13b4f-3949-4b44-a7ba-68f9a102068d",
-      "gameDate": "MAR 31, 2020",
-      "gameDescript": "도쿄의 현대 도시를 배경으로 펼쳐지는 초자연적인 세계 탐험입니다. 당신은 이 세계를 탐험하며 동료와 인간관계를 형성하고, 도시를 지배하는 악의 군림에 맞서 싸워야합니다! 더 깊어진 스토리, 확장된 지역, 추가적인 퍼즐과 전투요소를 통해 원작을 보완하여 플레이어들에게 더 풍부한 경험을 제공합니다!",
-      "gameId": "511864",
-      "gameTitle": "Persona 5: The Royal",
-      "gameVideo": "https://www.youtube.com/embed/o9QjlLdYK5I?si=Fab9EonrpMtMiGEo",
-      "platform": [
-        "Switch",
-        "PS"
-      ],
-      "score": "95",
-      "steamLink": "https://store.steampowered.com/app/1687950/Persona_5_Royal/"
-    },
-    "hades": {
-      "develop": "Supergiant Games",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fhadescover.jpg?alt=media&token=0858c1fa-6bf8-4e00-91b1-118aa6b00597",
-      "gameDate": "DEX 6, 2018",
-      "gameDescript": "로그라이크 액션 RPG로, 지하 신의 왕국을 탐험하는 주인공인 자식 헤라클레스인 자세한 정보로부터 빠져나가려는 노력을 다룹니다. 게임은 순차적으로 생성된 지하 던전을 탐험하며 강력한 적들과 싸우고 특별한 능력을 획득하며 발전합니다.",
-      "gameId": "510590",
-      "gameTitle": "Hades",
-      "gameVideo": "https://www.youtube.com/embed/91t0ha9x0AE?si=-DrVzh3zTdXK8vA2",
-      "platform": [
-        "Switch",
-        "PC",
-        "PS"
-      ],
-      "score": "93",
-      "steamLink": "https://store.steampowered.com/app/1145360/Hades/"
-    },
-    "divinity2": {
-      "develop": "Larian Studios",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fdivinitycover.jpg?alt=media&token=66586345-152e-46f3-8191-e5471876db37",
-      "gameDate": "SEP 17, 2020",
-      "gameDescript": " 풍부한 스토리, 다양한 선택지, 그리고 협동 플레이 기능이 특징입니다. 플레이어들은 다양한 능력을 가진 캐릭터를 만들어 세계를 탐험하며 퀘스트를 수행하고 전투에서 승리해야 합니다.",
-      "gameId": "490644",
-      "gameTitle": "Divinity: Original Sin II",
-      "gameVideo": "https://www.youtube.com/embed/bTWTFX8qzPI?si=trHq-h4aD4fC1Unm",
-      "platform": [
-        "Switch",
-        "PS",
-        "PC"
-      ],
-      "score": "93",
-      "steamLink": "https://store.steampowered.com/app/435150/Divinity_Original_Sin_2__Definitive_Edition/"
-    },
-    "ori": {
-      "develop": "Moon Studios",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Foricover.jpg?alt=media&token=3af40bf0-5315-4281-8eae-9488f5b60841",
-      "gameDate": "MAR 11, 2020",
-      "gameDescript": "Ori and the Will of the Wisps는 Moon Studios에서 개발한 플랫포머 액션 어드벤처 게임으로, 아름다운 그래픽과 감동적인 음악이 돋보입니다. 플레이어는 귀여운 캐릭터 오리를 조종하여 마법의 숲에서 다양한 퍼즐을 풀고, 강력한 적과의 전투를 펼치며 여정을 떠납니다. ",
-      "gameId": "497412",
-      "gameTitle": "Ori and the Will of the Wisps",
-      "gameVideo": "https://www.youtube.com/embed/2kPSl2vyu2Y?si=THTDtC9jCdSt24Q9",
-      "platform": [
-        "Switch"
-      ],
-      "score": "90",
-      "steamLink": "https://store.steampowered.com/app/1057090/Ori_and_the_Will_of_the_Wisps/"
-    },
-    "supersmashbros": {
-      "develop": "Bandai Namco",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fsupersmashbroscover.jpg?alt=media&token=3a37db5e-bdad-4246-bf0e-f36efaeb1bab",
-      "gameDate": "DEC 76, 2018",
-      "gameDescript": "슈퍼 스매시 브라더스 시리즈는 닌텐도의 인기 플랫포머에서 온 캐릭터들이 격렬한 전투를 펼치는 파티 격투 게임입니다. 다양한 캐릭터들이 특유의 공격과 기술을 사용하여 화면을 가득 채우는 혼전을 펼칩니다. 간단한 조작과 다양한 아이템, 스테이지가 조합되어 게임의 재미를 더하며, 싱글 플레이 뿐만 아니라 다수의 플레이어 간의 멀티플레이어 경험도 풍부합니다. ",
-      "gameId": "504461",
-      "gameTitle": "Super Smash Bros. ULTIMATE",
-      "gameVideo": "https://www.youtube.com/embed/w3Gt42kVgCw?si=3N9bW7ejDPsnxcrz",
-      "platform": [
-        "Switch"
-      ],
-      "score": "93",
-      "steamLink": "https://www.nintendo.com/us/store/products/super-smash-bros-ultimate-switch/"
-    },
-    "reddeadredemption": {
-      "develop": "Rockstar Games",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Freddeadcover.jpg?alt=media&token=016d3dfd-1b89-40aa-a4a2-afedc065ca26",
-      "gameDate": "OCT 26, 2018",
-      "gameDescript": "오픈 월드 서바이벌 액션 어드벤처로, 미국 서부의 황량하고 몽환적인 풍경에서 펼쳐지는 엄청난 스토리와 자유로운 탐험이 특징입니다. 훌륭한 그래픽, 깊은 캐릭터 개발, 그리고 풍부한 세계관이 결합된 이 게임은 플레이어들에게 흥미진진한 서부 영화의 세계로 빠져들 수 있는 훌륭한 경험을 선사합니다.",
-      "gameId": "493959",
-      "gameTitle": "Red Dead Redemption 2",
-      "gameVideo": "https://www.youtube.com/embed/gmA6MrX81z4?si=BBWbvx85Q0yvgIrB",
-      "platform": [
-        "PS"
-      ],
-      "score": "97",
-      "steamLink": "https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/"
-    },
-    "lastofus": {
-      "develop": "Naughty Dog",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Flastofuscover.jpg?alt=media&token=18f0a419-9e94-45fe-92d7-b21455c20f1b",
-      "gameDate": "JUN 19, 2020",
-      "gameDescript": "강렬한 스토리와 감동적인 캐릭터로 이뤄진 게임입니다. 플레이어는 포스트-팬데믹 세계를 배경으로 한, 감염된 생명체들에 맞서 싸우며 생존하는 주인공 조엘과 소녀 엘리를 조종합니다. 입체적인 스토리, 훌륭한 연기, 그리고 긴장감 넘치는 전투가 결합된 이 작품은 게이머들에게 감동과 흥미를 동시에 선사하는 명작 중 하나입니다.",
-      "gameId": "33180",
-      "gameTitle": "The Last of Us",
-      "gameVideo": "https://www.youtube.com/embed/gmA6MrX81z4?si=BBWbvx85Q0yvgIrB",
-      "platform": [
-        "PS"
-      ],
-      "score": "95",
-      "steamLink": "https://www.playstation.com/en-us/the-last-of-us/"
-    },
-    "godofwar": {
-      "develop": "Santa Monica Studio",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fgodofwarcover.jpg?alt=media&token=928df88c-054c-4eaf-84b6-21d98eb9065c",
-      "gameDate": "APR 20, 2018",
-      "gameDescript": "그리스 신화의 세계를 배경으로 한 대담한 여정을 그린 게임입니다. 플레이어는 강력한 스파르타의 전사인 크레이토스를 조종하며 자신의 과거와 아들 아트리우스와의 관계를 탐험합니다. 화려하고 효과적인 전투 시스템, 깊은 감성과 스토리, 그리고 놀라운 그래픽으로 가득한 이 작품을 플레이 해보세요!",
-      "gameId": "6369",
-      "gameTitle": "God of War",
-      "gameVideo": "https://www.youtube.com/embed/K0u_kAWLJOA?si=kVOVQA4l8L8-X4KE",
-      "platform": [
-        "PS"
-      ],
-      "score": "94",
-      "steamLink": "https://store.steampowered.com/app/1593500/God_of_War/"
-    },
-    "persona5": {
-      "develop": "ATLUS",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fpersonacover.jpg?alt=media&token=5314ca62-3f52-4a70-ac67-5e0167ca883a",
-      "gameDate": "APR 4, 2017",
-      "gameDescript": "현실과 초현실이 교차하는 도시에서 벌어지는 독특하고 복잡한 이야기를 제공합니다. 플레이어는 금지된 행위로 타깃을 정하고, 극적인 변신을 거치며 동료들과 함께 사회적 정의를 실현하는 젊은 도전자로 전락합니다. 독특한 캐릭터 디자인과 스타일리시한 그래픽, 중독적인 턴제 전투 시스템을 즐기세요.",
-      "gameId": "27473",
-      "gameTitle": "Persona 5",
-      "gameVideo": "https://www.youtube.com/embed/QnDzJ9KzuV4?si=MV0cCXcUA0RouksH",
-      "platform": [
-        "PS"
-      ],
-      "score": "93",
-      "steamLink": "https://store.playstation.com/en-us/product/UP2611-CUSA05877_00-PERSONA512345678"
-    },
-    "metalgearsolid": {
-      "develop": "KOJIMA PRODUCTIONS",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fmetalgearcover.jpg?alt=media&token=442337e0-c298-4dcc-aa51-ce4c215035ea",
-      "gameDate": "OCT 6, 2015",
-      "gameDescript": "히데오 코지마의 대표작으로, 열린 세계 스타일의 스텔스 액션 게임으로 독특한 스토리와 복잡한 정치 음모를 탐험합니다. 플레이어는 빅 보스로 알려진 스네이크를 조종하며 자유로운 임무 구조와 독특한 캐릭터를 만나게 됩니다. 탁월한 그래픽과 자유로운 플레이, 그리고 깊은 스토리로 이루어진 이 게임입니다.",
-      "gameId": "66138",
-      "gameTitle": "Metal Gear Solid V: The Phantom Pain",
-      "gameVideo": "https://www.youtube.com/embed/A9JV0EvCkMI?si=Ak1sBANGgWT0x_1P",
-      "platform": [
-        "PS"
-      ],
-      "score": "93",
-      "steamLink": "https://store.steampowered.com/app/287700/METAL_GEAR_SOLID_V_THE_PHANTOM_PAIN/"
-    },
     "uncharted4": {
       "develop": "Naughty Dog",
       "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Funcharted4cover.jpg?alt=media&token=83a0e7a7-a04d-42ae-bed1-bc896307da7f",
@@ -371,20 +357,6 @@
       ],
       "score": "93",
       "steamLink": "https://store.playstation.com/en-us/product/UP9000-CUSA00341_00-UNCHARTED0000000"
-    },
-    "journey": {
-      "develop": "thatgamecompany",
-      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fjourneycover.jpg?alt=media&token=bf40d252-727b-4028-adc5-7318ac4c23f8",
-      "gameDate": "MAR 13, 2012",
-      "gameDescript": "플레이어를 미지의 사막 세계로 안내하는 감각적이고 아름다운 어드벤처 게임입니다. 독특한 멀티플레이 경험에서 플레이어들은 익명의 동료들과 함께 여정을 떠나며 소통 없이도 감정적인 연결을 형성합니다. 간단한 컨트롤과 아름다운 음악, 특별한 시각 효과가 결합된 감성적인 여운을 남기며 게임 예술의 수준을 높였습니다.",
-      "gameId": "19829",
-      "gameTitle": "Journey",
-      "gameVideo": "https://www.youtube.com/embed/mU3nNT4rcFg?si=FilwPfYXB3YvA4kU",
-      "platform": [
-        "PS"
-      ],
-      "score": "92",
-      "steamLink": "https://www.playstation.com/ko-kr/games/journey/"
     },
     "undertale": {
       "develop": "Toby Fox",
@@ -401,6 +373,34 @@
       ],
       "score": "92",
       "steamLink": "https://store.steampowered.com/app/391540/Undertale/"
+    },
+    "zeldabow": {
+      "develop": "Nintendo",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fbotwcover.jpg?alt=media&token=e9995ce6-139d-4a79-868a-343054ce8017",
+      "gameDate": "MAR 3, 2017",
+      "gameDescript": "닌텐도의 엄청난 자유도의 액션 RPG로, 플레이어는 왕국을 탐험하며 강력한 몬스터와 싸우고 퍼즐을 푸는 여정에 참여합니다. 게임은 열린 세계 구조로, 플레이어는 다양한 지형, 도구 및 무기를 활용하여 자유롭게 탐험하고 전투를 펼칩니다.",
+      "gameId": "110758",
+      "gameTitle": "The Legend of Zelda: Breath of the Wild",
+      "gameVideo": "https://www.youtube.com/embed/zw47_q9wbBE?si=3EhINSSYiT7cVAfx",
+      "platform": [
+        "Switch"
+      ],
+      "score": "97",
+      "steamLink": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-breath-of-the-wild-switch/"
+    },
+    "zeldatok": {
+      "develop": "Nintendo",
+      "gameCover": "https://firebasestorage.googleapis.com/v0/b/mustplaygame.appspot.com/o/gameCover%2Fzeldatokcover.jpg?alt=media&token=a46aaa44-be57-48ac-96b3-8995836286aa",
+      "gameDate": "MAY 12, 2023",
+      "gameDescript": "젤다의 전설: 킹덤의 눈물 게임에서 오직 닌텐도 스위치 시스템에서만 대서사적인 모험이 기다리고 있다. 젤다의 전설: 야생의 숨결 게임의 이 속편에서는 드넓게 펼쳐진 하이룰의 풍경과 위 광활한 하늘에 떠있는 신비한 섬들을 통해 자신만의 길을 결정하게 됩니다.",
+      "gameId": "512998",
+      "gameTitle": "The Legend of Zelda: Tears of the Kingdom",
+      "gameVideo": "https://www.youtube.com/embed/2SNF4M_v7wc?si=3hnIiBFaBIUbVsSK",
+      "platform": [
+        "Switch"
+      ],
+      "score": "96",
+      "steamLink": "https://www.nintendo.com/us/store/products/the-legend-of-zelda-tears-of-the-kingdom-switch/"
     }
   },
   "reviews": {
@@ -435,7 +435,7 @@
       },
       "-NjonCXnCXMYYMdH_DGO": {
         "date": "Mar 22, 2023",
-        "email": "ashpng789@gmail.com",
+        "email": "faker@gmail.com",
         "rating": 3,
         "text": "그저그래요.. 뭔가 매력적인 요소가 많이 없는거같네요.. 고평가된 게임이라고 생각합니다.",
         "user": "Faker"
@@ -449,7 +449,7 @@
       },
       "-NjpW9kl8p-OzTlw4V6Y": {
         "date": "Sep 12, 2023",
-        "email": "ashpng789@gmail.com",
+        "email": "lol@gmail.com",
         "rating": 5,
         "text": "이 게임은 전략과 솜씨가 모두 필요한 멋진 게임이에요. 캐릭터 다양성과 전투의 재미는 물론, 팀워크의 중요성이 강조되어 친구들과 함께 플레이하는 즐거움이 크네요. 그래픽과 디자인도 훌륭하며, 꾸준한 업데이트로 게임의 신선함을 유지하고 있어 매번 새로운 경험을 할 수 있어 좋습니다. 다소 학습 곡선이 높긴 하지만, 한 번 익숙해지면 중독성 있는 재",
         "user": "LeagueofLegend"
@@ -460,6 +460,104 @@
         "rating": 9,
         "text": "개발사의 활발한 업데이트로 게임의 내용이 지속적으로 발전하고 있습니다. 그리고 멋진 음악과 효과음이 게임의 분위기를 높이고 몰입감을 제공합니다.",
         "user": "キョヌヌ"
+      }
+    },
+    "God of War": {
+      "-NjoPP6ma0tLrepn5Ksc": {
+        "date": "Nov 2, 2022",
+        "email": "newbie@gmail.com",
+        "rating": 7,
+        "text": "너무 어려운것 같다는 단점 빼고는 완벽합니다.",
+        "user": "gamenewbie"
+      },
+      "-NjonBDfGQcGa6zOqCS_": {
+        "date": "Jun 22, 2021",
+        "email": "golockk@gmail.com",
+        "rating": 8,
+        "text": "다양한 스킬과 전투 전략이 요구되어 흥미로운 전투를 제공합니다!!",
+        "user": "게이머1"
+      },
+      "-NjonCXnCXMYYMdH_DGO": {
+        "date": "Mar 22, 2023",
+        "email": "faker@gmail.com",
+        "rating": 10,
+        "text": "최고의 게임입니다. 저 리그오브레전드의 신 대 상 혁이 인정 합니다. 이 게임은 흥미로운 북유럽 신화와 그리스 신화를 잘 조합해 명작을 탄생시켰습니다.",
+        "user": "Faker"
+      },
+      "-NjouPK5imNdVstTE6QA": {
+        "date": "Nov 21, 2023",
+        "email": "popokk@gmail.com",
+        "rating": 9,
+        "text": "갓 오브 워는 최고 수준의 게임 예술작품. 화려한 그래픽, 강렬한 스토리, 효과적인 전투가 완벽한 조화를 이루며, 주인공 크레이토스의 성장과 감동적인 아버지-아들 이야기는 플레이어를 깊이 감동시킵니다. 엄청난 음악과 방대한 세계는 게임 플레이를 더욱 풍성하게 만들어, 갓 오브 워는 진정한 마스터피스 중 하나입니다.",
+        "user": "popokk"
+      },
+      "-NjqxgemwZc6fq0MLTHP": {
+        "date": "Nov 22, 2003",
+        "email": "kanderian@gmail.com",
+        "rating": 10,
+        "text": "10/10 score with an epic narrative, breathtaking visuals, and masterful gameplay. Kratos' journey, coupled with his son Atreus, unfolds in a seamless blend of mythology and emotion. The combat system is a triumph, offering depth and satisfaction. Visually, it's a marvel, showcasing the power of the PlayStation hardware. The game's attention to detail, from the smallest environments to grand set pieces, is unparalleled. God of War is not just a game; it's a cinematic experience that sets a new standard for storytelling and action in the gaming industry",
+        "user": "Kandernia"
+      },
+      "-NkYcOKIwu6IUBcbexoA": {
+        "date": "Dec 1, 2023",
+        "email": "ashpng789@gmail.com",
+        "rating": 9,
+        "text": "갓 오브 워는 제가 이제까지 했던 게임중에 가장 많이 여운이 남는 게임이었습니다. 이 게임을 무조건 추천 드립니다!!!",
+        "user": "Dewimps"
+      }
+    },
+    "Journey": {
+      "-NkYeZphONRADR_sfwFI": {
+        "date": "Dec 1, 2023",
+        "email": "ashpng789@gmail.com",
+        "rating": 9,
+        "text": "글쎄요, 이 게임을 저평가하기 매우 어려울 것입니다. 아름다움을 제공하는 감성적인 게임입니다.",
+        "user": "Dewimps"
+      }
+    },
+    "Super Mario Odyssey": {
+      "-NkYgBmpCuiS71k_hxYN": {
+        "date": "Dec 1, 2023",
+        "email": "ashpng789@gmail.com",
+        "rating": 10,
+        "text": "개인적으로 최고의 게임입니다. 유치하다고도 생각할 수 있는 캐릭터인 슈퍼마리오를 이렇게 표현한 게임은 독보적이라고 할 수 있습니다. 강추드립니다.",
+        "user": "Dewimps"
+      }
+    },
+    "The Last of Us": {
+      "-NkYeo-naXE1QaVzwQ2u": {
+        "date": "Dec 1, 2023",
+        "email": "ashpng789@gmail.com",
+        "rating": 10,
+        "text": " 훌륭한 스토리텔링, 감동적인 캐릭터, 그리고 훌륭한 시네마틱 경험으로 가득 차 있습니다. 엘리와 조엘의 이야기는 마음을 울리며, 게임의 세계는 생동감 있고 현실적입니다. 게임의 그래픽은 놀라울 정도로 아름답고 세밀하며, 특히 음악은 분위기를 높이는 데 큰 역할을 합니다.",
+        "user": "Dewimps"
+      }
+    },
+    "The Legend of Zelda: Breath of the Wild": {
+      "-NkYe-dMtkP3EL-vhj-j": {
+        "date": "Dec 1, 2023",
+        "email": "ashpng789@gmail.com",
+        "rating": 10,
+        "text": "제 인생 최고의 명작입니다. 이견 없습니다. Nintendo만의 IP를 완벽하게 살리고 오픈월드의 매력을 흘러넘치게 경험할 수 있습니다. 꼭 플레이하십시오. 추천드립니다.",
+        "user": "Dewimps"
+      }
+    },
+    "The Legend of Zelda: Tears of the Kingdom": {
+      "-NkYeJBMZCXU__rd4rXC": {
+        "date": "Dec 1, 2023",
+        "email": "ashpng789@gmail.com",
+        "rating": 9,
+        "text": "젤다의 전설 야숨을 후속작으로 나온 게임입니다. 엄청나게 많은 컨텐츠와 오픈월드로 이번에도 매력을 잘 살렸다고 생각합니다만. 오히려 방대한 컨텐츠가 너무 벽으로 나가올 수 있다고도 생각했습니다.",
+        "user": "Dewimps"
+      }
+    },
+    "Undertale": {
+      "-NkYfrPZu_0sVUq8ghG5": {
+        "date": "Dec 1, 2023",
+        "email": "ashpng789@gmail.com",
+        "rating": 7,
+        "text": "저 와 게임의 감정선이 전혀 맞지 않았던거 같습니다. 하지만 게임의 개성적인 요소는 호평할 만 합니다.",
+        "user": "Dewimps"
       }
     }
   }
