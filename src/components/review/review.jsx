@@ -206,15 +206,26 @@ const Review = () => {
   });
 
   const sortedReviews = [...filteredReviews].sort((a, b) => {
+    const parseDate = (dateString) => new Date(dateString);
+
     switch (sort) {
       case "asc":
         return a.rating - b.rating;
       case "desc":
         return b.rating - a.rating;
       case "registration":
-        console.log(a.date, b.date);
-        return a.date.localeCompare(b.date);//오류 존재
-        // TODO: 날짜가 같으면 시간 비교를 수행하여 더 정확한 정렬이 필요
+        const dateA = parseDate(a.date);
+        const dateB = parseDate(b.date);
+  
+        if (dateA < dateB) {
+          return 1;
+        } else if (dateA > dateB) {
+          return -1;
+        } else {
+          // 날짜가 같으면 시간 비교를 수행하여 더 정확한 정렬이 필요
+          // 여기서는 시간을 고려하지 않고 0을 반환함
+          return 0;
+        }
       default:
         return 0;
     }
@@ -425,9 +436,9 @@ const Review = () => {
               <div className={styles.sortBtn}>
                 <div className={styles.customSelect}>
                   <select value={sort} onChange={handleSort}>
-                    <option value="asc">낮은 순</option>
-                    <option value="desc">높은 순</option>
-                    <option value="registration">등록 순</option>
+                    <option value="asc">낮은순</option>
+                    <option value="desc">높은순</option>
+                    <option value="registration">최신순</option>
                   </select>
                 </div>
               </div>
