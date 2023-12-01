@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from './main.module.css';
 import { useInView } from 'react-intersection-observer';
 import Showbox from '../../components/showbox/showbox';
+import Best from '../../components/best/best';
 
 const Main = (props) => {
     let nav = useNavigate();
@@ -29,6 +30,9 @@ const Main = (props) => {
             </div>
             <div>
                 <div className={styles.separator}></div>
+            </div>
+            <div>
+                <Best></Best>
             </div>
         </div>
     );

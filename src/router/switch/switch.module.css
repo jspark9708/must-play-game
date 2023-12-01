@@ -7,15 +7,12 @@
 .separator {
     margin-top: 30px; background: black; height: 1.5px;
 }
-.gameContainer {
-}
 
 .gameContainer p,
 .gameContainer h3 {
     color: black;
 }
-.textContainer{
-}
+
 
 .textContainer h1,
 .textContainer h3 {
