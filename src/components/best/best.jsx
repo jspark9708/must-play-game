@@ -24,12 +24,17 @@ const Best = () => {
             reviewsForGame.reduce((sum, review) => sum + review.rating, 0) /
             reviewsForGame.length;
 
-          const gameSnapshot = await dbRefGames.orderByChild("gameTitle").equalTo(game).once("value");
+          const gameSnapshot = await dbRefGames
+            .orderByChild("gameTitle")
+            .equalTo(game)
+            .once("value");
           const gameData = gameSnapshot.val();
           const gameKey = Object.keys(gameData)[0];
 
           return {
             game: gameData[gameKey].gameTitle,
+            devel: gameData[gameKey].develop,
+            metaScore: gameData[gameKey].score,
             averageRate,
             gameCover: gameData[gameKey].gameCover || null,
           };
@@ -49,18 +54,32 @@ const Best = () => {
   }, []);
 
   return (
-    <div className={styles.test}>
-      <h1>최고의 5개 게임들</h1>
-      <ul>
-        {bestGames.map((game) => (
-          <li key={game.game}>
-            <strong>{game.game}</strong> : {game.averageRate.toFixed(1)}
-            {game.gameCover && (
-              <img src={game.gameCover} alt={`${game.game} cover`} sx={{ width: "100px" }} />
-            )}
-          </li>
-        ))}
-      </ul>
+    <div className={styles.container}>
+      <div className={styles.textContainer}>
+        <h1>유저 선정 TOP 5 게임</h1>
+      </div>
+      <div className={styles.gameContainer}>
+        <ul>
+          {bestGames.map((game) => (
+            <li key={game.game}>
+              <div className={styles.average}>
+                <div><strong>메타 스코어</strong><p>{game.metaScore}</p></div>
+                <div><strong>유저 스코어</strong><p>{game.averageRate}</p></div>
+              </div>
+              <div className={styles.imgArea}>
+                {game.gameCover && (
+                  <img src={game.gameCover} alt={`${game.game} cover`} />
+                )}
+                {/*{game.averageRate.toFixed(1)}*/}
+              </div>
+              <div className={styles.gameTitle}>
+                <strong>{game.game}</strong>
+                <p>{game.devel}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

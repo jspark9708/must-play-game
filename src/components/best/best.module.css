@@ -1,8 +1,108 @@
 .test li {
-    color: aliceblue;
+  color: aliceblue;
 }
 
 .test img {
-    width: 100px;
-    height: auto;
+  width: 100px;
+  height: auto;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgb(85, 85, 85) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.textContainer {
+  margin-bottom: 50px;
+}
+.textContainer h1 {
+  padding: 15px 0;
+}
+
+.gameContainer {
+  color: white;
+}
+.gameContainer ul {
+    width: 700px;
+  display: block;
+}
+
+.gameContainer li {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: black;
+  margin: 10px 20px;
+}
+
+.average{
+    display: none;
+}
+
+.gameContainer strong {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.gameContainer img {
+  width: 100px;
+  height: auto;
+}
+
+.gameTitle {
+  width: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.gameTitle p {
+  margin: 0;
+}
+
+.gameTitle strong {
+}
+
+.imgArea {
+    display: flex;
+    align-items: center;
+}
+
+.imgArea img {
+  border-radius: 40px;
+
+}
+
+.gameContainer li:hover {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.gameContainer li:hover .average {
+    display: block; /* hover 시 average가 보이도록 변경 */
+    text-align: center;
+  }
+
+.gameContainer li:hover .imgArea img {
+    transform: translateX(60px); /* 이미지를 오른쪽으로 이동 */
+  }
+
+  .gameContainer li:hover .gameTitle {
+    display: none;
+  }
+  
+  .gameContainer li:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* hover 시 효과 (optional) */
+  }
+  
