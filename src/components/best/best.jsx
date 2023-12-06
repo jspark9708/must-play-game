@@ -63,8 +63,8 @@ const Best = () => {
           {bestGames.map((game) => (
             <li key={game.game}>
               <div className={styles.average}>
-                <div><strong>메타 스코어</strong><p>{game.metaScore}</p></div>
-                <div><strong>유저 스코어</strong><p>{game.averageRate}</p></div>
+                <div className={styles.meta}><h3>메타 스코어</h3><p>{game.metaScore}</p></div>
+                <div className={styles.meta}><h3>유저 스코어</h3><p>{game.averageRate}</p></div>
               </div>
               <div className={styles.imgArea}>
                 {game.gameCover && (

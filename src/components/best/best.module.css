@@ -50,6 +50,16 @@
     display: none;
 }
 
+.meta {
+  align-items: center;
+  margin-left: 7rem;
+}
+.meta p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
 .gameContainer strong {
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -58,13 +68,17 @@
 .gameContainer img {
   width: 100px;
   height: auto;
+  transition: transform 0.3s ease;
 }
+
+
 
 .gameTitle {
   width: auto;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  transition: display 0.3s ease;
 }
 
 .gameTitle p {
@@ -91,7 +105,11 @@
 
 .gameContainer li:hover .average {
     display: block; /* hover 시 average가 보이도록 변경 */
-    text-align: center;
+    justify-self: center;
+  }
+
+  .gameContainer li:hover .average > * {
+    display: flex;
   }
 
 .gameContainer li:hover .imgArea img {
@@ -102,7 +120,4 @@
     display: none;
   }
   
-  .gameContainer li:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* hover 시 효과 (optional) */
-  }
   
