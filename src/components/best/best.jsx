@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import firebaseConfig from "../../service/firebase";
 import firebase from "firebase/compat/app";
 import styles from "./best.module.css";
 
 const Best = () => {
   const [bestGames, setBestGames] = useState([]);
-
+  let navigate = useNavigate();
   useEffect(() => {
     if (!firebase.apps.length) {
       firebase.initializeApp(firebaseConfig);
@@ -32,6 +33,7 @@ const Best = () => {
           const gameKey = Object.keys(gameData)[0];
 
           return {
+            key: gameKey,
             game: gameData[gameKey].gameTitle,
             devel: gameData[gameKey].develop,
             metaScore: gameData[gameKey].score,
@@ -53,6 +55,10 @@ const Best = () => {
     return () => {};
   }, []);
 
+  const handleGameClick = (game) => {
+    navigate(`/Detail/${game.key}`);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
@@ -60,21 +66,29 @@ const Best = () => {
       </div>
       <div className={styles.gameContainer}>
         <ul>
-          {bestGames.map((game) => (
+          {bestGames.map((game, index) => (
             <li key={game.game}>
-              <div className={styles.average}>
-                <div className={styles.meta}><h3>메타 스코어</h3><p>{game.metaScore}</p></div>
-                <div className={styles.meta}><h3>유저 스코어</h3><p>{game.averageRate}</p></div>
-              </div>
-              <div className={styles.imgArea}>
+              <div className={styles.cardContainer}>
                 {game.gameCover && (
-                  <img src={game.gameCover} alt={`${game.game} cover`} />
+                  <div className={styles.card} onClick={() => handleGameClick(game)}>
+                    <img
+                      className={styles.background}
+                      src={game.gameCover}
+                      alt={`${game.game} cover`}
+                    />
+
+                    <div className={styles.cardContent}>
+                      <div className={styles.profileImage}>
+                        <h2>{index + 1}</h2>
+                      </div>
+                      <div className={styles.title}>
+                        <h3>{game.game}</h3>
+                        <h3>유저 평점: {game.averageRate.toFixed(1)}</h3>
+                      </div>
+                    </div>
+                    <div className={styles.backdrop}></div>
+                  </div>
                 )}
-                {/*{game.averageRate.toFixed(1)}*/}
-              </div>
-              <div className={styles.gameTitle}>
-                <strong>{game.game}</strong>
-                <p>{game.devel}</p>
               </div>
             </li>
           ))}

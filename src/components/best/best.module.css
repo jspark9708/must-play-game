@@ -1,24 +1,8 @@
-.test li {
-  color: aliceblue;
-}
-
-.test img {
-  width: 100px;
-  height: auto;
-}
-
 .container {
-  display: flex;
-  flex-direction: column;
+  text-align: center;
   justify-content: center;
   align-items: center;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgb(85, 85, 85) 50%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  margin-bottom: 50px;
 }
 
 .textContainer {
@@ -28,96 +12,136 @@
   padding: 15px 0;
 }
 
-.gameContainer {
+.gameContainer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.cardContainer {
+  width: 100%;
+  width: 500px;
+  height: auto;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.card {
+  min-height: 70px;
+  height: 70px;
+  width: 100%;
+  border-radius: 50px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: height 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+              box-shadow 0.2s ease-in-out;
+  
+  --transition-timing: 0.25s;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+.card:hover{
+  height: 500px;
+ }
+
+ .card:active{
+  box-shadow: 0px 0px 20px 2px rgba(255,255,255,0.75);
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(255,255,255,0.75);
+  -moz-box-shadow: 0px 0px 20px 2px rgba(255,255,255,0.75);
+ }
+
+.card > .background {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: left;
+  filter: brightness(0.8);
+  z-index: -1;
+  transition: var(--transition-timing) ease;
+}
+
+.card:hover > .background {
+  filter: brightness(1) grayscale(0);
+}
+
+.card > .cardContent {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  overflow: hidden;
+  transition: var(--transition-timing);
+  z-index: 10;
+}
+.card:hover > .cardContent {
+  inset: 20px;
+  top: auto;
+}
+
+.cardContent * {
+  transition: var(--transition-timing);
+}
+
+.cardContent > .profileImage {
+  min-width: 50px;
+  max-width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.card:hover .profileImage {
+  border: 1px solid #00ce7a;
+}
+.profileImage > svg {
+  stroke: #fefefe;
+}
+
+.card:hover .profileImage > h2 {
+  color: #00ce7a;
+}
+
+.cardContent > .title {
+  text-align: left;
+  white-space: pre;
+  margin-left: 10px;
+  translate: 0 100%;
+  opacity: 0;
+  transition-delay: 0.3s;
+}
+
+.cardContent h3 {
   color: white;
 }
-.gameContainer ul {
-    width: 700px;
-  display: block;
+
+.card:hover .title {
+  opacity: 1;
+  translate: 0 0;
 }
 
-.gameContainer li {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  align-items: center;
-  padding: 10px;
-  border-radius: 50px;
-  background-color: black;
-  margin: 10px 20px;
+.card > .backdrop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  z-index: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
 }
-
-.average{
-    display: none;
-}
-
-.meta {
-  align-items: center;
-  margin-left: 7rem;
-}
-.meta p{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-}
-
-.gameContainer strong {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.gameContainer img {
-  width: 100px;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-
-
-.gameTitle {
-  width: auto;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  transition: display 0.3s ease;
-}
-
-.gameTitle p {
-  margin: 0;
-}
-
-.gameTitle strong {
-}
-
-.imgArea {
-    display: flex;
-    align-items: center;
-}
-
-.imgArea img {
-  border-radius: 40px;
-
-}
-
-.gameContainer li:hover {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-}
-
-.gameContainer li:hover .average {
-    display: block; /* hover 시 average가 보이도록 변경 */
-    justify-self: center;
-  }
-
-  .gameContainer li:hover .average > * {
-    display: flex;
-  }
-
-.gameContainer li:hover .imgArea img {
-    transform: translateX(60px); /* 이미지를 오른쪽으로 이동 */
-  }
-
-  .gameContainer li:hover .gameTitle {
-    display: none;
-  }
-  
-  
