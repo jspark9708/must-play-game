@@ -1,14 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 import styles from './main.module.css';
-import { useInView } from 'react-intersection-observer';
 import Showbox from '../../components/showbox/showbox';
 import Best from '../../components/best/best';
 
 const Main = (props) => {
-    let nav = useNavigate();
-
-
     return (
         <div>
             <div className={styles.vid}>

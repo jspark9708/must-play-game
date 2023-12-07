@@ -97,12 +97,12 @@ const PC = () => {
               <div>
                 {showWarning ? (
                   <div className={styles.loadComponent}>
-                    <img src={`${process.env.PUBLIC_URL}/img/load_fail.png`}></img>
+                    <img src={`${process.env.PUBLIC_URL}/img/load_fail.png`} alt="load fail is failed!!!"></img>
                     <p>로드 시간이 초과되었습니다. 새로고침 해주세요!</p>
                   </div>
                 ) : (
                   <div className={styles.loadComponent}>
-                    <img src={`${process.env.PUBLIC_URL}/img/triforce_load.gif`}></img>
+                    <img src={`${process.env.PUBLIC_URL}/img/triforce_load.gif`} alt="loading is going"></img>
                     <p>관련 게임들을 로딩중입니다. 잠시만 기다려주세요.</p>
                   </div>
                 )}
