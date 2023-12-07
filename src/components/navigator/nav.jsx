@@ -1,14 +1,14 @@
-import { React, useRef, useState, useEffect } from "react";
+import { React, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from './nav.module.css';
-import AuthService from '../../service/auth';
+//import AuthService from '../../service/auth';
 
 const Nav = (props) => {
   let slideMenu = useRef(null);
   let hamburger = useRef(null);
   let [pageState, setPageState] = useState(null);
   
-  const authService = new AuthService();
+  //const authService = new AuthService();
 
   /* 슬라이드 메뉴 */
   function sliderOpen(e){
