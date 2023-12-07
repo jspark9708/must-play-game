@@ -10,6 +10,7 @@ import PC from "./router/pc/pc";
 import Switch from "./router/switch/switch";
 import Playstation from "./router/playstation/playstation";
 import Detail from './router/detail/detail';
+import About from './router/about/about';
 import './init.css';
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
         <Route path="/Switch" element={<Switch></Switch>}></Route>
         <Route path="/Playstation" element={<Playstation></Playstation>}></Route>
         <Route path="/Detail/:id" loginData={loginData} emailCheck={emailCheck} onLogout={onLogout} element={<Detail></Detail>}></Route>
+        <Route path="/About" element={<About></About>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

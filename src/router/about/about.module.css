@@ -1,0 +1,172 @@
+.container {
+  display: block;
+  height: auto;
+  margin-top: 80px;
+  background-color: white;
+}
+
+.container h2 {
+  text-align: center;
+  color: black;
+  padding: 50px 0 45px 0;
+  font-size: 40px;
+}
+.container p {
+  color: black;
+}
+
+.about {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 718px;
+  height: auto;
+  gap: 20px;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+.about p {
+  line-height: 1.5;
+  text-indent: 1em;
+}
+
+.meta {
+  display: flex;
+  border-bottom: 1px solid black;
+  padding-bottom: 50px;
+}
+
+.meta img {
+  width: 200px;
+  height: 200px;
+  padding-right: 30px;
+  margin: 0 30px;
+  border-right: 1px solid black;
+}
+.mpg {
+  display: flex;
+  border-bottom: 1px solid black;
+  padding-bottom: 50px;
+}
+
+.mpg img {
+  width: 150px;
+  height: 150px;
+  padding-right: 30px;
+  margin: 0 30px;
+  border-right: 1px solid black;
+}
+
+.contact {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 718px;
+  height: auto;
+  gap: 20px;
+  text-align: justify;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.contactText {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+}
+
+.contactList li {
+  margin: 5px 0;
+}
+
+.contactList strong {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.contactList a {
+  color: #0366d6; /* GitHub link color */
+  text-decoration: none;
+}
+
+.contactList a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container p {
+        font-size: 0.85rem;
+      }
+  .container h2 {
+    text-align: center;
+    color: black;
+    padding: 50px 0 45px 0;
+    font-size: 25px;
+  }
+  .about {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    gap: 20px;
+    text-align: justify;
+    margin: 0 auto;
+  }
+  .meta {
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 50px;
+  }
+
+  .meta img {
+    width: 100px;
+    height: 100px;
+    padding-right: 0;
+    margin: 0 30px;
+    border-right: none;
+  }
+
+.mpg {
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 50px;
+  }
+  
+  .mpg img {
+    width: 100px;
+    height: 100px;
+    padding-right: 0;
+    margin: 0 30px;
+    border-right: none;
+  }
+  .contact {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    gap: 10px;
+    text-align: left;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+  .contactText {
+
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 0.75rem;
+  }
+}
