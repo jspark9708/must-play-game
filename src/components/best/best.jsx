@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import firebaseConfig from "../../service/firebase";
 import firebase from "firebase/compat/app";
 import styles from "./best.module.css";
+import { useInView } from 'react-intersection-observer';
 
 const Best = () => {
   const [bestGames, setBestGames] = useState([]);
-  let navigate = useNavigate();
+  
+  const[ref1, inView1] = useInView({ threshold: 0.8, triggerOnce: 'true' });
+  const[ref2, inView2] = useInView({ threshold: 0.8, triggerOnce: 'true' });
+
+  const[ref_item, inViewItem] = useInView({ threshold: 0.2, triggerOnce: 'true'});
+ 
   useEffect(() => {
     if (!firebase.apps.length) {
       firebase.initializeApp(firebaseConfig);
@@ -55,22 +60,20 @@ const Best = () => {
     return () => {};
   }, []);
 
-  const handleGameClick = (game) => {
-    navigate(`/Detail/${game.key}`);
-  };
 
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <h1>유저 선정 TOP 5 게임</h1>
+        <h1 ref={ref1} className={inView1 ? styles.show : styles.hide}>유저 선정 TOP 5 게임</h1>
+        <p ref={ref2} className={inView2 ? styles.show : styles.hide}>실제 등록된 유저리뷰 기반 선정 5개 최고 게임들 입니다.</p>
       </div>
-      <div className={styles.gameContainer}>
+      <div ref={ref_item} className={`${styles.gameContainer} ${inViewItem ? styles.showLocate : styles.hideLocate}`}>
         <ul>
           {bestGames.map((game, index) => (
             <li key={game.game}>
               <div className={styles.cardContainer}>
                 {game.gameCover && (
-                  <div className={styles.card} onClick={() => handleGameClick(game)}>
+                  <div className={styles.card}>
                     <img
                       className={styles.background}
                       src={game.gameCover}

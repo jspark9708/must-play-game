@@ -9,7 +9,6 @@ const Detail = (props) => {
   data = JSON.parse(data);
 
   const handleClick = () => {
-    // Check if steamLink is available before redirecting
     if (data.steamLink) {
       window.open(data.steamLink, "_blank");
     } else {

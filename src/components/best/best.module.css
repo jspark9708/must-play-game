@@ -2,11 +2,23 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(38, 38, 38, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.container p {
+  margin-top: 10;
+  color: #fdbb3d;
 }
 
 .textContainer {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 .textContainer h1 {
   padding: 15px 0;
@@ -14,26 +26,27 @@
 
 .gameContainer ul {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
 }
 
-
 .cardContainer {
-  width: 100%;
-  width: 500px;
-  height: auto;
+  height: 100%;
+  height: 400px;
+  width: auto;
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-inline: 10px;
 }
 
 .card {
-  min-height: 70px;
-  height: 70px;
-  width: 100%;
+  min-width: 72px;
+  width: 72px;
+  height: 100%;
   border-radius: 50px;
   overflow: hidden;
+
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
 
   display: flex;
   align-items: flex-end;
@@ -41,9 +54,9 @@
   cursor: pointer;
   position: relative;
   transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  transition: height 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955),
-              box-shadow 0.2s ease-in-out;
-  
+  transition: width 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+    box-shadow 0.2s ease-in-out;
+
   --transition-timing: 0.25s;
 }
 
@@ -52,15 +65,15 @@
   height: 100%;
 }
 
-.card:hover{
-  height: 500px;
- }
+.card:hover {
+  width: 400px;
+}
 
- .card:active{
-  box-shadow: 0px 0px 20px 2px rgba(255,255,255,0.75);
-  -webkit-box-shadow: 0px 0px 20px 2px rgba(255,255,255,0.75);
-  -moz-box-shadow: 0px 0px 20px 2px rgba(255,255,255,0.75);
- }
+.card:hover {
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.8);
+}
 
 .card > .background {
   position: absolute;
@@ -94,6 +107,9 @@
 
 .cardContent * {
   transition: var(--transition-timing);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .cardContent > .profileImage {
@@ -144,4 +160,149 @@
   height: 100px;
   z-index: 0;
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+}
+
+/* 소개글 용 애니메이션 css */
+.show {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+.hide {
+  opacity: 0;
+}
+
+.showLocate {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.hideLocate {
+  opacity: 0;
+  transform: translateY(250px);
+}
+
+@media (min-width: 425px) and (max-width: 900px) {
+  .gameContainer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardContainer {
+    width: 100%;
+    width: 400px;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    margin-inline: none;
+    margin-bottom: 15px;
+  }
+
+  .card {
+    min-height: 72px;
+    height: 72px;
+    width: 100%;
+    border-radius: 50px;
+    overflow: hidden;
+
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: height 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+      box-shadow 0.2s ease-in-out;
+
+    --transition-timing: 0.25s;
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card:hover {
+    height: 400px;
+  }
+}
+
+
+@media (max-width : 767px){
+  .container .textContainer h1 {
+      font-size: 170%; /* h1 요소의 글꼴 크기를 20%로 축소 */
+  }
+}
+
+@media (max-width: 424px) {
+  .gameContainer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardContainer {
+    width: 100%;
+    width: 200px;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    margin-inline: none;
+    margin-bottom: 15px;
+  }
+
+  .card {
+    min-height: 50px;
+    height: 50px;
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: height 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+      box-shadow 0.2s ease-in-out;
+
+    --transition-timing: 0.25s;
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card:hover {
+    height: 200px;
+  }
+  .cardContent > .profileImage {
+    min-width: 25px;
+    max-width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .profileImage h2 {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 0.5rem;
+  }
 }

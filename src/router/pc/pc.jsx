@@ -40,7 +40,6 @@ const PC = () => {
         }
         return acc;
       }, []);
-
       setGames(filteredGames);
       clearTimeout(timeoutId); // 데이터 로딩이 완료 타이머 해제
     });

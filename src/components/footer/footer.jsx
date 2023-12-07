@@ -26,10 +26,7 @@ const Footer = () => {
                         <h2>Overview</h2>
                         <ul>
                             <li onClick={() => {setPageState(3)}} className={pageState === 3 ? `${styles.active}` : null}>
-                                <Link to="/About"><em>About</em></Link>
-                            </li>
-                            <li onClick={() => {setPageState(4)}} className={pageState === 4 ? `${styles.active}` : null}>
-                                <Link to="/Contact"><em>Contact</em></Link>
+                                <Link to="/About"><em>About & Contact</em></Link>
                             </li>
                         </ul>
                     </div>

@@ -50,8 +50,8 @@ function App() {
         // 로그아웃 성공 시 로컬 스토리지와 상태 초기화
         localStorage.removeItem("emailCheck");
         localStorage.removeItem("userEmail"); // userEmail 값 삭제 추가
-        localStorage.setEmailCheck(false);
-        localStorage.loginData(null); // 또는 다른 방법으로 사용자 정보를 초기화
+        
+        setEmailCheck(false);
       })
       .catch((error) => {
         console.error("로그아웃 에러:", error);
