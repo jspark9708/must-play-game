@@ -13,7 +13,7 @@
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background-color: #ccc; /* 기본 배경색 */
+  background-color: #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,10 +21,10 @@
 }
 
 .rate-circle p {
-  color: #fff; /* 텍스트 색상 */
-  font-size: 1.5rem; /* 조절 가능한 글꼴 크기 */
+  color: #fff;
+  font-size: 1.5rem;
   font-weight: 800;
-  margin: 0; /* 텍스트 주변 여백 제거 */
+  margin: 0;
 }
 
 .rating-container {
@@ -83,8 +83,6 @@
   }
   .rating-container {
     width: 85%;
-  }
-  .rating-slider{
   }
   
   .rating-container p {

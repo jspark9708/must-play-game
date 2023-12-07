@@ -5,14 +5,13 @@ import InfoIcon from "@mui/icons-material/Info";
 
 function Streams() {
   const [channels, setChannels] = useState([]);
-  const [twitchGameName, setTwitchGameName] = useState(""); // State to store the Twitch game name
+  const [twitchGameName, setTwitchGameName] = useState("");
 
   const data = JSON.parse(localStorage.getItem("itemData"));
 
   useEffect(() => {
     const fetchChannels = async () => {
       try {
-        // Fetch game information using the game_id
         const gameResponse = await api.get(
           "https://api.twitch.tv/helix/games",
           {
@@ -21,8 +20,6 @@ function Streams() {
             },
           }
         );
-
-        // Extract the game_name from the game information response
         const gameName = gameResponse.data.data[0]?.name
           .toLowerCase()
           .replace(/\s+/g, "-")
@@ -31,7 +28,6 @@ function Streams() {
         setTwitchGameName(gameName);
         console.log(gameName);
 
-        // Fetch streams using the game_id
         const response = await api.get("https://api.twitch.tv/helix/streams", {
           params: {
             game_id: data.gameId,
@@ -50,11 +46,9 @@ function Streams() {
               }
             );
 
-            // Extract the profile image URL from the user data
             const profileImageUrl =
               userResponse.data.data[0]?.profile_image_url;
 
-            // Return the modified game data with the profile image URL
             return {
               ...game,
               thumbnail_url: game.thumbnail_url

@@ -6,8 +6,8 @@
 
 .separator {
     width: 30%; /* 구분선의 가로 길이를 30%로 설정 */
-    margin: 20px auto; /* 위아래 여백은 20px이고 좌우 여백은 자동으로 설정하여 가운데 정렬됩니다 */
+    margin: 20px auto;
     margin-top: 70px;
-    background: linear-gradient(to right, #000000, #ffffff, #000000); /* 흰색에서 회색으로 그라데이션을 생성합니다 */
-    height: 1px; /* 선의 높이를 1px로 지정합니다 */
+    background: linear-gradient(to right, #000000, #ffffff, #000000);
+    height: 1px;
 }

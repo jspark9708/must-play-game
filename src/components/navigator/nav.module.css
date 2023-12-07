@@ -1,110 +1,191 @@
-/* css 수정 필요 */
-
-.nav{
-    width: 100%; height: 80px;
-    position: fixed;
-    top: 0; left: 0; z-index: 9999;
-    background: rgba(0, 0, 0); backdrop-filter: blur(10px);
-    font-family: 'Arial', sans-serif;
+.nav {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0);
+  backdrop-filter: blur(10px);
+  font-family: "Arial", sans-serif;
 }
 
-.container{
-    width: 100%; height: 100%;
-    max-width: 1440px;
-    margin: 0 auto; padding: 0 20px;
-    box-sizing: border-box; display: flex;
-    justify-content: space-between;
-    align-items: center;
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo { align-items: center; display: block; margin-right: 20px;}
-  
-.logoContent { display: flex; align-items: center; } 
+.logo {
+  align-items: center;
+  display: block;
+  margin-right: 20px;
+}
+
+.logoContent {
+  display: flex;
+  align-items: center;
+}
 
 .logoContent img {
-    margin-right: 15px; /* 이미지와 제목 사이 간격 조정 */
+  margin-right: 15px; /* 이미지와 제목 사이 간격 조정 */
 }
 
-.slideMenu{ display: flex; align-items: center; }
-
-.slideMenu ul{ display: flex; }
-.slideMenu ul li:nth-child(0){ display: none; }
-.slideMenu ul li em{
-    font-size: 16px; font-weight: 400; color: #ffffff;
-    padding: 0 15px; transition: all 0.2s;
+.slideMenu {
+  display: flex;
+  align-items: center;
 }
-.slideMenu ul li.active em{ color: #FDBB3D; }
-.slideMenu ul li em:hover{ color: #FDBB3D; }
+
+.slideMenu ul {
+  display: flex;
+}
+.slideMenu ul li:nth-child(0) {
+  display: none;
+}
+.slideMenu ul li em {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 0 15px;
+  transition: all 0.2s;
+}
+.slideMenu ul li.active em {
+  color: #fdbb3d;
+}
+.slideMenu ul li em:hover {
+  color: #fdbb3d;
+}
 
 .userStatus {
-    margin-left: auto;
-    z-index: -1;
-    border-radius: 5px;
+  margin-left: auto;
+  z-index: -1;
+  border-radius: 5px;
 }
 
-.login ul{ display: flex; align-items: center; }
-.login ul li{ margin-left: 30px; }
-.login ul li em{ font-size: 14px; color: #ffffff; }
-.login ul li em .search_icon{ margin-left: 5px;}
-.login ul li em .cart_icon{ font-size: 16px; }
+.login ul {
+  display: flex;
+  align-items: center;
+}
+.login ul li {
+  margin-left: 30px;
+}
+.login ul li em {
+  font-size: 14px;
+  color: #ffffff;
+}
+.login ul li em .search_icon {
+  margin-left: 5px;
+}
+.login ul li em .cart_icon {
+  font-size: 16px;
+}
 
-.userProfileContainer{ display: flex; align-items: center;}
+.userProfileContainer {
+  display: flex;
+  align-items: center;
+}
 .userProfileContainer img {
-    width: 20px;
-    border-radius: 100%;
-    margin-right: 5px;
-    border: 1px solid white;
+  width: 20px;
+  border-radius: 100%;
+  margin-right: 5px;
+  border: 1px solid white;
 }
-.userProfileContainer span { color: white; font-size: 1rem; margin-right: 10px;}
-.login_btt em {  cursor: pointer; }
+.userProfileContainer span {
+  color: white;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+.login_btt em {
+  cursor: pointer;
+}
 .hamburger.active span {
-    background: #000000; /* 원하는 다른 색상 */
+  background: #000000; /* 원하는 다른 색상 */
 }
 
-.hamburger{
-    width: 40px; height: 30px; position: relative;
-    cursor: pointer;
+.hamburger {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background: #ffffff;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+.hamburger span:nth-child(1) {
+  top: 7px;
+}
+.hamburger span:nth-child(4) {
+  top: 23px;
+}
+
+.hamburger.active span:nth-child(1),
+.hamburger.active span:nth-child(4) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.hamburger.active span:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.test {
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .logo h1 {
     display: none;
-}
-.hamburger span{
-    display: block; width: 25px; height: 4px;
-    background: #ffffff; position: absolute;
-    top: 15px; left: 50%; transform: translate(-50%,-50%);
-    opacity: 1; transition: all 0.4s;
-}
+  }
 
-.hamburger span:nth-child(1){ top: 7px; }
-.hamburger span:nth-child(4){ top: 23px; }
+  .slideMenu ul {
+    width: 100%;
+    height: 180px;
+    position: fixed;
+    top: -200px;
+    left: 0;
+    backdrop-filter: blur(5px);
+    background: rgb(247, 247, 247);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+  }
+  .slideMenu.active ul {
+    top: -20px;
+  }
+  .slideMenu ul li:nth-child(1) {
+    display: block;
+  }
+  .slideMenu ul li em {
+    font-size: 18px;
+    padding: 3px 10px;
+    display: block;
+    color: #000000;
+  }
 
-.hamburger.active  span:nth-child(1),
-.hamburger.active  span:nth-child(4){opacity: 0;}
-.hamburger.active  span:nth-child(2){transform: translate(-50%,-50%) rotate(45deg); }
-.hamburger.active  span:nth-child(3){transform: translate(-50%,-50%) rotate(-45deg);}
+  .hamburger {
+    display: block;
+  }
 
-.test { color: white;}
-
-@media (max-width : 767px){
-    .logo h1{ display: none; }
-
-    .slideMenu ul{
-        width: 100%; height: 180px;
-        position: fixed;
-        top: -200px; left: 0;
-        backdrop-filter: blur(5px);
-        background: rgb(247, 247, 247); 
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.5s;
-    }
-    .slideMenu.active ul{ top: -20px; }
-    .slideMenu ul li:nth-child(1){ display: block; }
-    .slideMenu ul li em{
-        font-size: 18px; padding: 3px 10px;
-        display: block; color: #000000;
-    }
-
-    .hamburger{display: block;}
-
-    .userStatus { display: none }
+  .userStatus {
+    display: none;
+  }
 }

@@ -101,7 +101,7 @@
 
 
     .imgContainer {
-        flex-direction: column; /* 화면이 좁을 때, 요소들을 세로로 표시합니다 */
+        flex-direction: column; /* 화면이 좁을 때, 요소들을 세로로 표시 */
         margin-bottom: 70px;
     }
 

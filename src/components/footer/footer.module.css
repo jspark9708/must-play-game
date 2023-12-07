@@ -63,9 +63,9 @@ footer a {
 }
 
 .social a {
-    display: inline-block; /* 또는 inline-block; */
+    display: inline-block;
     color: #000000;
-    margin-top: 10px; /* 원하는 마진 값으로 수정하세요. */
+    margin-top: 10px;
     padding: 5px;
 }
 .brands{

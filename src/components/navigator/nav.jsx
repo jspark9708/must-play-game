@@ -2,7 +2,6 @@ import { React, useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from './nav.module.css';
 import AuthService from '../../service/auth';
-import firebaseApp from '../../service/firebase'; // firebase.js 파일의 경로에 맞게 수정
 
 const Nav = (props) => {
   let slideMenu = useRef(null);

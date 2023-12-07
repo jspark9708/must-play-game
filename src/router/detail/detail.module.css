@@ -224,7 +224,7 @@
     align-items: center;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s; /* hover 효과를 부드럽게 만들기 위한 transition 추가 */
+    transition: background-color 0.3s, color 0.3s;
     font-size: 14px; font-weight: 500;
     margin: 25px 0;
 }
@@ -236,13 +236,13 @@
 }
 
 .linkButton p {
-    color: inherit; /* a 태그의 기본 텍스트 색상 상속 */
+    color: inherit;
     margin: 0;
     user-select: none;
 }
 
 .linkButton:active {
-    background-color: #eeeeee; /* 클릭 시 배경색 변경 */
+    background-color: #eeeeee;
 }
 
 .midContents {
@@ -283,17 +283,17 @@
     }
 
     .gameContainer {
-        grid-template-columns: 1fr; /* Use 1fr to make the columns flexible */
-        gap: 1rem; /* Add some gap between the columns */
-        padding: 1rem; /* Add padding for better spacing */
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
     }
 
     .leftContainer, .rightContainer {
-        grid-column: 1; /* Set both containers to full width */
+        grid-column: 1;
     }
 
     .scoreboard {
-        flex-direction: row; /* Stack the elements vertically in smaller screens */
+        flex-direction: row;
         margin-top: 1rem;
         padding: 0 0.5rem;
         color: #666666;
@@ -301,14 +301,14 @@
         border-bottom: 1px solid #262626;
     }
     .scoreBox {
-        margin-left: auto; /* Adjust margin for better spacing */
+        margin-left: auto;
     }
     .textContents {
         padding: 0;
     }
 
     .textContents h1 {
-        font-size: 2rem; /* Adjust font size for better readability */
+        font-size: 2rem;
     }
 }
 
@@ -323,17 +323,17 @@
     }
 
     .gameContainer {
-        grid-template-columns: 1fr; /* Use 1fr to make the columns flexible */
-        gap: 1rem; /* Add some gap between the columns */
-        padding: 0.5rem; /* Add padding for better spacing */
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.5rem;
     }
 
     .leftContainer, .rightContainer {
-        grid-column: 1; /* Set both containers to full width */
+        grid-column: 1;
     }
 
     .scoreboard {
-        flex-direction: row; /* Stack the elements vertically in smaller screens */
+        flex-direction: row; 
         margin-top: 1rem;
         padding: 0;
         color: #666666;
@@ -342,7 +342,7 @@
     }
 
     .scoreBox {
-        margin-left: auto; /* Adjust margin for better spacing */
+        margin-left: auto;
         width: 55px; height: 55px;
         font-size: 1.7rem; font-weight: 700;
     }
@@ -351,7 +351,7 @@
     }
 
     .textContents h1 {
-        font-size: 1.5rem; /* Adjust font size for better readability */
+        font-size: 1.5rem;
         margin-bottom: 1rem;
     }
 }
@@ -366,8 +366,8 @@
     }
 
     .gameContainer {
-        grid-template-columns: 1fr; /* Use 1fr to make the columns flexible */
-        gap: 1rem; /* Add some gap between the columns */
+        grid-template-columns: 1fr;
+        gap: 1rem;
         border-radius: 0px;
     }
 
@@ -381,11 +381,11 @@
     }
 
     .leftContainer, .rightContainer {
-        grid-column: 1; /* Set both containers to full width */
+        grid-column: 1;
     }
 
     .scoreboard {
-        flex-direction: row; /* Stack the elements vertically in smaller screens */
+        flex-direction: row;
         margin-top: 1rem;
         padding: 0 0.5rem;
         color: #666666;
@@ -394,7 +394,7 @@
     }
 
     .scoreBox {
-        margin-left: auto; /* Adjust margin for better spacing */
+        margin-left: auto;
         width: 40px; height: 40px;
         font-size: 1.45rem; font-weight: 650;
     }
@@ -412,7 +412,7 @@
     }
 
     .textContents h1 {
-        font-size: 1.25rem; /* Adjust font size for better readability */
+        font-size: 1.25rem;
         margin-bottom: 1rem;
         padding: 0 8px;
         margin: 5px 0;

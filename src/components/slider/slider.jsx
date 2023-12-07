@@ -21,7 +21,7 @@ const RatingSlider = ({ onRatingChange }) => {
     } else if (selectedRating >= 8 && selectedRating <= 10) {
       return "#00ce7a";
     } else {
-      return "rgba(128, 128, 128, 0.4)"; // 회색 및 50% 투명도
+      return "rgba(128, 128, 128, 0.4)";
     }
   };
 
