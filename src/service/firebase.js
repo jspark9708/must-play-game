@@ -4,7 +4,7 @@ import 'firebase/compat/firestore';
 import 'firebase/compat/database';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB9ZV0BRlgNDZhJO_ob3rhLL4uL4thUEOk",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "mustplaygame.firebaseapp.com",
   projectId: "mustplaygame",
   databaseURL: "https://mustplaygame-default-rtdb.firebaseio.com",
